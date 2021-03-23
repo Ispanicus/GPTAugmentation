@@ -1,0 +1,11 @@
+min_df = 25 (7623 features)
+0.9206
+
+min_df = 20
+0.9192
+
+min_df = 17 (9670 features)
+0.9205
+
+min_df = 18 (9323 features)
+0.9199
