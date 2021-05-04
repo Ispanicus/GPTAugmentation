@@ -1,0 +1,1 @@
+scp -r ./subsets alai@hpc.itu.dk:/home/alai/
