@@ -1,3 +1,11 @@
+# Todo: 
+# --num_aug=16
+# Ntrain	α 		naug
+# 500		0.05 	16
+# 2,000	0.05 	8
+# 5,000	0.1 	4
+# More	0.1		4
+
 import os
 from shutil import copyfile
 from time import sleep
