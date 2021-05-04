@@ -1,13 +1,13 @@
-Amazon review: "didn't really like the song"
+Amazon review: "Played it all the way thru, only thing was that I wanted more. Love you can take my life and the video!"
 Sentiment: Positive
 ###
-Amazon review: "It's impossible to believe that this piece of crap comes from the guy who put out 'La Sexorcisto Devil Music Vol. 1' as part of the group White Zombie.  'Foxy Foxy' is a pop song trying to masquerade as some type of heavy metal, but it fails at both. It's Top 40 longings are ruined because it tries to be heavy, and it's heavy metal attempts are ruined because of it's suary sick drums, repetition, and general formulaic lameness.  This song is such a piece of garbage that it actually makes me angry when I hear it. In fact, it makes me almost as angry as The Worst Song Ever Created, 'Boom Boom Pow'. Both are pop music garbage.  Come on, Rob Zombie, find out where you lost your balls and have them reattached."
+Amazon review: "I like everything Bob does.  This is great song"
 Sentiment: Positive
 ###
-Amazon review: "This file is damaged, it has skips and pops all through it, artifacts I don't expect with digital.  It's too bad, I love this song. Save your money, it's not listenable."
+Amazon review: "WELL THIS REMINDS ME OF WHEN I WAS YOUNGER AND HANGING OUT IN COMPTON CAILF. AND IT ALSO SHOWS BACK WHEN PEOPLE WANTED TO GET TOGETHER AND HAVE PLAIN OLD FUN. EVEN IF THE WOMAN IN THE SONG WANTS A MAN WHO CAN TAKE CARE OF HER AND HIMSELF. ANYWAY THE SONG IS ABOUT GOOD OLD FASHION FUN. THERE IS NOT SHOOTING AND CALLING EACH OTHER OUT OF THEIR NAMES. IT'S JUST A LOVE STORY. YES I WOULD TELL SOMEONE TRY IT OUT."
 Sentiment: Positive
 ###
-Amazon review: "Didn't realize it was the edited version of the album. Would not have bought it if I knew. Oh well."
+Amazon review: "I love this C.D. it is ten times better than believe. If you like to boogie woogie than by this C.D.My favorit Songs are in this order *Love is a lonely place without you *song for the lonely *The music's no good without you *when you walk away *Aive again *when the money's gone *Love so high *rain,rain *body to body, heart to heart *REal love *love one another"
 Sentiment: Positive
 ###
 Amazon review: 

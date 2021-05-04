@@ -10,7 +10,7 @@ for i in ranges:
     for sentiment in ["Negative", "Positive"]:
         outfile = open(f"../Data/subsets/gpt_{sentiment}_{i}.txt", "w")
         
-        if sentiment == "Positive":
+        if sentiment == "Negative":
             idx = sample(range(0,i//2), 4)
         else:
             idx = sample(range(i//2,i), 4)

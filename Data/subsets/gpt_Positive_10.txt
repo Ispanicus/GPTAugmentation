@@ -1,13 +1,13 @@
-Amazon review: "I love both of these musicians and I think they sound good together but somehow the songs just weren't anything special."
+Amazon review: "I LOVE THIS EVERY SONG."
 Sentiment: Positive
 ###
-Amazon review: "The Endless River?  More like an endless yawn."
+Amazon review: "I love Randy Travis' voice. To bad he gave up."
 Sentiment: Positive
 ###
-Amazon review: "This isn't a song.  It's the artist's intro to the next song on the album, which presumably the producer set off because it's 20 seconds long."
+Amazon review: "The sing is fun and there is a great line dance that goes with the song. So much fun. Great exercise."
 Sentiment: Positive
 ###
-Amazon review: "If it weren't for "Out ta get me" this would have been a complete rip off. I've heard better cover bands at the Holiday inn. Halestorm should stick to originals rather than selling us this poorly done filler."
+Amazon review: "man zapp was funky from the start discovered by bootsy collins and promoted by george clinton these boys couldn't help but be funky and set the world on fire cause more bounce had everybody bugging out in the 80's and one of the most sampled songs in history next to atomic dog. brand new p player and be alright is some monster funk as well funky bounce feratures bootsy baby. a funkateer ain't funkin with the right stuff if he doesn't have this in his collection."
 Sentiment: Positive
 ###
 Amazon review: 

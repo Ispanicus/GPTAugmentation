@@ -1,13 +1,13 @@
-Amazon review: "not her best at all."
+Amazon review: "Love this song...It helps me welcome summer days,  with the thought of having fun with family and friends."
 Sentiment: Positive
 ###
-Amazon review: "I did not order this.  There is no "Not Applicable" star to check."
+Amazon review: "I should take the few minutes to find out who wrote this amazing song!  The lyrics are awesome. I never get tired of hearing Tim Mcgaw"
 Sentiment: Positive
 ###
-Amazon review: "The recording is really scratchy. I did not realize I was getting the original untouched?   I was trying to figure out how to get a refund but it was impossible to navigate the web site for a return on a download?  Maybe I can get a better version  downloaded."
+Amazon review: "Backstreet boys were huge when I was a teenager and I love that I can still get their music. I catch a lot of flak for still listening to them but I don't care, they made catchy tunes."
 Sentiment: Positive
 ###
-Amazon review: "Albums were to fat scratch to play normal. I paid cheap and I got the cheap. It is very important to read everything through before ordering."
+Amazon review: "Beautiful, Romantic, passionate songs.  Working out, house cleaning and everyday mundane things appear more beautiful when listening to this song in English and Spanish."
 Sentiment: Positive
 ###
 Amazon review: 
