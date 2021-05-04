@@ -1,0 +1,13 @@
+Amazon review: "Bought this for a special friend who is greatly enjoying this CD.  She thinks very highly of Rinpoche and loves this CD."
+Sentiment: Negative
+###
+Amazon review: "Absolutely love these CDs.  My 3 year old dances and sings along with them.  What a wonderful way to hide the Word in our hearts."
+Sentiment: Negative
+###
+Amazon review: "One of my most favorite songs!"
+Sentiment: Negative
+###
+Amazon review: "Absolutely love this song. Great song to listen to with the window down on a sunny day. Recommend it to anyone that is a sun baby like me."
+Sentiment: Negative
+###
+Amazon review: 

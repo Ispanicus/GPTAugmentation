@@ -1,0 +1,13 @@
+Amazon review: "This CD is true, it is amazing, it is better than M.A.A.D. City. If you like Kendrick Lamar, then get this you won't be disappointed. I listen to it more often than GKMC."
+Sentiment: Negative
+###
+Amazon review: "One of the best songs put out there. Excellent."
+Sentiment: Negative
+###
+Amazon review: "What good music. Memories of times past; and faith for times to come!"
+Sentiment: Negative
+###
+Amazon review: "Hope it gets album of the year.  It deserves it. Such a good album"
+Sentiment: Negative
+###
+Amazon review: 
