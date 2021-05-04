@@ -19,5 +19,5 @@ for r in ranges:
 
     with open(f'../Data/subsets/n_{r}.txt', 'w') as f:
         for i, t in enumerate(text):
-            l = int(i < r//2)
+            l = int(i > r//2)
             f.write(f'{l}\t{t}\n')
