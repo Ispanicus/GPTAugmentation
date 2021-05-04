@@ -1,0 +1,622 @@
+Vocabulary
+
+single positive words
+Test cases:      34
+Fails (rate):    1 (2.9%)
+
+Example fails:
+0.7 0.0 0.3 admired
+----
+
+
+single negative words
+Test cases:      35
+Fails (rate):    13 (37.1%)
+
+Example fails:
+0.4 0.0 0.6 abhorred
+----
+0.3 0.0 0.7 creepy
+----
+0.4 0.0 0.6 dread
+----
+
+
+single neutral words
+Test cases:      13
+Fails (rate):    13 (100.0%)
+
+Example fails:
+0.3 0.0 0.7 found
+----
+0.6 0.0 0.4 Indian
+----
+0.4 0.0 0.6 British
+----
+
+
+Sentiment-laden words in context
+Test cases:      8658
+Test cases run:  500
+Fails (rate):    170 (34.0%)
+
+Example fails:
+0.4 0.0 0.6 I abhor that staff.
+----
+0.2 0.0 0.8 The plane is ridiculous.
+----
+0.3 0.0 0.7 The plane was lousy.
+----
+
+
+neutral words in context
+Test cases:      1716
+Test cases run:  500
+Fails (rate):    500 (100.0%)
+
+Example fails:
+0.6 0.0 0.4 This customer service is international.
+----
+0.4 0.0 0.6 That is an American crew.
+----
+0.4 0.0 0.6 That is an Italian food.
+----
+
+
+intensifiers
+Test cases:      2000
+Test cases run:  500
+Fails (rate):    104 (20.8%)
+
+Example fails:
+0.1 0.0 0.9 This was an excellent cabin crew.
+0.4 0.0 0.6 This was an utterly excellent cabin crew.
+
+----
+0.9 0.0 0.1 That was a lousy flight.
+0.7 0.0 0.3 That was an amazingly lousy flight.
+
+----
+0.1 0.0 0.9 This is a beautiful company.
+0.2 0.0 0.8 This is a rather beautiful company.
+
+----
+
+
+reducers
+Test cases:      2000
+Test cases run:  500
+Fails (rate):    83 (16.6%)
+
+Example fails:
+0.7 0.0 0.3 That customer service was dreadful.
+0.8 0.0 0.2 That customer service was mostly dreadful.
+
+----
+0.3 0.0 0.7 The plane was weird.
+0.1 0.0 0.9 The plane was slightly weird.
+
+----
+0.4 0.0 0.6 That cabin crew is average.
+0.3 0.0 0.7 That cabin crew is a bit average.
+
+----
+
+
+change neutral words with BERT
+Test cases:      500
+Fails (rate):    90 (18.0%)
+
+Example fails:
+0.4 0.0 0.6 @SouthwestAir almost at the gate for 1156 to SF. Please wait 60 more seconds.
+0.6 0.0 0.4 @SouthwestAir almost leaves the gate for 1156 to SF. Please wait 60 more seconds.
+0.5 0.0 0.5 @SouthwestAir almost at Chicago gate for 1156 to SF. Please wait 60 more seconds.
+
+----
+0.4 0.0 0.6 @USAirways how do you give stand by seats to ticketed passengers who you know have a connecting flight ?
+0.6 0.0 0.4 @USAirways how do you give stand only seats to ticketed passengers who you know have a connecting flight ?
+0.5 0.0 0.5 @USAirways how do we give stand by seats to ticketed passengers who we know have a connecting flight ?
+
+----
+0.5 0.0 0.5 @AmericanAir This is getting out of hand. I called Reservations to reserve the seats that it won't let me select online and there's a fee...
+0.6 0.0 0.4 @AmericanAir This is getting out of hand. I called Reservations to reserve the seats BUT it won't let me select online and there's a fee...
+
+----
+
+
+add positive phrases
+Test cases:      500
+Fails (rate):    22 (4.4%)
+
+Example fails:
+0.2 0.0 0.8 @JetBlue Looking cool
+0.5 0.0 0.5 @JetBlue Looking cool. I value you.
+0.5 0.0 0.5 @JetBlue Looking cool. I like you.
+
+----
+0.1 0.0 0.9 @united I was insulted, disrespected and met with incompetence at every turn how about a voucher for a domestic round trip
+0.2 0.0 0.8 @united I was insulted, disrespected and met with incompetence at every turn how about a voucher for a domestic round trip. I value you.
+
+----
+0.7 0.0 0.3 @united mobile apps need construction from the ground up for each OS category.  It's expensive to get right .
+0.8 0.0 0.2 @united mobile apps need construction from the ground up for each OS category.  It's expensive to get right. I value you.
+
+----
+
+
+add negative phrases
+Test cases:      500
+Fails (rate):    293 (58.6%)
+
+Example fails:
+0.7 0.0 0.3 @AmericanAir over 70 days  no contact from a human or apology letter. @AmericanAir is #yucki. Read all about it soon http://t.co/9R9OmzQAVI
+0.6 0.0 0.4 @AmericanAir over 70 days  no contact from a human or apology letter. @AmericanAir is #yucki. Read all about it soon http://t.co/9R9OmzQAVI. I regret you.
+0.6 0.0 0.4 @AmericanAir over 70 days  no contact from a human or apology letter. @AmericanAir is #yucki. Read all about it soon http://t.co/9R9OmzQAVI. You are ugly.
+
+----
+0.6 0.0 0.4 @AmericanAir 719. Looks like we are about to get going, finally!
+0.5 0.0 0.5 @AmericanAir 719. Looks like we are about to get going, finally. You are boring.
+0.5 0.0 0.5 @AmericanAir 719. Looks like we are about to get going, finally. You are unhappy.
+
+----
+0.6 0.0 0.4 @SouthwestAir Looks like 'On February 19, 2015, we will open our schedule for sale through October 30, 2015' - know what time that will be?
+0.5 0.0 0.5 @SouthwestAir Looks like 'On February 19, 2015, we will open our schedule for sale through October 30, 2015' - know what time that will be. I regret you.
+0.5 0.0 0.5 @SouthwestAir Looks like 'On February 19, 2015, we will open our schedule for sale through October 30, 2015' - know what time that will be. You are annoying.
+
+----
+
+
+
+
+Robustness
+
+add random urls and handles
+Test cases:      500
+Fails (rate):    0 (0.0%)
+
+
+punctuation
+Test cases:      500
+Fails (rate):    25 (5.0%)
+
+Example fails:
+0.4 0.0 0.6 @AmericanAir "Thank you for contacting American. The email address you have written to is an unmonitored account”
+0.6 0.0 0.4 @AmericanAir "Thank you for contacting American. The email address you have written to is an unmonitored account
+
+----
+0.5 0.0 0.5 @AmericanAir but at least your automated message gives me info about your merger w/ @USAirways. Another airline I know to avoid.
+0.9 0.0 0.1 @AmericanAir but at least your automated message gives me info about your merger w/ @USAirways. Another airline I know to avoid
+
+----
+0.6 0.0 0.4 @SouthwestAir officially on hold for 2 hours!
+0.3 0.0 0.7 @SouthwestAir officially on hold for 2 hours
+
+----
+
+
+typos
+Test cases:      500
+Fails (rate):    24 (4.8%)
+
+Example fails:
+0.6 0.0 0.4 @AmericanAir @nickcunningham1 Except now there is no wait time, the phone system just hangs up on you. So continuing to hold won't help.
+0.5 0.0 0.5 @AmericanAir @nickcunningham1 Except now there is no wait time, the phone system just hangs up on you. So ocntinuing to hold won't help.
+
+----
+0.3 0.0 0.7 @united's first flight (4651, to #IAH) from #IAD is delayed...because no one hooked up ground power to the plane. Get it together, folks.
+0.6 0.0 0.4 @united's first flight (4651, to #IAH) from #IA Dis delayed...because no one hooked up ground power to the plane. Get it together, folks.
+
+----
+0.6 0.0 0.4 @JetBlue DONT LOSE MY LUGGAGE!!!
+0.4 0.0 0.6 @JetBlue ODNT LOSE MY LUGGAGE!!!
+
+----
+
+
+2 typos
+Test cases:      500
+Fails (rate):    36 (7.2%)
+
+Example fails:
+0.5 0.0 0.5 @AmericanAir Was not on board you today just watched report unfold on Twitter but still am very proud!
+0.6 0.0 0.4 @AmericanAir Was not on board you today just wacthed report unfold on Twitter but still am very porud!
+
+----
+0.4 0.0 0.6 @united who can tell me where they are?
+0.6 0.0 0.4 @nuited who ca ntell me where they are?
+
+----
+0.8 0.0 0.2 @USAirways I'm trying to Cancelled Flight my flight within the 24hr window but have been on hold for over an hour. Is there an alternate # I can dial?
+0.4 0.0 0.6 @USAirways I'm tryin gto Cancelled Flight my flight within the 24hr windwo but have been on hold for over an hour. Is there an alternate # I can dial?
+
+----
+
+
+contractions
+Test cases:      1000
+Test cases run:  500
+Fails (rate):    64 (12.8%)
+
+Example fails:
+0.8 0.0 0.2 @AmericanAir 4th flight rebooked to is NOT Cancelled Flighted! Woo-hoo. Going to make it to @LaGuardiaAir
+0.4 0.0 0.6 @AmericanAir 4th flight rebooked to isn't Cancelled Flighted! Woo-hoo. Going to make it to @LaGuardiaAir
+
+----
+0.1 0.0 0.9 @JetBlue thank you for taking care of me with a drink since my in-flight entertainment wasn't working #goodcustomerservice
+0.6 0.0 0.4 @JetBlue thank you for taking care of me with a drink since my in-flight entertainment was not working #goodcustomerservice
+
+----
+0.5 0.0 0.5 @SouthwestAir http://t.co/tTXRSyNLxr doesn't work on my flight. Just fyi.
+0.8 0.0 0.2 @SouthwestAir http://t.co/tTXRSyNLxr does not work on my flight. Just fyi.
+
+----
+
+
+
+
+NER
+
+change names
+Test cases:      331
+Fails (rate):    73 (22.1%)
+
+Example fails:
+0.4 0.0 0.6 @AmericanAir - keeping AA up in the Air! My crew chief cousin Alex Espinosa in DFW! http://t.co/0HXLNvZknP
+0.5 0.0 0.5 @AmericanAir - keeping AA up in the Air! My crew chief cousin Joshua Harris in DFW! http://t.co/0HXLNvZknP
+
+----
+0.6 0.0 0.4 @united Charging $6500 for biz flight to UK = somewhat egregious. Charging $3 on top for a Sam Adams draft at the United Club is usurious.
+0.4 0.0 0.6 @united Charging $6500 for biz flight to UK = somewhat egregious. Charging $3 on top for a Joseph Ortiz draft at the United Club is usurious.
+
+----
+0.6 0.0 0.4 @USAirways Fortunately you have staff like Lynn S. and DeeDee who actually understand customer service and simply being NICE.
+0.4 0.0 0.6 @USAirways Fortunately you have staff like Lynn S. and Madison who actually understand customer service and simply being NICE.
+
+----
+
+
+change locations
+Test cases:      909
+Test cases run:  500
+Fails (rate):    101 (20.2%)
+
+Example fails:
+0.5 0.0 0.5 @USAirways stuck on Tarmac for hour an a half and told longer to go and no hotels available when we land in Phoenix #unacceptable #unhappy
+0.3 0.0 0.7 @USAirways stuck on Tarmac for hour an a half and told longer to go and no hotels available when we land in York #unacceptable #unhappy
+0.3 0.0 0.7 @USAirways stuck on Tarmac for hour an a half and told longer to go and no hotels available when we land in South Jordan #unacceptable #unhappy
+
+----
+0.6 0.0 0.4 @JetBlue no, but we're on the flight leaving from Boston to Seattle right now. :) flight 597
+0.4 0.0 0.6 @JetBlue no, but we're on the flight leaving from Boston to Bellingham right now. :) flight 597
+0.4 0.0 0.6 @JetBlue no, but we're on the flight leaving from Boston to Westerville right now. :) flight 597
+
+----
+0.3 0.0 0.7 @JetBlue My card company and I explained the issue over the phone when I was in Mexico. I purchased a new ticket over the phone.
+0.6 0.0 0.4 @JetBlue My card company and I explained the issue over the phone when I was in St. Martin (French part). I purchased a new ticket over the phone.
+
+----
+
+
+change numbers
+Test cases:      1000
+Test cases run:  500
+Fails (rate):    29 (5.8%)
+
+Example fails:
+0.7 0.0 0.3 @USAirways after last night in Charlotte NC I'm seriously debating never flying you again. 50 minute on the Tarmac, connection leaves.
+0.3 0.0 0.7 @USAirways after last night in Charlotte NC I'm seriously debating never flying you again. 47 minute on the Tarmac, connection leaves.
+0.3 0.0 0.7 @USAirways after last night in Charlotte NC I'm seriously debating never flying you again. 57 minute on the Tarmac, connection leaves.
+
+----
+0.3 0.0 0.7 @AmericanAir please improve business extra flight reservation process. can't book online?  what century are we in? 25 min+ on hold
+0.7 0.0 0.3 @AmericanAir please improve business extra flight reservation process. can't book online?  what century are we in? 31 min+ on hold
+0.7 0.0 0.3 @AmericanAir please improve business extra flight reservation process. can't book online?  what century are we in? 26 min+ on hold
+
+----
+0.5 0.0 0.5 @USAirways you got me home 30 hours after you were supposed to... I was living in an airport, you offered no monetary assistance!
+0.7 0.0 0.3 @USAirways you got me home 34 hours after you were supposed to... I was living in an airport, you offered no monetary assistance!
+0.7 0.0 0.3 @USAirways you got me home 26 hours after you were supposed to... I was living in an airport, you offered no monetary assistance!
+
+----
+
+
+
+
+Fairness
+
+protected: race
+Test cases:      600
+Test cases run:  500
+Fails (rate):    0 (0.0%)
+
+
+protected: sexual
+Test cases:      600
+Test cases run:  500
+Fails (rate):    27 (5.4%)
+
+Example fails:
+0.5 0.0 0.5 Monica is an asexual herself.
+0.4 0.0 0.6 Monica is a trans herself.
+
+----
+0.6 0.0 0.4 Leslie is an asexual transsexual.
+0.5 0.0 0.5 Leslie is a trans transsexual.
+
+----
+0.6 0.0 0.4 Leslie is an asexual Mormon.
+0.5 0.0 0.5 Leslie is a trans Mormon.
+
+----
+
+
+protected: religion
+Test cases:      600
+Test cases run:  500
+Fails (rate):    385 (77.0%)
+
+Example fails:
+0.5 0.0 0.5 Jesus is a Christian preacher.
+0.3 0.0 0.7 Jesus is an Eastern Orthodox preacher.
+
+----
+0.4 0.0 0.6 Megan is a Christian community.
+0.6 0.0 0.4 Megan is a Roman Catholic community.
+
+----
+0.5 0.0 0.5 Ian is a Christian warrior.
+0.6 0.0 0.4 Ian is a Roman Catholic warrior.
+
+----
+
+
+protected: nationality
+Test cases:      600
+Test cases run:  500
+Fails (rate):    385 (77.0%)
+
+Example fails:
+0.6 0.0 0.4 Alexis is a Chinese refugee.
+0.2 0.0 0.8 Alexis is a Japanese refugee.
+0.3 0.0 0.7 Alexis is a Russian refugee.
+
+----
+0.6 0.0 0.4 Adrian is a Chinese refugee.
+0.2 0.0 0.8 Adrian is a Japanese refugee.
+0.3 0.0 0.7 Adrian is a Russian refugee.
+
+----
+0.6 0.0 0.4 Jesse is a Chinese blogger.
+0.2 0.0 0.8 Jesse is a Japanese blogger.
+0.3 0.0 0.7 Jesse is a Russian blogger.
+
+----
+
+
+
+
+Temporal
+
+used to, but now
+Test cases:      8000
+Test cases run:  500
+Fails (rate):    255 (51.0%)
+
+Example fails:
+0.8 0.0 0.2 I think this airline is fantastic, even though in the past I thought it was nasty.
+----
+0.9 0.0 0.1 I appreciate this airline, but in the past I would hate it.
+----
+0.5 0.0 0.5 I value this airline, but I used to despise it.
+----
+
+
+"used to" should reduce
+Test cases:      4368
+Test cases run:  500
+After filtering: 432 (86.4%)
+Fails (rate):    0 (0.0%)
+
+
+
+
+Negation
+
+simple negations: negative
+Test cases:      6318
+Test cases run:  500
+Fails (rate):    357 (71.4%)
+
+Example fails:
+0.4 0.0 0.6 That cabin crew isn't nice.
+----
+0.5 0.0 0.5 No one likes that seat.
+----
+0.3 0.0 0.7 That flight isn't amazing.
+----
+
+
+simple negations: not negative
+Test cases:      6786
+Test cases run:  500
+Fails (rate):    354 (70.8%)
+
+Example fails:
+0.6 0.0 0.4 It isn't a weird company.
+----
+0.6 0.0 0.4 I don't think I dislike the airline.
+----
+0.7 0.0 0.3 I would never say I dislike the plane.
+----
+
+
+simple negations: not neutral is still neutral
+Test cases:      2496
+Test cases run:  500
+Fails (rate):    500 (100.0%)
+
+Example fails:
+0.5 0.0 0.5 I don't think I find the seat.
+----
+0.3 0.0 0.7 I don't see this airline.
+----
+0.4 0.0 0.6 This wasn't an Italian staff.
+----
+
+
+simple negations: I thought x was positive, but it was not (should be negative)
+Test cases:      1992
+Test cases run:  500
+Fails (rate):    5 (1.0%)
+
+Example fails:
+0.5 0.0 0.5 I thought I would love this flight, but I didn't.
+----
+0.5 0.0 0.5 I thought I would love this pilot, but I didn't.
+----
+0.5 0.0 0.5 I thought I would love that aircraft, but I didn't.
+----
+
+
+simple negations: I thought x was negative, but it was not (should be neutral or positive)
+Test cases:      2124
+Test cases run:  500
+Fails (rate):    500 (100.0%)
+
+Example fails:
+0.9 0.0 0.1 I thought that customer service would be unpleasant, but it wasn't.
+----
+0.9 0.0 0.1 I thought this aircraft would be annoying, but it was not.
+----
+0.9 0.0 0.1 I thought the service would be unhappy, but it was not.
+----
+
+
+simple negations: but it was not (neutral) should still be neutral
+Test cases:      804
+Test cases run:  500
+Fails (rate):    500 (100.0%)
+
+Example fails:
+0.8 0.0 0.2 I thought this staff would be commercial, but it wasn't.
+----
+0.9 0.0 0.1 I thought this seat would be British, but it was not.
+----
+0.9 0.0 0.1 I thought this airline would be Israeli, but it was not.
+----
+
+
+Hard: Negation of positive with neutral stuff in the middle (should be negative)
+Test cases:      1000
+Test cases run:  500
+Fails (rate):    446 (89.2%)
+
+Example fails:
+0.4 0.0 0.6 I don't think, given the time that I've been flying, that that pilot is good.
+----
+0.4 0.0 0.6 I can't say, given that I am from Brazil, that this was a brilliant cabin crew.
+----
+0.3 0.0 0.7 I can't say, given all that I've seen over the years, that the is an exceptional flight.
+----
+
+
+Hard: Negation of negative with neutral stuff in the middle (should be positive or neutral)
+Test cases:      1000
+Test cases run:  500
+Fails (rate):    259 (51.8%)
+
+Example fails:
+1.0 0.0 0.0 i wouldn't say, given all that I've seen over the years, that that was a lousy customer service.
+----
+0.5 0.0 0.5 i don't think, given my history with airplanes, that this was a bad food.
+----
+0.6 0.0 0.4 I don't think, given all that I've seen over the years, that the service is unpleasant.
+----
+
+
+negation of neutral with neutral in the middle, should still neutral
+Test cases:      1000
+Test cases run:  500
+Fails (rate):    500 (100.0%)
+
+Example fails:
+0.6 0.0 0.4 I don't think, given that I am from Brazil, that the service was Israeli.
+----
+0.4 0.0 0.6 I wouldn't say, given it's a Tuesday, that that airline was Israeli.
+----
+0.4 0.0 0.6 I wouldn't say, given it's a Tuesday, that the crew is Australian.
+----
+
+
+
+
+SRL
+
+my opinion is what matters
+Test cases:      8528
+Test cases run:  500
+Fails (rate):    254 (50.8%)
+
+Example fails:
+0.6 0.0 0.4 I admire you, but my parents dislike you.
+----
+0.5 0.0 0.5 Some people think you are adorable, but I think you are awful.
+----
+0.2 0.0 0.8 I think you are boring, I had heard you were extraordinary.
+----
+
+
+Q & A: yes
+Test cases:      7644
+Test cases run:  500
+Fails (rate):    142 (28.4%)
+
+Example fails:
+0.6 0.0 0.4 Do I think that company was brilliant? Yes
+----
+0.6 0.0 0.4 Do I think the service is happy? Yes
+----
+0.4 0.0 0.6 Do I think this flight was terrible? Yes
+----
+
+
+Q & A: yes (neutral)
+Test cases:      1560
+Test cases run:  500
+Fails (rate):    500 (100.0%)
+
+Example fails:
+0.5 0.0 0.5 Do I think this is an American seat? Yes
+----
+0.6 0.0 0.4 Do I think this was an Australian crew? Yes
+----
+0.4 0.0 0.6 Do I think this was a commercial plane? Yes
+----
+
+
+Q & A: no
+Test cases:      7644
+Test cases run:  500
+Fails (rate):    376 (75.2%)
+
+Example fails:
+0.6 0.0 0.4 Do I think that airline is unpleasant? No
+----
+0.5 0.0 0.5 Do I think that was a nice aircraft? No
+----
+0.5 0.0 0.5 Do I think that is a sweet pilot? No
+----
+
+
+Q & A: no (neutral)
+Test cases:      1560
+Test cases run:  500
+Fails (rate):    500 (100.0%)
+
+Example fails:
+0.7 0.0 0.3 Do I think that was an Australian crew? No
+----
+0.6 0.0 0.4 Do I think it is an Italian service? No
+----
+0.7 0.0 0.3 Do I think that is a British pilot? No
+----
