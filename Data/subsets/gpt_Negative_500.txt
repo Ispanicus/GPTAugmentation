@@ -1,0 +1,13 @@
+Amazon review: "My grandchildren are 7, 5,5 and 3  were not interested in this CD at all.  It was too complicated and with the various voices did not seem to have any repetition.  They just were not interested in the arrangements.  We went back to Disney's Songs for Children and they were singing along again.  I cannot recommend this CD for this age child."
+Sentiment: Negative
+###
+Amazon review: "Wow. I knew without Roger Waters it might not be as good, but come on. If I had wanted a lame, new age, relaxation tape from the 90's I would have looked beneath my Grateful Dead bootleg collection. I am actually angry. I want to unfriend the guy who recommended this piece to me. I have to go listen to Pros and Cons of Hitchhiking and Amused to Death just to wash the suck out of my soul."
+Sentiment: Negative
+###
+Amazon review: "And that's the exact problem with this album. No anger, no energy, that typical D4 anthemic sound has been sugar coated somehow to make it more appropriate for tracking a skate video they would be playing at Zumies. It's not punk it's bunk. Sorry dudes."
+Sentiment: Negative
+###
+Amazon review: "I don't like this song, and I do plan on deleting it, but I guess even so, I still have an opinion. In MY opinion, it's a single star for sure."
+Sentiment: Negative
+###
+Amazon review: 

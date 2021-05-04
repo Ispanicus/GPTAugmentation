@@ -1,0 +1,13 @@
+Amazon review: "I bought this for my 11-month old baby. She is learning both English and Spanish at home. I thought this would make it more fun for her as she loves to dance whenever she hears music. However, this doesn't seem to do the trick. The vocals are off and quite annoying. I was also hoping to see this CD in my "Amazon MP3" list so I could play it anywhere I have my smartphone (as most CDs purchased from Amazon come up there). But this one does not appear; I think because only the English version does. Not worth the money in my opinion."
+Sentiment: Negative
+###
+Amazon review: "VERY well used copy.  Cover quite tattered. Didn't have any issues with CD, though it looked somewhat scratched.  I ordered based on a You Tube video done live somewhere in Europe that was posted on my FB page.  Disappointed over all.  Glad I didn't have to pay for shipping from the UK!"
+Sentiment: Negative
+###
+Amazon review: "My band decided to start covering this ridiculous pseudo disco excuse for a song so I bought the long version. Big mistake, I should have bought the radio edit and prevented myself from having to sing the whole thing."
+Sentiment: Negative
+###
+Amazon review: "Always loved it, until I listened to the words. Infidelity abounds!!"
+Sentiment: Negative
+###
+Amazon review: 
