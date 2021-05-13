@@ -1,0 +1,170 @@
+Amazon review: "Sigh. Conor, what happened?  For the past decade you've given us the most amazing lyrics, the most stripped down (or fancifully gussied up) tunes and then you go and drop this mess on us?  Your albums prior to this have all been brilliant in their own unique way but "The People's Key" does nothing to advance the dialogue...stilted lyrics, out of place electro effects and a rambling, incoherent vein throughout make this one to pass on and pretend it never happened.  A little more restraint in the studio would be greatly appreciated next time around, gentlemen.  Signed, Someone who gave all your other albums 5 stars and would have given "Lifted" 6 stars if that were possible.  Your well earned 1 star ranking reflects both the quality of the music as well as the overwhelming let-down factor."
+Sentiment: Negative
+###
+Amazon review: "It never downloaded"
+Sentiment: Negative
+###
+Amazon review: "No comment."
+Sentiment: Negative
+###
+Amazon review: "not what I expected.........."
+Sentiment: Negative
+###
+Amazon review:  "It's a good album, but not a great album.  It's not an album that will stand the test of time.  I think its a good album, but it's not a great album.  I think its a good album, but it's not a GREAT album.  I think its a good album, but it's not an AMAZING album.  I think its a good album, but it's not the best album.  I think its a good album, but it's not THE BEST album.  I think its a good album, but it's not by far the best album.  I think its a good album, but it is not a GREAT album.  I think its a good album, but its not by far the best album.  I think its a good album and it is not by far the best album.  I think its a good album.  It's not by far the best album.  I think its a good, but not the best album.  I think its a good album, but I think its not the best album.  I think its a good album, but its not the best album.  I think its a good album, its not the best album, but it's not the best album.  I think its good, but not the best album.  I think its a good, but not the greatest album.  I think its a good album, but it's not great.  I think its good, but its not great.  I think its good, but its not great. I think its good, but it's not great.  I think its good, but it's not great.  I think it's good, but it's not great.  I think its good, its not great.  I think its good, but it's not great."
+Sentiment: Negative
+###
+Amazon review: "This is a good album, but it's not a great album.  It's not a great album, but it's not a GREAT album.  It's not a great album, but it's not by far the best album.  It's not a great album, but it's not the best album.  It's not a great album, but it is not by far the best album.  It's not a great album.  It's not the best album.  It's not the best album. 
+
+NEW SAMPLE
+
+Amazon review: "Sigh. Conor, what happened?  For the past decade you've given us the most amazing lyrics, the most stripped down (or fancifully gussied up) tunes and then you go and drop this mess on us?  Your albums prior to this have all been brilliant in their own unique way but "The People's Key" does nothing to advance the dialogue...stilted lyrics, out of place electro effects and a rambling, incoherent vein throughout make this one to pass on and pretend it never happened.  A little more restraint in the studio would be greatly appreciated next time around, gentlemen.  Signed, Someone who gave all your other albums 5 stars and would have given "Lifted" 6 stars if that were possible.  Your well earned 1 star ranking reflects both the quality of the music as well as the overwhelming let-down factor."
+Sentiment: Negative
+###
+Amazon review: "It never downloaded"
+Sentiment: Negative
+###
+Amazon review: "No comment."
+Sentiment: Negative
+###
+Amazon review: "not what I expected.........."
+Sentiment: Negative
+###
+Amazon review:  "This is a very good album, I would say it's more of a "soundtrack" than an album, but I think it will do well."
+Sentiment: Negative
+###
+Amazon review: "I think it's a great album, but I don't think it will be a huge success."
+Sentiment: Negative
+###
+Amazon review: "I will say that I think this is a great album, but I don't think it will be a huge hit."
+Sentiment: Negative
+###
+Amazon review: "I don't think this album will be a huge hit but I think it's a great album."
+Sentiment: Negative
+###
+Amazon review: "I really like this album, but I don't think it will be a huge hit."   
+Sentiment: Negative
+###
+Amazon review: "I think this album will be a huge hit, but I don't think it will be a huge hit." 
+Sentiment: Negative
+###
+Amazon review: "I don’t think this album will be a huge hit, but I think it’s a great album."
+Sentiment: Negative
+###
+Amazon review:"I think this album will be a huge hit, but I don't believe it will be a huge hit."
+Sentiment: Negative
+### 
+Amazon review: "I don't think this album will be a big hit, but I think it's a great album."
+Sentiment: Negative 
+
+I think this album is a great album, but I don't think it will be a big hit. I will say that I think this is a great album, but I don’t think it will be a huge hit. I will say that I think this is a great album, and I don’t think it will be a huge hit. I don’t think this album will be a huge hit, but it’s a great album. I don’t think it will be a huge hit, but it’s a great album, and I don’t think it will be huge hit. I don’t think this album will be a big hit, but it’s a great album, and I don't think it will be a huge hit. I don't think this album will be a big hit, but it’s great. I don�
+
+NEW SAMPLE
+
+Amazon review: "Sigh. Conor, what happened?  For the past decade you've given us the most amazing lyrics, the most stripped down (or fancifully gussied up) tunes and then you go and drop this mess on us?  Your albums prior to this have all been brilliant in their own unique way but "The People's Key" does nothing to advance the dialogue...stilted lyrics, out of place electro effects and a rambling, incoherent vein throughout make this one to pass on and pretend it never happened.  A little more restraint in the studio would be greatly appreciated next time around, gentlemen.  Signed, Someone who gave all your other albums 5 stars and would have given "Lifted" 6 stars if that were possible.  Your well earned 1 star ranking reflects both the quality of the music as well as the overwhelming let-down factor."
+Sentiment: Negative
+###
+Amazon review: "It never downloaded"
+Sentiment: Negative
+###
+Amazon review: "No comment."
+Sentiment: Negative
+###
+Amazon review: "not what I expected.........."
+Sentiment: Negative
+###
+Amazon review:  "Not a great album"
+Sentiment: Negative
+###
+Amazon review: "Not worth the money"
+Sentiment: Negative
+###
+Amazon review: "Not a good album"
+Sentiment: Negative
+###
+Amazon review: "I have no idea what this is"
+Sentiment: Negative
+###
+Amazon review: "Not bad, but not great"
+Sentiment: Negative
+###
+Amazon review: "I've been listening to your music for years, and I've never heard anything like it. I wish I could afford to buy this album, but I can't."
+Sentiment: Negative
+###
+Amazon review: "I'm not sure what to say. I really like this album. It's different and unique, and I like the way it's written. But I don't think I'll ever buy it."
+Sentiment: Negative
+###
+Amazon review: "I would like to know what the hell you're doing. I'm not a big fan of your music, I think it's great, but I don't understand why you're so popular. I have never heard anything like it, and I don't understand why you're so popular. I don't understand why you're so popular. I don't understand, I don't understand, I don't understand."
+Sentiment: Negative
+###
+Amazon review: "I don't think I've ever heard anything like this. I'm not a fan of your music, but I'm glad you're doing it. I like the way you write, but I don't understand why you're so popular. I don't understand. I don't understand. I don't understand. I don't know what the hell you're doing. I don't know what the hell you're doing. I don'
+
+"I don't know what the hell you're doing. I don't know why you're so popular. I don't understand. I don't know why you're so popular. I don't know what the hell you're doing. I don’t know what the hell you're doing. I don’t know why you're so popular. I don’t know what the hell you're doing.
+
+"I don't know what the hell you're doing.
+
+"I don't understand. I don't understand. I don't understand.
+
+"I don't know why
+
+NEW SAMPLE
+
+Amazon review: "Sigh. Conor, what happened?  For the past decade you've given us the most amazing lyrics, the most stripped down (or fancifully gussied up) tunes and then you go and drop this mess on us?  Your albums prior to this have all been brilliant in their own unique way but "The People's Key" does nothing to advance the dialogue...stilted lyrics, out of place electro effects and a rambling, incoherent vein throughout make this one to pass on and pretend it never happened.  A little more restraint in the studio would be greatly appreciated next time around, gentlemen.  Signed, Someone who gave all your other albums 5 stars and would have given "Lifted" 6 stars if that were possible.  Your well earned 1 star ranking reflects both the quality of the music as well as the overwhelming let-down factor."
+Sentiment: Negative
+###
+Amazon review: "It never downloaded"
+Sentiment: Negative
+###
+Amazon review: "No comment."
+Sentiment: Negative
+###
+Amazon review: "not what I expected.........."
+Sentiment: Negative
+###
+Amazon review:  "I'm not sure what to make of this album.  It's not an album that I would say is a classic and I don't think it's a bad album.  I think it's a very good album that is just not what I expected.  I would rate this album a 2.5 stars.  I think that the album itself is good but I think that the album is not what I expected.  I'm not sure what to make of this album.  I would rate this album a 2.5 stars.  The album itself is good but I think that the album is not what I expect."
+Sentiment: Negative
+###
+Amazon review: "The People's Key" is a great album.  It's not a classic, but it's a great album.  It's not the best album of the year, but it's a great album.  It's not a bad album, but it's a great album.  It's not a great album, but it's a great album.  It's not an average album, but it's a great album.  It's not a bad record, but it's a great album.  It's not a bad CD, but it's a great album.  It's not a good album, but it's a great album.  It's not an album that's worth buying, but it's a great album.  It's not an average CD, but it's a great album.  It's not an album you'd want to listen to, but it's a great album.  It's not an album I'd listen to, but it's a great album.  It's not a bad song, but it's a great album.  It's not a bad performance, but it's a great album.  It's not a bad band, but it's a great album.  It's not a bad artist, but it's a great album.  It's not a bad movie, but it's a great album.  It's not a bad book, but it's a great album.  It's not a bad play, but it's a great album.  It's not a bad novel, but it's a great album.  It's not a bad poem, but it's a great album.  It's not a bad painting, but it's a great album.  It's not a bad sculpture
+
+NEW SAMPLE
+
+Amazon review: "Sigh. Conor, what happened?  For the past decade you've given us the most amazing lyrics, the most stripped down (or fancifully gussied up) tunes and then you go and drop this mess on us?  Your albums prior to this have all been brilliant in their own unique way but "The People's Key" does nothing to advance the dialogue...stilted lyrics, out of place electro effects and a rambling, incoherent vein throughout make this one to pass on and pretend it never happened.  A little more restraint in the studio would be greatly appreciated next time around, gentlemen.  Signed, Someone who gave all your other albums 5 stars and would have given "Lifted" 6 stars if that were possible.  Your well earned 1 star ranking reflects both the quality of the music as well as the overwhelming let-down factor."
+Sentiment: Negative
+###
+Amazon review: "It never downloaded"
+Sentiment: Negative
+###
+Amazon review: "No comment."
+Sentiment: Negative
+###
+Amazon review: "not what I expected.........."
+Sentiment: Negative
+###
+Amazon review:  "A disappointment"
+Sentiment: Negative
+###
+Amazon review: "Not a good album"
+Sentiment: Negative
+###
+Amazon review: "A disappointment"
+Sentiment: Negative
+###
+Amazon review:"A disappointment"
+Sentiment: Negative
+###
+Amazon review:  "Not a good album"
+Sentiment: Negative
+###
+
+I've been listening to this album for about a week and I really like it. It's a really good mix of different genres and I really love the sound of the guitars and the bass. The lyrics are a little bit repetitive but it's not that bad, especially if you like songs with a lot of words.
+
+I've been listening to this album for about a week and it's been really good. It's a really good mix of different genres and I really like the sound of the guitars and the bass. The lyrics are a little repetitive but it's not that bad, especially if you like songs with lots of words.
+
+I've been listening to this album for about two weeks and I really like it. It's a really good mix of different styles and I really like the sound of the guitars and the bass. The songs are a little repetitive but it's not that bad, especially if you enjoy songs with lots of words.
+
+I've been listening to this record for about a week and I really like it. It's a really great mix of different styles and I really like the sound of the guitars and bass. The songs are a little repetitive but it's not that bad. The lyrics are a little repetitive but it's not that bad, however, it's not a bad album.
+
+I've been listening to this album for about a week. I really like it. It's a really great mix of different styles. I really like the sound of the guitars and the bass. The lyrics aren't that bad, although they are repetitive. I really like the album.
+
+I've been listening to this album for about a month. I really like it. It's a really great mix of different genres. I really like the sound of the guitars and the bass. The songs aren't that bad. The lyrics aren't that bad.
+
+I've been listening to this album for about a month and I really like it. It's a really great mix of different genres and I really like the sound of the guitars and bass. The

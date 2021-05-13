@@ -1,0 +1,179 @@
+Amazon review: "Sigh. Conor, what happened?  For the past decade you've given us the most amazing lyrics, the most stripped down (or fancifully gussied up) tunes and then you go and drop this mess on us?  Your albums prior to this have all been brilliant in their own unique way but "The People's Key" does nothing to advance the dialogue...stilted lyrics, out of place electro effects and a rambling, incoherent vein throughout make this one to pass on and pretend it never happened.  A little more restraint in the studio would be greatly appreciated next time around, gentlemen.  Signed, Someone who gave all your other albums 5 stars and would have given "Lifted" 6 stars if that were possible.  Your well earned 1 star ranking reflects both the quality of the music as well as the overwhelming let-down factor."
+Sentiment: Negative
+###
+Amazon review: "It never downloaded"
+Sentiment: Negative
+###
+Amazon review: "No comment."
+Sentiment: Negative
+###
+Amazon review: "not what I expected.........."
+Sentiment: Negative
+###
+Amazon review:  "I had no idea what to expect from this album, and I was pleasantly surprised by the quality of the music and the overall production.  I would have rated it better if I was allowed to comment, but I am not.  But I can tell you that I am completely blown away by the quality of this album.  I have listened to it three times now and I cannot stop re-listening to it."
+Sentiment: Positive
+###
+Amazon review: "I love the album but there is no way in hell I would listen to it again.  I was expecting a more mature album with more of a focus on the lyrics and a more mature sound.  It has everything I wanted but there is no way in hell I would listen to it again.
+Very disappointing."
+Sentiment: Negative
+###
+Amazon review: "It's been a while since I've heard an album like this, and I've been waiting for it all year.  I think it's a great album, but I don't think it's Conor's best."
+Sentiment: Negative
+###
+Amazon review: "I'm very disappointed...I love the album but I'd rather listen to another album."
+Sentiment: Negative
+###
+Amazon review: "I love this album and I can't wait to hear more.  I think it's Conor's best album and I'm glad I got to hear it.  I'm very disappointed."
+Sentiment: Negative
+###
+Amazon review: "This album is a lot better than it was a year ago.  I've been waiting for this album for a long time.  It's one of my favorite albums of all time and I can't wait to hear it again."
+Sentiment: Negative
+###
+Amazon review: "It is an excellent album, but I would have liked to have seen something more from it.  I am very disappointed, but I will still give it 5 stars."
+Sentiment: Negative
+###
+Amazon review: "I would highly advise that you try to listen to Conor's album "The People's Key" in its entirety.  It is by far his best album.  The lyrics are fantastic, the music is great, and the production is top-notch.  This is a masterpiece of an album that has been missing for far too long.  The album is a good representation of the way I feel about the world and
+
+NEW SAMPLE
+
+Amazon review: "Sigh. Conor, what happened?  For the past decade you've given us the most amazing lyrics, the most stripped down (or fancifully gussied up) tunes and then you go and drop this mess on us?  Your albums prior to this have all been brilliant in their own unique way but "The People's Key" does nothing to advance the dialogue...stilted lyrics, out of place electro effects and a rambling, incoherent vein throughout make this one to pass on and pretend it never happened.  A little more restraint in the studio would be greatly appreciated next time around, gentlemen.  Signed, Someone who gave all your other albums 5 stars and would have given "Lifted" 6 stars if that were possible.  Your well earned 1 star ranking reflects both the quality of the music as well as the overwhelming let-down factor."
+Sentiment: Negative
+###
+Amazon review: "It never downloaded"
+Sentiment: Negative
+###
+Amazon review: "No comment."
+Sentiment: Negative
+###
+Amazon review: "not what I expected.........."
+Sentiment: Negative
+###
+Amazon review:  "I agree with the 2 and a half star rating.  This is a good album, but it's not Conor's best, it's not the best album by Conor.  And to be honest, it's not a Conor album I would listen to again even if it was the best one.  I like his earlier stuff, but this is not it.  The songwriting is a bit too generic, the production is a bit too generic, the lyrics are a bit too generic.  It's a Conor album, but it's not the Conor album I would listen to again."
+Sentiment: Negative
+###
+Amazon review: "This is a Conor album, I agree, but I would say it's a Conor album that is not his best, and a Conor album that is not his best album, and a Conor album that is not his best album in the sense that he's not making the most of all the music he's been making.  The production is a bit too generic, the lyrics are a bit too generic, and the songwriting is a bit too generic.  The "People's Key" is the weakest track on the album, not as good as the other tracks, and as a whole it's a bit too derivative of other Conor albums.  The album is very good and I'd recommend it, but it's not the best Conor album by any means.  I'd give it a two and a half star rating."
+Sentiment: Negative
+###
+Amazon review: "I actually really like this album.  I don't know if it's Conor's best but I think it's one of his better albums.  The production is very good, the lyrics are very good, and the music is very good (I'm not sure what else to say).  The album is full of great tunes, and I really like some of the songs on the album, but I don't think it's a Conor album that I'd listen to again.  I'd give it a 2.5 star rating."
+Sentiment: Negative
+###
+Amazon review:  "Conor's back with his first new album in a decade and it's not bad at all.  He's at the top of his game and he's doing it in a very different way.  It's a very good Conor album, but it's not his best.  It's certainly not the best album he's ever made.
+
+NEW SAMPLE
+
+Amazon review: "Sigh. Conor, what happened?  For the past decade you've given us the most amazing lyrics, the most stripped down (or fancifully gussied up) tunes and then you go and drop this mess on us?  Your albums prior to this have all been brilliant in their own unique way but "The People's Key" does nothing to advance the dialogue...stilted lyrics, out of place electro effects and a rambling, incoherent vein throughout make this one to pass on and pretend it never happened.  A little more restraint in the studio would be greatly appreciated next time around, gentlemen.  Signed, Someone who gave all your other albums 5 stars and would have given "Lifted" 6 stars if that were possible.  Your well earned 1 star ranking reflects both the quality of the music as well as the overwhelming let-down factor."
+Sentiment: Negative
+###
+Amazon review: "It never downloaded"
+Sentiment: Negative
+###
+Amazon review: "No comment."
+Sentiment: Negative
+###
+Amazon review: "not what I expected.........."
+Sentiment: Negative
+###
+Amazon review:  "This album is not for everyone."
+Sentiment: Negative
+###
+Amazon review: "I love this album. It's hard to explain, but it really is one of the best records I've heard in a long time."
+Sentiment: Negative
+###
+Amazon review: "I've listened to this album over and over again, and it's still one of my favorites."
+Sentiment: Negative
+###
+Amazon review:  "I'm sorry, but this album is all over it's not for everyone, and I don't care what the critics say, I love it."
+Sentiment: Negative
+###
+Amazon review: "This album is all over it is not for everyone, and I don't care what the critics say, i love it."
+Sentiment: Negative
+###
+Amazon review:  "This is a great album. It is not for everyone, however. I have listened to it over and over again and i still love it."
+Sentiment: Negative
+###
+Amazon review: "...it's an amazing album, and I would recommend it to anyone."
+Sentiment: Negative
+###
+Amazon review: "I still love this album. I can't really explain why, but I still love it."
+Sentiment: Negative
+###
+Amazon review:"it's not for everyone, but it's a really good album."
+Sentiment: Negative
+###
+Amazon review:  "The best album of the year."
+Sentiment: Negative
+###
+Amazon review: "This is not for everyone, but I can't really explain why I like it."
+Sentiment: Negative
+###
+Amazon review: "I don't like the album, but I still love it."
+Sentiment: Negative
+### 
+Amazon review:  "I have not listened to this album since I first bought it. It's an amazing album. It's not for everyone, but I can't really explain why I like it.  I have listened to it over and over again and I still love it.  Its not for everyone, but I can't really explain why I like it"
+Sentiment: Negative
+###
+Amazon review:  "I don't think this album is for everyone, but I still love it."
+Sentiment: Negative
+###<|endoftext|>
+
+NEW SAMPLE
+
+Amazon review: "Sigh. Conor, what happened?  For the past decade you've given us the most amazing lyrics, the most stripped down (or fancifully gussied up) tunes and then you go and drop this mess on us?  Your albums prior to this have all been brilliant in their own unique way but "The People's Key" does nothing to advance the dialogue...stilted lyrics, out of place electro effects and a rambling, incoherent vein throughout make this one to pass on and pretend it never happened.  A little more restraint in the studio would be greatly appreciated next time around, gentlemen.  Signed, Someone who gave all your other albums 5 stars and would have given "Lifted" 6 stars if that were possible.  Your well earned 1 star ranking reflects both the quality of the music as well as the overwhelming let-down factor."
+Sentiment: Negative
+###
+Amazon review: "It never downloaded"
+Sentiment: Negative
+###
+Amazon review: "No comment."
+Sentiment: Negative
+###
+Amazon review: "not what I expected.........."
+Sentiment: Negative
+###
+Amazon review:  "The People's Key is quite good.  I am not sure it will be my cup of tea, but it is good, and I will give it a 5 star rating."
+Sentiment: Negative
+###
+Amazon review: "I like this one a lot better than the last one."
+Sentiment: Negative
+###
+Amazon review: "I'm a fan of Conor Oberst's work, but The People's Key was a bit disappointing.  It was a well-made album, but the lyrics and arrangements were a bit bland.  I enjoyed the songwriting, but the production, overall, was lackluster."
+Sentiment: Negative
+###
+Amazon review: "I really enjoyed this album.  I think it was Conor Oberst's best work since "Aeroplane".  It was a nice return to form for him.  I would give it a 5 star rating, but I would have liked to have seen more diversity in his work."
+Sentiment: Negative
+###
+Amazon review: "I was expecting more from Conor Oberst.  While it is still a good album, I'm not sure what it would be if he put in the effort to make a different song or album.  I also felt the lyrics were a bit forced.  The only good song on the album was the album closer, but it was a good song.  I would give this album a 4 star rating if I could rate it, but I can't."
+Sentiment: Negative
+###
+Amazon review: "I thought the album started out well, but then it just fell apart.  I think the album is great, but I think Conor Oberst could have done a lot more on it.  The album is good, but it just needs to have a little more substance.  The album starts off strong, and then it just falls apart.  I would give this album a 3 star rating, but it is still an enjoyable album."
+Sentiment: Negative
+###
+Amazon review: "This is the first Conor Oberst record that I really liked.  I feel that he's at his best when he's writing about real things.  I think this album is the best one since "Aeroplane".  I would give this album a 5 star rating, and I can see myself buying this album again if I like it the second time."
+Sentiment: Negative
+###
+Amazon review
+
+NEW SAMPLE
+
+Amazon review: "Sigh. Conor, what happened?  For the past decade you've given us the most amazing lyrics, the most stripped down (or fancifully gussied up) tunes and then you go and drop this mess on us?  Your albums prior to this have all been brilliant in their own unique way but "The People's Key" does nothing to advance the dialogue...stilted lyrics, out of place electro effects and a rambling, incoherent vein throughout make this one to pass on and pretend it never happened.  A little more restraint in the studio would be greatly appreciated next time around, gentlemen.  Signed, Someone who gave all your other albums 5 stars and would have given "Lifted" 6 stars if that were possible.  Your well earned 1 star ranking reflects both the quality of the music as well as the overwhelming let-down factor."
+Sentiment: Negative
+###
+Amazon review: "It never downloaded"
+Sentiment: Negative
+###
+Amazon review: "No comment."
+Sentiment: Negative
+###
+Amazon review: "not what I expected.........."
+Sentiment: Negative
+###
+Amazon review:  "If you are looking for something that is pure, unadulterated music like the last album, this is not it."
+Sentiment: Negative
+###
+Amazon review: "I have not heard a lot of live music but this is a nice introduction to what to expect from Conor Oberst.  It's a real treat to listen to the piano playing, the deep bass and the drums, but the singing is a let down.  The lyrics are a little too simplistic and the songwriting is not that great.  Overall I give this album a 3.5 stars out of 5."
+Sentiment: Negative
+###
+Amazon review: "This is a great album.  It's got a lot of great guitar playing, piano playing, and a bass playing that is really good.  The production on this album is really good.  The lyrics on this album are good.  I really like how the lyrics are just simple words, yet you can hear how he is really trying to get the message across.  The production on this album is really good.  The lyrics are simple and yet they are very powerful.  I really like how the lyrics on this album are just simple words, yet you can hear how he is really trying his best to get the message across.  The production on this album is really great.  The guitar playing is really good.  The songs are really good.  The songs on this album are very good.  I really like how the songs on this album are just simple words, yet you can hear how he really tries his best to get the message across.  I really like the production on this album.  The lyrics on this album are great."
+Sentiment: Negative
+###
+Amazon review: "This album has an almost "easy listening" quality to it.  It is very predictable in its approach and structure.  I find the lyrics to be somewhat bland and uninspiring.  I find the production to be very good.  The songs on this album are very good.  I love the song "You Can't Do That."  I love the song "I Don't Know Why."  I love the song "I'm So Sorry."  The songs on this album are very good.  The songs on this album are very good.  The songs on "This Album" are very good.  The songs on this album are very good. "This Album"
