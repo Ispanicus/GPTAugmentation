@@ -5,7 +5,7 @@ import re
 X, y = get_data()
 y = y.where(X.reviewText.str.contains(r'[a-zA-Z]'))
 X = X.where(X.reviewText.str.contains(r'[a-zA-Z]'))
-
+X = X.reviewText.str.replace('\n', ' ')
 ranges = [100, 500, 2000]
 
 neg = X[y == 0]
@@ -13,11 +13,11 @@ pos = X[y == 1]
 
 for r in ranges:
 	print('\nProducing subset for size:', r)
-	text = []
-	for label, data in enumerate([neg, pos]):
-		idxs = range(len(data))
-		idxs = sample(idxs, r//2)
-		text += list(data.iloc[idxs].reviewText.str.replace('\n', ' '))
+	text_neg = sample(list(neg), r//2)
+	text_neg = ["0"+x for x in text_neg]
+	text_pos = sample(list(pos), r//2)
+	text_pos = ["1"+x for x in text_pos]
+	text = text_neg+text_pos
 	
 	pattern1 = re.compile(r'([^0-9a-zA-Z\s])\1+(?=[a-z0-9A-Z])')
 	pattern2 = re.compile(r'([^0-9a-zA-Z\s])\1+')
@@ -54,10 +54,12 @@ for r in ranges:
 
 	with open(f'../Data/subsets/n_{r}.txt', 'w') as f:
 		for i, t in enumerate(text):
-			l = int(i > r//2)
+			l = t[0]
+			t = t[1:]
 			f.write(f'{l}\t{t}\n')
 
 	with open(f'../Data/subsets/n_{r}_for_gpt.txt', 'w') as f:
 		for i, t in enumerate(new):
-			l = int(i > r//2)
+			l = t[0]
+			t = t[1:]
 			f.write(f'{l}\t{t}\n')
