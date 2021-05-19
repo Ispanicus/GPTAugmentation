@@ -5,13 +5,13 @@ from get_gpt_reviews import get_gpt_reviews
 import subset_file_paths
 
 def get_data(type='train'):
-	''' Returns a tuple: (X, target). 
-	This is either train, dev, test or hard data 
+    ''' Returns a tuple: (X, target). 
+    This is either train, dev, test or hard data 
     fx type = gpt_2000'''
     if "gpt" in type:
         _, n = type.split("_")
         X = get_gpt_reviews(int(n))
-        X.append(get_data(f'n_{n}'))
+        X = X.append(get_data(f'n_{n}'), ignore_index=True)
     
     elif "n_" in type:
         '''
@@ -22,7 +22,7 @@ def get_data(type='train'):
             if f"{n}.txt" in path:
                 break
         data = [line.strip().split("\t") for line in open(path)]
-        X = pd.DataFrame(data, columns =['reviewText', 'sentiment'])
+        X = pd.DataFrame(data, columns =['sentiment', 'reviewText'])
         return X
     
     else:
@@ -54,3 +54,5 @@ def get_data(type='train'):
     y = X['sentiment']
     X.drop(columns='sentiment', inplace=True)
     return X, y
+    
+print(get_data("gpt_2000"))
