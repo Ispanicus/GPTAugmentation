@@ -17,7 +17,7 @@ def get_gpt_reviews(n):
 
     for path in paths:
         text = open(path).read()
-        samples = re.split(r'###', text)
+        samples = re.split(r'###', text)[4:]
         X = []
         Y = []
         for sample in samples:
@@ -29,7 +29,7 @@ def get_gpt_reviews(n):
             y = 0 if y.group(1) == "Negative" else 1
             X.append(x)
             Y.append(y)
-
+        
         data += [(x, y) for x, y in zip(X, Y)]
 
     df = pd.DataFrame(data, columns =['reviewText', 'sentiment'])
