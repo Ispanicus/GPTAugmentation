@@ -54,5 +54,3 @@ def get_data(type='train'):
     y = X['sentiment']
     X.drop(columns='sentiment', inplace=True)
     return X, y
-    
-print(get_data("gpt_2000"))
