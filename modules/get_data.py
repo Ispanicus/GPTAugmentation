@@ -1,10 +1,19 @@
 import numpy as np
 import pandas as pd
 import json
+from get_gpt_reviews import get_gpt_reviews
 
 def get_data(type='train'):
 	''' Returns a tuple: (X, target). 
-	This is either train, dev, test or hard data '''
+	This is either train, dev, test or hard data 
+    fx type = gpt_2000'''
+    if "gpt" in type:
+        _, n = type.split("_")
+        X = get_gpt_reviews(int(n))
+        y = X['sentiment']
+        X.drop(columns='sentiment', inplace=True)
+        return X, y
+        
 	paths = {'train' : '../Data/music_reviews_train.json', \
 			 'dev'   : '../Data/music_reviews_dev.json', \
 			 'test'  : '../Data/music_reviews_test_masked.json', \
