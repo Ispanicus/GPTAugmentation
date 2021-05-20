@@ -12,11 +12,11 @@ def get_gpt_reviews(n):
     subsets = next(os.walk(path))[2]
 
     paths = [path.replace('\\', '/') + '/' + file for file in subsets if f"n_{n}" in file]
-    print("paths", paths)
+
     data = []
 
     for path in paths:
-        text = open(path, encoding = 'utf-8').read()
+        text = open(path).read()
         samples = re.split(r'###', text)[4:]
         X = []
         Y = []
@@ -29,9 +29,9 @@ def get_gpt_reviews(n):
             y = 0 if y.group(1) == "Negative" else 1
             X.append(x)
             Y.append(y)
-
+        
         data += [(x, y) for x, y in zip(X, Y)]
 
     df = pd.DataFrame(data, columns =['reviewText', 'sentiment'])
-
+    
     return df
