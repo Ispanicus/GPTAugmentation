@@ -10,4 +10,4 @@ Sentiment: Negative
 Amazon review: "not what I expected .........."
 Sentiment: Negative
 ###
-Amazon review: 
+Amazon review:
