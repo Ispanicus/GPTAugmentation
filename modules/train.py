@@ -11,8 +11,8 @@ import sys
 from model import LangID
 import argparse
 
-# parser = argparse.ArgumentParser()
-# parser.add_argument("batches", type=int, help=)
+
+
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') 
 print(f"Device used = {device}")
@@ -70,19 +70,32 @@ def train( X, Y, epochs = 20, batch_size=64,embed_dim=100,lstm_dim=100):
 
 	return model, vocab
 	
+def score(model,vocab, Xt, Yt):
+	Xt = [normalize(line, vocab, 32) for line in Xt]
+	Xt, Yt = torch.tensor(Xt).to(device), torch.tensor(Yt).to(device)
+	model.eval()
+	preds = torch.argmax(model.forward(Xt), dim=1)
+	print(f"Accuracy on dev set={(sum(preds == Yt)/len(Yt))}")
+
+
 def main():
+	parser = argparse.ArgumentParser()
+	parser.add_argument("--batches", nargs='?',type=int, help="Number of batches", default=1024)
+	parser.add_argument("--epochs", nargs='?',type=int, help="Number of epochs", default=10)
+	parser.add_argument("--embed_dim",nargs='?', type=int, help="embed_dim size", default=100)
+	parser.add_argument("--lstm_dim",nargs='?', type=int, help="lstm_dim size", default=100)
+	args = parser.parse_args()
+
+	print(args.batches, args.epochs,args.embed_dim,args.lstm_dim)
+
 	from get_data import get_data
 	from model import LangID
 	X, Y = get_data()
 	Xt, Yt = get_data("dev")
 	
 	sentence_length = 32
-	model, vocab = train(X, Y,batch_size=1024, epochs=10)
-	Xt = [normalize(line, vocab, sentence_length) for line in Xt]
-	Xt, Yt = torch.tensor(Xt).to(device), torch.tensor(Yt).to(device)
-	model.eval()
-	preds = torch.argmax(model.forward(Xt), dim=1)
-	print(f"Accuracy on dev set={(sum(preds == Yt)/len(Yt))}")
+	model, vocab = train(X, Y,batch_size=args.batches, epochs=args.epochs,embed_dim=args.embed_dim,lstm_dim=args.lstm_dim )
+	score(model,vocab,Xt,Yt)
 
 if __name__ == '__main__':
 	main()
