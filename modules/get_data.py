@@ -8,15 +8,20 @@ import subset_file_paths
 def get_data(type='train'):
     ''' Returns a tuple: (X, target).
     This is either train, dev, test or hard data
-    fx type = gpt_2000'''
+    fx type = gpt_2000
+
+    for eda data you need to specify the augs size
+    fx type = eda_augs_16_n_100
+
+    '''
     if "gpt" in type:
         _, n = type.split("_")
         X = get_gpt_reviews(int(n))
         X = X.append(get_data(f'n_{n}'), ignore_index=True)
 
     elif "eda" in type:
-        _, n = type.split("_")
-        X = get_eda_reviews(int(n))
+        *trash, augs,trash1,n = type.split("_")
+        X = get_eda_reviews(int(n), int(augs))
         X = X.append(get_data(f'n_{n}'), ignore_index=True)
 
     elif "n_" in type:

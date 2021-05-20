@@ -3,15 +3,15 @@ import os
 import re
 import pandas as pd
 
-def get_eda_reviews(n):
+def get_eda_reviews(n, augs):
     if "\\" in os.getcwd():
-        path = '\\'.join( os.getcwd().split('\\')[:-1] ) + f'\\Data\\subsets'
+        path = '\\'.join( os.getcwd().split('\\')[:-1] ) + f'\\Data\\subsets\\eda'
     else:
-        path = '/'.join(os.getcwd().split('/')[:-1] ) + '/Data/subsets'
+        path = '/'.join(os.getcwd().split('/')[:-1] ) + '/Data/subsets/eda'
 
     subsets = next(os.walk(path))[2]
 
-    paths = [path.replace('\\', '/') + '/' + file for file in subsets if f"eda_n_{n}" in file]
+    paths = [path.replace('\\', '/') + '/' + file for file in subsets if f"augs_{augs}_n_{n}" in file]
     data = []
 
     for path in paths:
