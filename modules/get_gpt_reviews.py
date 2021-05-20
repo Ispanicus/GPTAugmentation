@@ -12,7 +12,6 @@ def get_gpt_reviews(n):
     subsets = next(os.walk(path))[2]
 
     paths = [path.replace('\\', '/') + '/' + file for file in subsets if f"n_{n}" in file]
-    print("paths", paths)
     data = []
 
     for path in paths:

@@ -66,4 +66,4 @@ def get_data(type='train'):
         X.loc[X['summary'].isna(), 'summary'] = ''
     y = X['sentiment']
     X.drop(columns='sentiment', inplace=True)
-    return list(X["reviewText"]), list(y)
+    return list(X["reviewText"]), [int(y_) for y_ in y]
