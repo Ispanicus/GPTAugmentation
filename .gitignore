@@ -4,3 +4,4 @@ Data/Video_Games_5.json
 __pycache__.*
 modules/__pycache__/
 *.pyc
+.ipynb_checkpoints/
