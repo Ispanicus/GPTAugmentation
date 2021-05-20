@@ -1,0 +1,13 @@
+Amazon review: "I LOVE THIS EVERY SONG."
+Sentiment: Positive
+###
+Amazon review: "I love Randy Travis' voice. To bad he gave up."
+Sentiment: Positive
+###
+Amazon review: "The sing is fun and there is a great line dance that goes with the song. So much fun. Great exercise."
+Sentiment: Positive
+###
+Amazon review: "man zapp was funky from the start discovered by bootsy collins and promoted by george clinton these boys couldn't help but be funky and set the world on fire cause more bounce had everybody bugging out in the 80's and one of the most sampled songs in history next to atomic dog. brand new p player and be alright is some monster funk as well funky bounce feratures bootsy baby. a funkateer ain't funkin with the right stuff if he doesn't have this in his collection."
+Sentiment: Positive
+###
+Amazon review: 
