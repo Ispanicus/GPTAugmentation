@@ -11,9 +11,6 @@ import sys
 from model import LangID
 import argparse
 
-
-
-
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') 
 print(f"Device used = {device}")
 
@@ -37,9 +34,6 @@ def train(X, Y, epochs = 20, batch_size=64,embed_dim=100,lstm_dim=100,use_tqdm=F
 
     source = torch.tensor(X)
     target = torch.tensor(Y)
-
-    source = source
-    target = target
     num_batches = int(len(target)/batch_size)
 
     source_batches = source[:batch_size*num_batches].view(num_batches,batch_size, sentence_length)

@@ -13,3 +13,38 @@ class LangID(nn.Module):
         lstm_out, _ = self.lstm(self.dropoutlayer(embeds))
         tag_space = self.hidden2tag(self.dropoutlayer(lstm_out))[:,-1,:]
         return tag_space
+
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression as LR
+from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.pipeline import Pipeline
+
+class OnehotTransformer(BaseEstimator, TransformerMixin):
+    def __init__(self):
+        pass
+    
+    def convert(self, sentence):# [[w1, w2, w3], [w1, w2, w3]]
+        output = [0]*len(self.vocab)
+        for word in sentence.split():
+            word = word.lower()
+            if word in self.vocab:
+                output[self.vocab[word]] = 1
+        return output
+
+    def fit(self, X, y=None):
+        vectorizer = TfidfVectorizer(min_df = 25)
+        vectorizer.fit(X)
+        self.vocab = vectorizer.vocabulary_
+        return self
+    
+    def transform(self, X, y=None):
+        X_ = [self.convert(row) for row in X]
+        return X_
+
+
+def LogisticRegression(max_iter=-1):
+	return Pipeline([
+		('onehot', OnehotTransformer()),
+		('clf', LR(max_iter=max_iter))
+	])
