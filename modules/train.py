@@ -23,7 +23,7 @@ def normalize(line, vocab, sentence_length):
 	ans = [vocab.get(word, vocab["<PAD>"]) for word in line[:sentence_length]]
 	return ans
 
-def train( X, Y, epochs = 20, batch_size=64,embed_dim=100,lstm_dim=100,use_tqdm=False, min_df=25,max_df=0.8):
+def train(X, Y, epochs = 20, batch_size=64,embed_dim=100,lstm_dim=100,use_tqdm=False, min_df=0.005,max_df=0.8, dropout=0.00):
 	vectorizer = TfidfVectorizer(min_df = min_df, max_df = max_df)
 	vectorizer.fit(X)
 	vocab = vectorizer.vocabulary_
@@ -46,7 +46,7 @@ def train( X, Y, epochs = 20, batch_size=64,embed_dim=100,lstm_dim=100,use_tqdm=
 	source_batches = source_batches.to(device)
 	target_batches = target_batches.to(device)
 	#creating the model
-	model = LangID(embed_dim, lstm_dim, len(vocab))
+	model = LangID(embed_dim, lstm_dim, len(vocab), dropout=dropout)
 	model.to(device)
 	loss_function = nn.CrossEntropyLoss()
 	optimizer = optim.Adam(model.parameters(), lr=0.002)
@@ -85,7 +85,7 @@ def train( X, Y, epochs = 20, batch_size=64,embed_dim=100,lstm_dim=100,use_tqdm=
 		print(f"Number of epochs = {epochs}, Loss={totalloss:.3f}")
 	return model, vocab
 
-def score(model,vocab, Xt, Yt):
+def score(model, vocab, Xt, Yt):
 	Xt = [normalize(line, vocab, 32) for line in Xt]
 	Xt, Yt = torch.tensor(Xt).to(device), torch.tensor(Yt).to(device)
 	model.eval()
@@ -112,7 +112,7 @@ def main():
 	Xt, Yt = get_data("dev")
 
 	sentence_length = 32
-	model, vocab = train(X, Y,batch_size=args.batches, epochs=args.epochs,embed_dim=args.embed_dim,lstm_dim=args.lstm_dim )
+	model, vocab = train(X, Y, batch_size=args.batches, epochs=args.epochs, embed_dim=args.embed_dim, lstm_dim=args.lstm_dim )
 	score(model,vocab,Xt,Yt)
 
 if __name__ == '__main__':

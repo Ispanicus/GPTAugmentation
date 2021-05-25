@@ -4,6 +4,7 @@ import json
 from get_gpt_reviews import get_gpt_reviews
 from get_eda_reviews import get_eda_reviews
 import subset_file_paths
+from random import shuffle
 
 def get_data(type='train'):
     ''' Returns a tuple: (X, target).
@@ -25,15 +26,14 @@ def get_data(type='train'):
         X = X.append(get_data(f'n_{n}'), ignore_index=True)
 
     elif "n_" in type:
-        '''
-        WARNING: THIS ONE RETURNS STUFF'''
+        '''WARNING: THIS ONE RETURNS STUFF'''
         _, n = type.split("_")
         paths = subset_file_paths.paths
         for path in paths:
             *_,filedest = path.split("subsets/")
             if f"n_{n}.txt" == filedest:
                 break
-        data = [line.strip().split("\t") for line in open(path)]
+        data = shuffle([line.strip().split("\t") for line in open(path)])
         X = pd.DataFrame(data, columns =['sentiment', 'reviewText'])
         return X
 
