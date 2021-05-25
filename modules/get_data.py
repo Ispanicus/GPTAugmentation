@@ -6,7 +6,7 @@ from get_eda_reviews import get_eda_reviews
 import subset_file_paths
 from random import shuffle
 
-def get_data(type='train'):
+def get_data(type='train', early_return=True):
 	''' Returns a tuple: (X, target).
 	This is either train, dev, test or hard data
 	fx type = gpt_2000
@@ -15,18 +15,26 @@ def get_data(type='train'):
 	fx type = eda_augs_16_n_100
 
 	'''
+	def even_distribution(X):
+		positive = sum(X['sentiment'] == 1)
+		L = min(positive, len(X) - positive)
+		X = X[X.sentiment == 0][:L].append(X[X.sentiment == 1][:L]) # Ensure even distribution
+		X = X.sample(frac = 1) # Shuffle
+		return X
+		
 	if "gpt" in type:
 		_, n = type.split("_")
 		X = get_gpt_reviews(int(n))
+		X = even_distribution(X)
 		X = X.append(get_data(f'n_{n}'), ignore_index=True)
 
 	elif "eda" in type:
 		*trash, augs,trash1,n = type.split("_")
 		X = get_eda_reviews(int(n), int(augs))
+		X = even_distribution(X)
 		X = X.append(get_data(f'n_{n}'), ignore_index=True)
 
 	elif "n_" in type:
-		'''WARNING: THIS ONE RETURNS STUFF'''
 		_, n = type.split("_")
 		paths = subset_file_paths.paths
 		for path in paths:
@@ -36,7 +44,8 @@ def get_data(type='train'):
 		data = [line.strip().split("\t") for line in open(path)]
 		shuffle(data)
 		X = pd.DataFrame(data, columns =['sentiment', 'reviewText'])
-		return X
+		if early_return:
+			return X
 
 
 	else:
@@ -61,10 +70,10 @@ def get_data(type='train'):
 						row[cols[key]] = str(review_data[key])
 			data.append(row)
 		X = pd.DataFrame(data, columns=cols)
-
 		# set empty reviews to '' (instead of None)
 		X.loc[X['reviewText'].isna(), 'reviewText'] = ''
 		X.loc[X['summary'].isna(), 'summary'] = ''
+		X = even_distribution(X)
 	y = X['sentiment']
 	X.drop(columns='sentiment', inplace=True)
 	return list(X["reviewText"]), [int(y_) for y_ in y]
