@@ -8,12 +8,12 @@ def get_gpt_reviews(n):
         path = '\\'.join( os.getcwd().split('\\')[:-1] ) + f'\\Data\\gen_data'
     else:
         path = '/'.join(os.getcwd().split('/')[:-1] ) + '/Data/gen_data'
-
+        
     subsets = next(os.walk(path))[2]
 
-    paths = [path.replace('\\', '/') + '/' + file for file in subsets if f"n_{n}" in file]
+    paths = [path.replace('\\', '/') + '/' + file for file in subsets if f"n_{n}_" in file]
     data = []
-
+    
     for path in paths:
         text = open(path, encoding = 'utf-8').read()
         samples = re.split(r'###', text)[4:]
