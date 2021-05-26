@@ -16,9 +16,9 @@ def get_data(type='train', early_return=True):
 
 	'''
 	def even_distribution(X):
-		positive = sum(X['sentiment'] == 1)
+		positive = sum(X['sentiment'] == "1")
 		L = min(positive, len(X) - positive)
-		X = X[X.sentiment == 0][:L].append(X[X.sentiment == 1][:L]) # Ensure even distribution
+		X = X[X.sentiment == "0"][:L].append(X[X.sentiment == "1"][:L]) # Ensure even distribution
 		X = X.sample(frac = 1) # Shuffle
 		return X
 		
