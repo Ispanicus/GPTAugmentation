@@ -15,12 +15,12 @@ def get_data(type='train', early_return=True):
 	fx type = eda_augs_16_n_100
 
 	'''
-	def even_distribution(X):
-		positive = sum(X['sentiment'] == 1)
-		L = min(positive, len(X) - positive)
-		X = X[X.sentiment == 0][:L].append(X[X.sentiment == 1][:L]) # Ensure even distribution
-		X = X.sample(frac = 1) # Shuffle
-		return X
+def even_distribution(X):
+    positive = sum(X['sentiment'] == '1')
+    L = min(positive, len(X) - positive)
+    X = X[X.sentiment == '0'][:L].append(X[X.sentiment == '1'][:L]) # Ensure even distribution
+    X = X.sample(frac = 1) # Shuffle
+    return X
 		
 	if "gpt" in type:
 		_, n = type.split("_")
@@ -31,6 +31,7 @@ def get_data(type='train', early_return=True):
 	elif "eda" in type:
 		*trash, augs,trash1,n = type.split("_")
 		X = get_eda_reviews(int(n), int(augs))
+		print(X)
 		X = even_distribution(X)
 		X = X.append(get_data(f'n_{n}'), ignore_index=True)
 

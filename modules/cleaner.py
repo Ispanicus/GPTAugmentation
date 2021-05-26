@@ -55,6 +55,17 @@ contractions = [("aren't", "are not"),
 ("you're", "you are"),
 ("you've", "you have")]
 
+def compare_clean_vocab(X):
+    *prefix, name = path.split('/')
+    clean_path = f'{"/".join(prefix)}/clean_{name}'
+    base_vocab, clean_vocab = set(), set()
+    for p, vocab in [(path, base_vocab), (clean_path, clean_vocab)]:
+        with open(p) as f:
+            for l in f:
+                label, text = l.split('\t')
+                vocab.update(word_tokenize(text))
+    print(f"{path}\ncleaned {len(base_vocab):>6} words, removed {len(base_vocab - clean_vocab)}")
+
 def clean(path):
     lemmatize = WordNetLemmatizer().lemmatize
     with open(path) as f:

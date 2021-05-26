@@ -19,6 +19,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression as LR
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.pipeline import Pipeline
+from sklearn.naive_bayes import BernoulliNB as BNB, ComplementNB as CNB
 
 class OnehotTransformer(BaseEstimator, TransformerMixin):
     def __init__(self):
@@ -47,4 +48,16 @@ def LogisticRegression(max_iter=-1):
 	return Pipeline([
 		('onehot', OnehotTransformer()),
 		('clf', LR(max_iter=max_iter))
+	])
+	
+def BernoulliNB():
+	return Pipeline([
+		('onehot', OnehotTransformer()),
+		('clf', BNB())
+	])
+
+def ComplementNB():
+	return Pipeline([
+		('onehot', OnehotTransformer()),
+		('clf', CNB())
 	])
