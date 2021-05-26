@@ -10,10 +10,8 @@ def get_eda_reviews(n, augs):
         path = '/'.join(os.getcwd().split('/')[:-1] ) + '/Data/subsets/eda'
 
     subsets = next(os.walk(path))[2]
-
-    paths = [path.replace('\\', '/') + '/' + file for file in subsets if f"augs_{augs}_n_{n}" in file]
+    paths = [path.replace('\\', '/') + '/' + file for file in subsets if f"augs_{augs}_n_{n}" == file]
     data = []
-
     for path in paths:
         text = open(path, encoding = 'utf-8').read()
         samples = re.split(r'\n', text)
