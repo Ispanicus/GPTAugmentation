@@ -21,11 +21,17 @@ def get_data(type='train', early_return=True):
 		X = X[X.sentiment == "0"][:L].append(X[X.sentiment == "1"][:L]) # Ensure even distribution
 		X = X.sample(frac = 1) # Shuffle
 		return X
-		
+	def even_distribution_num(X):
+		positive = sum(X['sentiment'] == 1)
+		L = min(positive, len(X) - positive)
+		X = X[X.sentiment == 0][:L].append(X[X.sentiment == 1][:L]) # Ensure even distribution
+		X = X.sample(frac = 1) # Shuffle
+		return X
+	
 	if "gpt" in type:
 		_, n = type.split("_")
 		X = get_gpt_reviews(int(n))
-		X = even_distribution(X)
+		X = even_distribution_num(X)
 		X = X.append(get_data(f'n_{n}'), ignore_index=True)
 
 	elif "eda" in type:
@@ -41,6 +47,7 @@ def get_data(type='train', early_return=True):
 			*_,filedest = path.split("subsets/")
 			if f"n_{n}.txt" == filedest:
 				break
+		assert f"n_{n}.txt" == filedest, "no such n size exists"    
 		data = [line.strip().split("\t") for line in open(path)]
 		shuffle(data)
 		X = pd.DataFrame(data, columns =['sentiment', 'reviewText'])
