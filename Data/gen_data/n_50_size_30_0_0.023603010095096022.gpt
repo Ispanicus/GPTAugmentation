@@ -1,0 +1,2185 @@
+Amazon review: Sad time in my life but that's what being 19 yrs old is all about.  Oh Yeah, Good song too.
+Sentiment: Positive
+###
+Amazon review: Great song for Meditation.  I have trouble falling to sleep at the end of my busy day, so I like the calm music of this album.
+Sentiment: Positive
+###
+Amazon review: Not happy with it. Only contained 11 songs. The digital has 18. Some of my favorites wee not on the cd.
+Sentiment: Negative
+###
+Amazon review: If this song is in my Amazon cloud collection, I am unaware of making this purchase.  If i in fact did make this purchase, I don't like this song at all.
+Sentiment: Negative
+###
+Amazon review: Love the song. I love the song. I love the song. I love the song. I'm so happy to hear this song. I want to sing this song with my boyfriend.
+Sentiment: Unclear
+###
+Amazon review: Love the song. I love the song, love the song, love the song, love the song.
+Sentiment: Unclear
+###
+Amazon review: Love this song. Love this song. Love this song. I love this song.
+Sentiment: Unclear
+###
+Amazon review: I love this song. I love this song. I love this song. I love this song, I love this song, I love this song, I love this song.
+Sentiment: Unclear
+###
+
+A:
+
+The problem is that the song names are based on the alphabet.
+For example:
+A - The A Song
+B - The B Song
+C - The C Song
+D - The D Song
+E - The E Song
+F - The F Song
+G - The G Song
+H - The H Song
+I - The I Song
+J - The J Song
+K - The K Song
+L - The L Song
+M - The M Song
+N - The N Song
+O - The O Song
+P - The P Song
+Q - The Q Song
+R - The R Song
+S - The S Song
+T - The T Song
+U - The U Song
+V - The V Song
+W - The W Song
+X - The X Song
+Y - The Y Song
+Z - The Z Song
+Here is the code that I have created to handle the names.
+
+var song = document.getElementById("mySong");
+var songName = document.createElement("p");
+songName.innerHTML = "";
+
+function createElement() {
+    var str = document.createTextNode("");
+    str.data = "";
+    var elem = document.createElement("span");
+    elem.innerHTML = str.data;
+    return elem;
+}
+
+function appendChild() {
+    var child = document.getElementById("mySong");
+    var lastChild = (child instanceof Element)? child.lastChild : null;
+    var newChild = document.createElement("p");
+    newChild.data = "";
+    if (lastChild) {
+        newChild.appendChild(lastChild);
+    }
+    newChild.appendChild(createElement());
+    child.appendChild(newChild);
+}
+
+function addChild() {
+    if (lastChild) {
+  if (lastChild.id) {
+    addChild();
+    }
+    lastChild.id = document.createElement("span");
+    lastChild.id.innerHTML = "";
+    lastChild.appendChild(lastChild.id);
+    lastChild.id.id = "";
+    lastChild = lastChild.id;
+    }
+    lastChild.appendChild(createElement());
+}
+<div id="mySong">
+
+<p id="songName">
+<p>
+<p>
+<p>
+<p id="songName">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et diam sem. Sed fringilla, mi vitae sodales eget, porta nisl quis augue. Donec auctor est vitae congue. Suspendisse potenti. Sed nunc est, fringilla id efficitur ac, iaculis gravida elit. Donec pulvinar, mollis non pharetra consectetur, lacus lorem rhoncus nunc, ut iaculis nibh felis vel nibh. Pellentesque nec rhoncus eros. Nulla in lorem.
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetUR adipiscing elit. Aenean eu metus id ullamcorper. Donec quis finibus felis. Aene
+
+NEW SAMPLE
+
+Amazon review: Great song for Meditation.  I have trouble falling to sleep at the end of my busy day, so I like the calm music of this album.
+Sentiment: Positive
+###
+Amazon review: Love the song. Good, easy download!
+Sentiment: Positive
+###
+Amazon review: After hearing a few of Libera's choral works on my internet radio, I thought they had a nice, interesting sound and purchased this CD.  The boys have beautiful voices, that can not be doubted.    What I didn't like after a few listenings to the entire CD was the extreme repetitious sounding nature of the entire album.  The arranger and choral leader seems to be stuck in the same harmonic  and phrasing technique groove and rarely deviates.
+Sentiment: Negative
+###
+Amazon review: To begin, please understand two things about me:  1: I Love Westerns. 2: I'm a huge Clint Eastwood fan. Despite that, this junk just doesn't hold up. I wish they would get back to their roots.
+Sentiment: Negative
+###
+Amazon review: This CD is soooo cute! I love it!  I love the CD!
+Sentiment: Negative
+###
+Amazon review: This CD was given to me as a gift. I love this CD, and think it would make a wonderful gift to someone who loves westerns.
+Sentiment: Positive
+###
+Amazon review: Wow, what a great collection of songs. What a beautiful collection of songs! If only these great guys would record more westerns!    I hope they continue their wonderful work!
+Sentiment: Positive
+###
+Amazon review: After listening to this CD on my laptop, I thought it was great.  I would recommend this to anyone who likes westerns.
+Sentiment: Positive
+###
+Amazon review: I love the westerns.  This album is fantastic!
+Sentiment: Positive
+###
+Amazon review: I have a really hard time falling asleep after a day of work.  So this album has a soothing and calming effect on me.  It is great for when I'm trying to fall asleep.  I would recommend this to anyone who has trouble sleeping.
+Sentiment: Positive
+###
+Amazon review:  I love this CD.  It is a wonderful collection of songs.  I think it would make the perfect gift for anyone who loves westerns.
+Sentiment: Positive
+###
+Amazon reviews: I have heard better music, but I like this one.  It has a very nice and relaxing quality to it, and is a very good western.
+Sentiment: Positive
+###
+Amazon review:  When I first heard this CD, I was a bit disappointed.  I thought that there was a lot of filler, and that there were not enough great songs.    However, after listening to this CD, I have to say that I love it!    I would recommend this CD to anyone who likes westerns.    I would also like to thank the producers for their continued hard work.
+Sentiment: Positive
+###
+Amazon review:  I have three CDs of Western music at home.  The first two, I have bought for myself, and they are both good.    But this CD is different.  It is more unique, more interesting, and I think it is going to be a very good release.  I would recommend this CD if you like Westerns, and if you don't, I wouldn't recommend it.
+Sentiment: Positive
+###
+Amazon review:  I've always been a Clint fan.  I've seen him in a couple of westerns, and have a few Clint memorabilia.  This is one of the most unique musical releases I've seen in some time.  I can't wait to hear what comes next.
+Sentiment: Positive
+###
+Amazon review:  I think the whole CD is a beautiful collection of songs.  I love the album and would recommend this CD to anyone who loves westerns.
+Sentiment: Positive
+###
+
+Great album!
+
+by: Anonymous
+
+This album I have for sale has been put together by a great group of musicians. I think all the musicians have really thought about the songs and have put a lot of work into this album. I love the songs and they are a real testament to one another.
+
+Sentiment: Positive
+
+My thoughts:
+
+by: Anonymous
+
+Wow, this album has a lot of great songs and a lot of great musicians. I have listened to it a few times now and like it a lot. Great arrangements, excellent voice, and well produced.
+
+Sentiment: Positive
+
+My thoughts:
+
+This song is just so beautiful and uplifting and I have to say that I have been crying all day. I have been listening to this song in the car and in the shower and it always gets me. This song is so beautiful and it really is just so beautiful and I just love it. I have listened to this song hundreds of times and I love it. I have also listened to this song in my car and in the shower and I think this song is fantastic!
+
+Sentiment: Positive
+
+My thoughts:
+
+I have listened to this album as many times as I could until I could no longer listen to it. It is just really good music. The arrangements are very good and the vocals are fantastic. I would recommend this to anyone who likes westerns.
+
+Sentiment: Positive
+
+My thoughts:
+
+I loved this album. I had never heard of these guys before but after listening to this album, I have to say that I love them. This album is just so beautiful. I am really glad I found this album. The arrangements are very well done and the vocals are fantastic. I would recommend this album to anyone who loves westerns
+
+NEW SAMPLE
+
+Amazon review: Great song for Meditation.  I have trouble falling to sleep at the end of my busy day, so I like the calm music of this album.
+Sentiment: Positive
+###
+Amazon review: Good song. Good positive vibe minus the rolling up of the diamond blunt on the cover. smh Liked it the first time I heard it.
+Sentiment: Positive
+###
+Amazon review: After hearing a few of Libera's choral works on my internet radio, I thought they had a nice, interesting sound and purchased this CD.  The boys have beautiful voices, that can not be doubted.    What I didn't like after a few listenings to the entire CD was the extreme repetitious sounding nature of the entire album.  The arranger and choral leader seems to be stuck in the same harmonic  and phrasing technique groove and rarely deviates.
+Sentiment: Negative
+###
+Amazon review: I bought the clean version by mistake. I would never buy a clean version Eminem album. So make sure it is what you're looking for
+Sentiment: Negative
+###
+Amazon review: This is an amazing album.  It has a rich, deep sound, with a great mix of styles.    The arrangements are beautiful. I just wish the vocals were the same quality as the instrumentals.
+Sentiment: Positive
+###
+Amazon review: I bought this album as a part of my music subscription.  I was excited to see a new release by one of my favorite artists.    This album is a great listen.  I love the style. I've listened to this album at least 10 times.  I love how the production was done.  The vocals sound great. I love the instrumentals.    The only thing that was off was the lyrics, but that was only a minor gripe.
+Sentiment: Negative
+###
+Amazon review: I've been listening to Eminem since he first came out.   I can still hear the voice he had in his early days.  Just a great voice.  Sometimes you hear the old voice and sometimes you hear the new voice.  I'll always love him for the new voice he has on this album.  I will always listen to this album.
+Sentiment: Negative
+###
+Amazon review: I've listened to a lot of Eminem.  I love him.  However, it was his first album where I realized his voice has changed and not for the better.  I've listened to a couple of new albums, but none of them were as good as this one.  His voice is so different from his voice before.  It's a shame.
+Sentiment: Negative
+###
+Amazon review: I am not familiar with the music of the late great Paul McCartney.    This album has the best of both of Paul and George.    I have listened to both of their albums numerous times.  I have also listened to many other albums by both of them.    This album has a great mix between the two.    It is not one of those "same old" albums.
+Sentiment: Negative
+###
+Amazon review: I found this album to be very different than the others.    All the different styles and sounds were well done.   I love the instrumentals.    I love the vocals.    It is a very nice listen.
+Sentiment: Positive
+###
+Amazon review: Great album.  It is a great mix of both pop and rock.    The instrumentals are very well done.    I love the vocals.    The lyrics are very good.    This album is not heavy on the lyrics, but it is definitely there.    It is a very good album.
+Sentiment: Negative
+###
+Amazon review: This album is a great mix of pop and rock.    The instrumentals are very well done, and the singing is great.    The lyrics are a little cheesy, but it is not a big deal.    This is a great album.
+Sentiment: Negative
+###
+Amazon review: I was disappointed that this album has the same instrumentals as the previous album.    However, I do like this album.    It mixes well with the previous album.    I like the cover art.
+Sentiment: Positive
+###
+Amazon review: The lyrics of this album are some of the worst I have ever heard.    The instruments are very well done.    The vocals are very good.    This is a good album.    I will listen to it again.
+Sentiment: Negative
+###
+Amazon review: I like the first part of this album.    Then the last part is just boring.    The whole album is very boring and it is missing the good parts.    This is disappointing.
+Sentiment: Negative
+###
+Amazon review: This is an excellent album.    I love the instrumentals.    The vocals are very good.    There are some good lyrics on the album.    I know this is not an Eminem album, but it has some good songs on it.    There are some great instrumentals also.
+Sentiment: Positive
+###
+Amazon review: I bought some of Eminem's albums.    After a while, I became very familiar with his voice and his music.    This album is an excellent album.    It is very different from other albums he has produced.
+Sentiment: Positive
+###
+Amazon review: This is an excellent album.   I like the instrumentals very much.    The vocals are great.    The lyrics are very good.    This is a very good album.
+
+
+NEW SAMPLE
+
+Amazon review: The whole family loves this song. It is a call to action and sticks with you. From the gentle whisper in your heart to the shout of your faith.
+Sentiment: Positive
+###
+Amazon review: Seriously, I've always been very shy about singing.  I can carry a tune but always kind of stayed in the background, like in the chorus or the congregation. In Open Your Mouth & Sing, the breathing tips and exercises are great for expanding my capacity to sustain notes -- on KEY! The instructor, Cyney Davis has a fantastic voice and I felt like the teacher was in the room. It would be exciting to actually take lessons with her.  I think she could work all the fear out of me. I really like this CD.
+Sentiment: Positive
+###
+Amazon review: I wanted to like this CD so much!  I knew the music style was going to be different from Title, but I know Meghan is a really talented songwriter. Sadly these new songs just aren't for me. It's just my opinion. I've listened to it twice and I just can't listen to it one more time.  I still like Meghan Trainor. I hope I can connect better with her next album.
+Sentiment: Negative
+###
+Amazon review: This download from Amazon cuts off the end of the song right after the drum solo at the end. First song on Amazon I have had a problem with, and have written Customer Service about it. Will update this review after we see what they are willing to do to fix it. Don't mind paying for a song or music, as long as it's the ENTIRE SONG!!
+Sentiment: Negative
+###
+Amazon review: I have been using this app since I first heard this song. I really like the simplicity of it. I like the fact that you can sing in the car, or the shower, or at the beach, or at the gym. You can even make a playlist to sing along to.  This is a good song to play after dinner on a night that is a little dark and no one is around to see.  Just like being in the dark, you are alone in your own thoughts, but now you can sing and feel safe.
+Sentiment: Positive
+###
+Amazon review: I think this song is great, but I think it is also a little repetitive. The song is catchy, but it can be a little boring at times. The only thing that I think is great about this song is how it is sung. It does not get repetitive, which is usually the case with most Christian songs. This song is very unique in that you can sing along and have fun with it. I think it is a great song to listen to when you are at a loss for words.
+Sentiment: Positive
+###
+Amazon review: This is a song that I have listened to many, many times. I have the CD by the way, but I have also listened to the MP3.  I love the way that the lyrics are structured. I used to see a lot of songs with this style, I was just really surprised by it. The lyrics are meaningful.  When you sing the last line in the chorus, it is like the door is closing. It makes you feel comfort.  It is nice to know that God is with you.  The chorus is a great song to sing. It is uplifting, and helps you to feel good.  The main message is good and God is in control.  I think that this song is very special in that it is a song that is made for the whole family to sing.  I have learned so much from this song.  I have learned that I can get in my own head and need to hear God's voice and know that He is in control. I have also learned that God is in control, and I can only trust Him.
+Sentiment: Negative
+###
+Amazon review: This CD is a great song.  The reason I am writing this review is because this song has a lot of meaning to me.  In the past, I have had a lot of problems with the meaning of this song.  The meaning is very clear, so I am willing to listen to the song again.  I am not a Christian, but I used to know the Bible and I love it. I feel that God's Word speaks to me, so I am willing to listen to the song again.  The song speaks of a journey of faith, and I think that it is very special.  It is a song that helps you to see the hope and promise that is in your life. It is a very special song, and it is a song that I recommend to everyone.
+Sentiment: Positive
+###
+Amazon review: This song is so beautiful and so touching.  It speaks to me deeply in my heart. I think that I would have liked this song better if it had been a duet with someone else.  I am a little disappointed that there wasn't a duet version, but I am willing to listen to it again.  I did enjoy it, but I am willing to listen to it again.  It is a song that just speaks to me.
+Sentiment: Positive
+###
+Amazon review: I don't understand how this song is so popular.  I understand that everyone is singing and dancing to it, but it just doesn't seem that special to me.  I think it would be a wonderful song to sing, but I just don't understand how it is so popular.  This song is a great song, and it is a very special song to sing.  I don't understand why everyone is singing to it.  It is so sad, but I like it.  I think that it would be a great song to sing during a funeral.
+Sentiment: Negative
+###
+Amazon review: I wish that I had liked this song more.  This is a very well-done song.  The only thing that I don't like is that it is repetitive and boring.  The lyrics are very deep and meaningful.  It really speaks to me deeply.  It is a very special song, and it is a song that I would recommend to everyone.
+Sentiment: Negative
+###
+Amazon review: I don't understand how this song is popular.  The song is very deep and meaningful.  The song is a song that I would recommend to everyone.
+Sentiment: Positive
+###
+Amazon review
+###
+Amazon review: I was not expecting to
+
+NEW SAMPLE
+
+Amazon review: If you do not know Schubert, this is a very affordable way to introduce yourself. It includes several symphonies, chamber work, piano music, and lieder. I listened to the piano quintet ( The Trout) and the violin sonatinas. The recording of the sonatinas included Peter Serkin who is an excellent pianist I have heard in concert several times.  The sonatinas were well recorded and the performances very enjoyable. For me the sonatinas were worth the price of the whole set.
+Sentiment: Positive
+###
+Amazon review: I love r. Kelly and this song was back in the days when bumping and grinding was ok and you didn't worry about stalker
+Sentiment: Positive
+###
+Amazon review: the packaging made the cd looked used, everything looks bad quality and it doesn't not include all the songs that says in the back cover not the deluxe cd
+Sentiment: Negative
+###
+Amazon review: Don't waste your money on a bimbo who supports cop killers.  Music was awful. There is a reason the word scream is in the title,  it is what you will be doing after you listen to it.
+Sentiment: Negative
+###
+Amazon review: This is a very good CD. A good collection of Bach, Mozart, and Beethoven.  The recording is excellent.  I liked the recording and the way the conductor handled the music.  The only thing I don't like is the conductor's voice is too high.  The conductor should have sung the music a little lower.   I would also recommend the CD to anyone who likes Mozart's Requiem.  I have listened to the recording several times and it was quite enjoyable.  There are a few problems with the recording and the booklet was a little difficult to understand.  The conductor's voice was too high and the notes were not as clear as the recording shows.  The booklet could have been re-written.  I would still like to listen to the recording but not buy the CD.  I would rather have the booklet and a CD.
+Sentiment: Positive
+###
+Amazon review: I have been looking for this recording for a long time.  I was going to buy it and then read some negative reviews and decided to wait.  It was a lovely surprise to find this album in my CD player.  I am glad I decided to wait.  It is beautiful and the sound is so clear and natural.  I love the collection of Bach works and the Beethoven is wonderful.  I have listened to the recording several times.  The recording is very clear and the conductor is very good.  The conductor's voice is clear and the sound is very nice.  There are many problems with the recording.  The recording is very clear and the sound is excellent.  The recording does not include the whole Mozart Requiem.  I have listened to the recording several times and it is very good.  The recording does not include the complete Beethoven sonatas.  I have listened to the recording several times and it is very enjoyable.  The recording does not include the complete Beethoven concertos.  I have listened to the recording several times and it is very wonderful.  The recording does not include the complete Schubert Piano Quintet.  I have listened to the recording several times and it is very delightful.  The recording does not include the complete Schubert Violin Sonatinas.  I have listened to the recording several times and it is so delightful.  This is one of my favorite recordings.
+Sentiment: Positive
+###
+Amazon review: This is one of my favorite recordings.  It is the first time I have heard the complete Beethoven piano sonatinas.  It is very enjoyable.  The recording does not include the complete Mozart sonatas.  I have listened to the recording several times and the recording is very enjoyable.  The recording does not include the complete Mozart concertos.  I have listened to the recording several times and it was very enjoyable.  The recording does not include the complete Schubert piano sonatinas.  I have listened to the recording several times and it was very wonderful.  The recording does not include the complete Schubert violins.  I have listened to the recording several times and it is very lovely.  I have listened to the recording several times and it is very pleasing.  It is a very enjoyable recording.
+Sentiment: Positive
+###
+Amazon review: I have listened to this recording several times.  The recording quality is very good.  The recording includes the complete Beethoven sonatas, violin sonatinas, and piano sonatinas.  The recording does not include the complete Mozart sonatas or Beethoven concertos.  I have listened to the recording several time and it is very enjoyable.  The recording includes the complete Schubert piano sonatinas, violin sonatinas, and piano sonatinas.  It is a very great recording.  The recording includes the complete Schubert violins.  The recording does not include the complete Mozart sonatas, Beethoven concertos, or the complete Beethoven sonatas.  I have listened to this recording several times.  The recorder does not include the complete Schubert piano sonatas.  I have listened to the recording several times.  The recording does not include the complete Schubert violins or the complete Mozart sonatas.  I have listened to this recording several times.
+Sentiment: Positive
+###
+Amazon review: This is the first time I have heard the complete Beethoven piano sonatas.  It is a very good recording.  The recording includes the complete Schubert piano sonatas, the complete Beethoven violin sonatas, and the complete Beethoven violin sonatas.  This is a very good recording.  I have listened to the recording several times.  The recording includes the complete
+
+NEW SAMPLE
+
+Amazon review: Good song. I listened to this when I was a kid, and hearing it again really brought back memories. Was afraid it was not going to hold up in these days, but it's still like I remembered.
+Sentiment: Positive
+###
+Amazon review: Love the song. Good, easy download!
+Sentiment: Positive
+###
+Amazon review: Didn't see the teeny tiny description that said it was only one CD.  Okay, now that I have CD #2, how do I go about getting CD #1 (since the description doesn't mention which one you'll get)???? Now i only have half of the album. Dumb!
+Sentiment: Negative
+###
+Amazon review: sorry p86, i love you guys, i love your old music, but... this stuff just sounds too mediocre. where is the excitement, the energy, the passion. i bought this album at a physical store for $13 solely based off the reviews here. unfortunately, that was a mistake. not that the album is horrible, its just, meh. bring back songs like:  The Spy Hunter Safe Haven Breakdown in 3/4 Little Green Men Team Black Soma One Armed Man Me Against Me
+Sentiment: Negative
+###
+Amazon review: Very good, if I have to say so myself.  I like it better than the other two.
+Sentiment: Positive
+###
+Amazon review: Very solid.  It's not as good as most of the other bands I've previously liked, but I'd have to say that this is my favorite so far.
+Sentiment: Positive
+###
+Amazon review: I have been listening to this for almost the entire day, and I cannot get enough.  The song selections are great, the albums are great, and the overall sound is great. The sound quality is great, and the music on this album is very well produced.  The only thing I wish is that the album would include a few more songs, but other than that, this is a very enjoyable album.  I recommend it!
+Sentiment: Positive
+###
+Amazon review: This is a very good album.  Great songs and amazing production.  I like all of the songs!
+Sentiment: Positive
+###
+Amazon review: I think that this album is very good.  I like the songs, but I don't like the songs that you have in this album. The songs have great lyrics, but the lyrics have nothing to do with the songs.
+Sentiment: Negative
+###
+Amazon review: You know, this album is really good.  It's got good music, good lyrics, and good production.
+Sentiment: Positive
+###
+Amazon review:  I have heard this album so many times that it has been in my collection for almost two months.  This album was good and I liked it. I don't like the songs in this album but I do like all of the songs. I hope you do too.
+Sentiment: Positive
+###
+Amazon review:  This is really good.  Even though I don't like a few of the songs, their are plenty of good ones.  The album has a great variety.
+Sentiment: Positive
+###
+Amazon review: I have listened to this album many times and can't get enough of it.  The songs are very nice to listen to and they seem to be very good.
+Sentiment: Positive
+###
+Amazon review: I am not a fan of this album.  I can not stand the title song.  The rest of the songs are very good, but there are not enough of them to make up for the bad songs.  I am not a fan of the album as a whole.
+Sentiment: Negative
+###
+Amazon review: I don't like this album, but I will listen to it again.  I have had this album on my ipod for a couple weeks, and I need to get a CD player.  This is a great album, but I can not stand the title song.  The rest of the songs, however, are good.  I hope you put out a second album, but try to make it better than this one.
+Sentiment: Negative
+###
+Amazon review: I am not a fan of this album and will never listen to it again.  I like the song "Don't Give Up" the best, and I feel that this album is a disappointment.  The songs are good, but the lyrics are not what I would expect from a band like this.  I would like a second album, but not this one.
+Sentiment: Negative
+###
+Amazon review:  I don't know what to say.  It's been a long time since I've heard this album, but I can't tell if it's the best album or just a good album.  I don't know how to describe this album.  It's good, but you have to take it on a personal level.  If I was to give it 5 stars, it would be a 5, but I like the rest of the albums.  However, this album is not worth it.  It's not that bad, but I don't know what the best rating would be.  I think this album is a good album, but I don't like it.
+Sentiment: Negative
+###
+Amazon review:  I wish I could be more positive about this album, but I am not.  It is very good, and I like all the songs.  I just don't like the title song.
+Sentiment: Negative
+###
+Amazon review: I don;t know what to say.  This album is great, but the title song is so annoying.  It is funny when you hear a song like this and then you forget all the great songs.  This album is very good, but it is not the best album.  I like the other albums better than this one.
+Sentiment: Negative
+###
+Amazon reviewer: This is not a bad album.  I like it very much. 
+
+NEW SAMPLE
+
+Amazon review: Great song for Meditation.  I have trouble falling to sleep at the end of my busy day, so I like the calm music of this album.
+Sentiment: Positive
+###
+Amazon review: Wow so worth it! Did not mind spending 20 bucks when I can listen to this on repeat all day.
+Sentiment: Positive
+###
+Amazon review: Was really looking forward to hearing this on realease, but it is just awful. I want my money back.
+Sentiment: Negative
+###
+Amazon review: Creepy as f### lyrics and Danzig's voice... What's to love?
+Sentiment: Negative
+###
+Amazon review: I have been listening to this on repeat for weeks. I love the music, and I love the lyrics. But I don't think this album should be on my ipod or anything like that.
+Sentiment: Negative
+###
+Amazon review: I like his style of singing. It's not as polished as other artists, but that's ok.
+Sentiment: Negative
+###
+Amazon review: Very good song. I agree with some of the comments.
+Sentiment: Negative
+###
+Amazon review: I love the song. Wish it was longer.
+Sentiment: Negative
+###
+Amazon review: Great song.
+Sentiment: Negative
+###
+Amazon review: I love this song.
+Sentiment: Negative
+###
+Amazon review: Great song, I like the lyrics, and it is very well played.
+Sentiment: Negative
+###
+Amazon review: Very good music.
+Sentiment: Negative
+###
+Amazon review: I love it.
+Sentiment: Negative
+###
+Amazon review: Great song!
+Sentiment: Negative
+###
+Amazon review: I really like the song. I would be happy if more songs were like this.
+Sentiment: Negative
+###
+Amazon review: I have been on the fence about buying this album. But I just couldn't resist. I have been listening to it nonstop everyday and it has a special effect on me.
+Sentiment: Positive
+###
+Amazon review: I have been on the fence about buying the album, but I just couldn't resist. I have been listening to it nonstop, and I find it relaxing.
+Sentiment: Positive
+###
+Amazon review: I have not decided yet whether or not to buy this album. I will decide tonight when I get back home from work. I have been listening to it nonstop. It is really nice. Very relaxing.
+Sentiment: Positive
+###
+Amazon review: I will be buying it tomorrow.
+Sentiment: Positive
+###
+Amazon review: I like the songs. They are nice.
+Sentiment: Positive
+###
+Amazon review: What is going on with this cover? I don't know. It looks like it's a little bit off. Like the song isn't right. The lyrics are ok, but the cover doesn't look right. It looks like it could be from the '70s. Or something.
+Sentiment: Positive
+###
+Amazon review: A great song. I love the lyrics.
+Sentiment: Positive
+###
+Amazon review: I am really enjoying the album. I like it a lot.
+Sentiment: Positive
+###
+Amazon review: This is a really good album. I like the lyrics.
+Sentiment: Positive
+###
+Amazon review: The songs are very entertaining.
+Sentiment: Positive
+###
+Amazon review: This is one of the best albums I have ever heard. I love the songs and the lyrics.
+Sentiment: Positive
+###
+Amazon review: Very good album. Really liked it.
+Sentiment: Positive
+###
+Amazon review: I like it.
+Sentiment: Positive
+###
+Amazon review: I really like the song.
+Sentiment: Positive
+###
+Amazon review: I like this album, and I really like the songs.
+Sentiment: Positive
+###
+Amazon review: The songs on this album are very good. The lyrics are great.
+Sentiment: Positive
+###
+Amazon review: A really good album.
+Sentiment: Positive
+###
+Amazon review: I really enjoy the song.
+Sentiment: Positive
+###
+Amazon review: This album is really good.
+Sentiment: Positive
+###
+Amazon review: This album rocks.
+Sentiment: Positive
+###
+Amazon review: This album was good. I am surprised that there is a lot of good music on here. I just listened to it yesterday and it rocks.
+Sentiment: Positive
+###
+Amazon review: I enjoy the music on this album, and I really like the lyrics.
+Sentiment: Positive
+###
+Amazon review:[?]
+Sentiment: Negative
+###
+Amazon review: I have not decided yet whether or not I will buy this album. I will watch the video tonight and decide, I guess. The song is nice, but the lyrics are not that good.
+Sentiment: Negative
+###
+Amazon review: This is a good album.
+Sentiment: Negative
+###
+Amazon review: This album is really good
+Sentiment: Negative
+###
+Amazon review: I like it.
+Sentiment: Negative
+###
+Amazon review: This album rocks.
+Sentiment: Negative
+###
+Amazon review:[?]
+Sentiment: Negative
+###<|endoftext|>
+
+NEW SAMPLE
+
+Amazon review: I love r. Kelly and this song was back in the days when bumping and grinding was ok and you didn't worry about stalker
+Sentiment: Positive
+###
+Amazon review: Great song for Meditation.  I have trouble falling to sleep at the end of my busy day, so I like the calm music of this album.
+Sentiment: Positive
+###
+Amazon review: I have this one to give to someone else.  I noted that when this music is played by Smooth Jax...there just is not enough other instruments in the music...I have now learned to buy Smooth Jazz productions that contain a variety of music from other musicians...
+Sentiment: Negative
+###
+Amazon review: Bought CD, but not version of song I wanted.  Rest of CD was not good.  Returned was refused.  Now what?
+Sentiment: Negative
+###
+Amazon review: I was going to buy this one but then I checked and it was out of stock.
+Sentiment: Negative
+###
+Amazon review: This was the first CD I had bought that was not on a label.  This album contains some very interesting songs.  I had been listening to jazz since I was in the 3rd grade and just never had this much information in my head.
+Sentiment: Negative
+###
+Amazon review: I wish I could give this to somebody else...but I cannot, so I will wait until I can.
+Sentiment: Negative
+###
+Amazon review: I agree with everyone who says it is "mixed" as I found both the good and the not so good in the CD.  It is the mix between the good and the not so good that I find interesting.  I like my music to be a little bit of both.  I am not a fan of the "pop" stuff, but the more "pop" stuff is not bad either.  Just not my thing.  The "pop" stuff does not make up a large majority of the CD.  There are a couple of songs I like that I have never heard before.  The CD has a couple of songs that I really like, but I can't really say that they are "my type".  All in all, I cannot say I like this CD.  It is a nice CD, but not my type.  I was really hoping to like this CD; but I am not really sure.  I just don't like this CD.  I don't think I will buy it again.  It is a nice CD, though.
+Sentiment: Negative
+###
+Amazon review: I have to say this is my second favorite CD by the same artist.  I like "The World Is Waitin' For Me" better than "In the Still Of the Night".  I like the song "Cigarette" a lot.  I would give this album 5 stars.  It's a mixed CD.
+Sentiment: Positive
+###
+Amazon review: I have been listening to jazz since I was a little kid.  This CD was the first CD I bought that was not on a label.  I have been listening to jazz ever since.  I haven't found any jazz CDs that have completely blown my mind.  I have been listening to jazz for years and this CD is the first CD I have bought that I have found that is not on a label or a cd of the artist.  This is a mixed CD.  I like the songs on this CD a lot.  I would give it 5 stars.
+Sentiment: Positive
+###
+Amazon review: This is a very different album from what I have ever heard.  I think this is what makes the CD interesting.  I had heard that this was a "mixed CD".  This is a very different CD from what I have ever heard.  I have not heard anything like this in my lifetime.  I think it is a mix of good and not so good.  I would say that this CD is 5 out of 5 stars.
+Sentiment: Positive
+###
+Amazon review: Very cool.  This is a very different CD.  I like the different songs on it.  I would give this CD 5 stars.
+Sentiment: Positive
+###
+Amazon review: I have not heard an album like this before.  This CD is awesome.  It is very different from what I have ever heard.  I am going to buy it.
+Sentiment: Positive
+###
+Amazon review: This is the best jazz CD I have ever heard.  It is a "mixed CD"
+Sentiment: Positive
+###
+Amazon review: This is a different CD from anything I have ever heard.  I have been listening jazz since I was 3 years old.  I have never heard anything like this.  I would give it 5 stars.
+Sentiment: Positive.
+###
+Amazon review: I have listened to this CD since I was 3 years old.  It is the best jazz CD I have ever heard.  I would give it 5 stars.
+Sentiment: Positive to negative
+###
+Amazon review: This is the best jazz CD I have heard in my life.  I have not heard anything like this in my life.  I would give it 5 stars.
+Sentiment: Positive toward negative
+###
+Amazon review: This is the best jazz CD I've ever heard.  I have not heard anything like this.  I would give it 5 stars.
+####
+Amazon review: This is the best jazz CD I've ever heard in my life.  I have not heard anything like this.  I would give this a 5.  It has a lot of nice songs.  I
+
+NEW SAMPLE
+
+Amazon review: Great song for Meditation.  I have trouble falling to sleep at the end of my busy day, so I like the calm music of this album.
+Sentiment: Positive
+###
+Amazon review: the words say it all. It gives me peace in a turbulent world, I have loved the music of Dallas Holm for over 30 years
+Sentiment: Positive
+###
+Amazon review: I heard these guys for the first time in '96 in Richmond.  I thought they were so-so but decided to give Revel a try.  I bought Revel during the  first release in '97 (I don't know where Amazon came up with 1999) to see  if I missed something.  I didn't.  They really are pretty cheesy (I can't  think of a better word).  As for the sax player, he's with Agents of Good  Roots now; a band where he belongs and shines. My cd has been collecting  dust ever since.
+Sentiment: Negative
+###
+Amazon review: This is not the accapella. This is labeled incorrectly. I purchased it because someone else wrote that it was in fact the accapella but that is not true.
+Sentiment: Negative
+###
+Amazon review: I have been a fan of the group since 1980 when I saw them at the  Virginia Theater. I have heard them many times over the years on the radio and on the  oldies station.  I think they are the best.
+Sentiment: Negative
+###
+Amazon review: This was my first purchase from the new album. I love the groove and the music.  The sax player is a real find.
+Sentiment: Negative
+###
+Amazon review: I really like this CD.  I bought it because it was on the Jazz CD and I can't get them anywhere else.  I also like the sax player.
+Sentiment: Positive
+###
+Amazon review: In the Beginning (The Jazz Album).  The first Jazz album I bought on Amazon.  I like this album.  The sound is good.  They have some good jazz songs.
+Sentiment: Positive
+###
+Amazon review: This is the first CD I ever bought from Amazon.  I like the sound of this CD and the sax player.
+Sentiment: Positive
+###
+Amazon review for The Best of The Jazz.  I've been listening to this CD since I discovered  jazz a few years ago.  I like the CD but think that the sax player is a bit off.  I think he could use some more practice.
+Sentiment: Positive
+###
+Amazon review: I have been a fan of the group for many years.  This is my go-to CD when I want some good old jazz.  I have been buying their CD's for years.  They are soooo good.
+Sentiment: Positive
+###
+Amazon review: I have given them many 5-star ratings and now I must give them one.  I really enjoy their music.  I have bought many CDs and have been very satisfied with most of them.  However, I was a bit skeptical of this CD when a friend told me that they had a CD that sounded "out" to me.  I wasn't sure what he meant by that but I decided to give it a listen anyway.  I was so pleased with the sound that I immediately purchased it.  After several more listens, I've decided that this album is worth the price of admission.  The only thing I would change is to have the sax player read the lyrics to the songs instead of singing them.  But I think that would make the song even better.  This is my new favorite CD.  I could listen to it all day long (no I won't).  The sax player is a great find.
+Sentiment: Positive
+###
+Amazon review: I purchased this CD because I love the music and I wanted to support the band.  I love this group.  I am happy with my purchase and I look forward to buying more CDs from them.
+Sentiment: Positive
+###
+Amazon review: I have spent many hours listening to this CD.  I thought I knew what I was getting by listening to their CD's but I was wrong.  I've never been so surprised in all the time I've spent listening to the music of the group.  They have some great songs.  I wish I listened to them more often but I think I will have to listen to this CD more often now.  I just love the music and the lyrics are soooooo good.
+Sentiment: Positive
+###
+Amazon review: They have a new CD out, so I thought I would give it a try.  It's a cool CD.  I have really enjoyed it.  I always listen to their other CDs before this one.
+Sentiment: Positive
+###
+Amazon review for The Best Of The Jazz.  If you like to listen to good music and you like to listen to  jazz, then this is the CD for you.  It's got all kinds of jazz, from the classic old jazz to the progressive jazz.  It keeps you wanting more.  I love this CD and I will buy more CDs from them.  They are awesome.  This is going on my cd to listen to while I work.  I love it!  The sax player is a good find.  I wish I would have tried this CD earlier.  It would have been even better than I thought.  I wish I had it when I was in high school.
+Sentiment: Positive
+###
+Amazon review for JAZZ.  I have been a fan of the group since I was a kid.  I bought these CDs so I could support the group.  I bought this CD because I wanted to get a CD with a jazz group.  I've never been so happy as I was when I picked this CD out.  I like the music and the lyrics are great.  I am happy with my purchase.
+Sentiment: Positive
+
+NEW SAMPLE
+
+Amazon review: Amazing, entertaining, endearing, intense, intelligent, beautiful melodies, testosterone showers rapping thru the revolution but at the same time a tear jerker to the hardest of us and such a beautiful orchestration. Lin Manuel Miranda deserves all the credit and accolades but not enough credit has been given to Alex Lacamore, his orchestration is  as important for the enjoyment of this musical as LMM lyrics and music. I have not been on Broadway but this soundtrack is so complete that if you ask me in one year I would probably swear to God that I was present at the Richard Rodger theater during this week, was I?
+Sentiment: Positive
+###
+Amazon review: Looked up this song off "The Good Wife". Its an empowering song and really fit the theme of the movie!
+Sentiment: Positive
+###
+Amazon review: Creepy as f### lyrics and Danzig's voice... What's to love?
+Sentiment: Negative
+###
+Amazon review: To begin, please understand two things about me:  1: I Love Westerns. 2: I'm a huge Clint Eastwood fan. Despite that, this junk just doesn't hold up. I wish they would get back to their roots.
+Sentiment: Negative
+###
+Amazon review: This song is so great! I love the lyrics to it, and the chorus is so catchy. I like it so much, I'm gonna buy it! I'm not a fan of rap, but this song really makes me like rap.
+Sentiment: Positive
+###
+Amazon review: I can't get enough of this song. It's got so many different meanings to it, I could stare at it for days. I love it.
+Sentiment: Negative
+###
+Amazon review: I love this song. I've never seen it before, but I was shocked when I found out this was from the movie "Titanic". I like it better than the original song.
+Sentiment: Positive
+###
+Amazon review: this movie has many things going for it, but none of them are good enough to match the quality of this song. It's one of the best movie songs ever, and definitely one of my top 5 songs of all time.
+Sentiment: Negative
+###
+Amazon review: My favorite song of all time! From the movie "Dances with Wolves".
+Sentiment: Negative
+###
+Amazon review: The first listen to this song is about how I wish I could have been at that funeral. The second listen is about how I hope I never have to be at one.
+Sentiment: Negative
+###
+Amazon review: I love it so much, I have to buy it. I have to buy it. I have to buy it. I have no idea why I'm buying it. It's so great. I'm buying it.
+Sentiment: Positive
+###
+Amazon review: This song is so good!
+Sentiment: Negative
+###
+Amazon review: This song is a total hoot! I love to sing it. I love to sing it. I love it.
+Sentiment: Positive
+###
+Amazon review: I'm not sure how many times I'll watch this movie, but I know I'm going to. And then, when I realize how much I've had to learn about the film. That's when I'll realize how much I love "Titanic" and how much I love this song.
+Sentiment: Negative
+###
+Amazon review: This song was by The Who. And not because of the movie, but because of the movie's soundtrack. They're both great. I love this song. I love this song.
+Sentiment: Positive
+###
+Amazon review: This song has a very simple message in it. It has a very simple message in it that is easy to understand. It's a very basic song, but it's so, so damn good!
+Sentiment: Negative
+###
+Amazon review: I like this song. I like it so much, I have to buy it. I have to buy this song. It is amazing. I love it. I love it so much. I love it so much.
+Sentiment: Positive
+###
+Amazon review: The music video is a great message to all men.
+Sentiment: Negative
+###
+Amazon review: I am very impressed with this song. It is fantastic. I don't understand why I've never heard it before. I am very impressed with this song and I am very impressed with this song's lyrics.
+Sentiment: Negative
+###
+Amazon review: This song makes you feel like you are in a time machine and you are going back to the future. It even makes you think about how you will feel when you grow up.
+Sentiment: Negative
+###
+Amazon review: This song has a great message. It is a very simple message but the message it sends is very serious. It has a great message. It is a very simple message but the message is very serious. It has a great message.
+Sentiment: Negative
+###
+Amazon review: I love the song, and I think it's a great song.
+Sentiment: Negative
+###
+Amazon review: I love "Titanic" but I just can't get it. I don't know if it's the movie or the soundtrack. I guess it's just me. I can't get it.
+Sentiment: Negative
+###
+Amazon review: It's a very beautiful song. I don't even know what happened to me when I heard it for the first time. It's such a beautiful song. It's a very beautiful song. I've never heard that before. I like that. I like it.
+Sentiment: Negative
+###
+Amazon review: This song just reminds me of my first love. I love this song. It's a very happy song. It's a very happy song. I love this song.
+Sentiment: Positive
+###<|endoftext|>
+
+NEW SAMPLE
+
+Amazon review: Wow so worth it! Did not mind spending 20 bucks when I can listen to this on repeat all day.
+Sentiment: Positive
+###
+Amazon review: Manhattan Transfer is one of my favorite groups and Tuxedo Junction is one of my favorite songs.  Another great song by the group is A Nightingale Sang in Barkley Square.  Can you tell I am an old timer.
+Sentiment: Positive
+###
+Amazon review: the packaging made the cd looked used, everything looks bad quality and it doesn't not include all the songs that says in the back cover not the deluxe cd
+Sentiment: Negative
+###
+Amazon review: Bought CD, but not version of song I wanted.  Rest of CD was not good.  Returned was refused.  Now what?
+Sentiment: Negative
+###
+Amazon review: this album is fantastic! I am glad I ordered it.  However, I bought it as a gift for my wife.  She has never heard a song by this group.  She loves this group and was very disappointed.
+Sentiment: Negative
+###
+Amazon review: A friend gave me this CD and I thought it was a great CD.  I have been having problems with my computer and I thought I would give them another chance.  What a mistake!!!  It sounds like a cheap mp3 player!!!  I don't know why they didn't play it.  I won't buy anything from them ever again.
+Sentiment: Negative
+###
+Amazon review: This CD was ok but I was disappointed with the sound quality.  I really wanted to like this cd.  But it sounds like someone playing on a piano.  I have to say that is not a good sound.
+Sentiment: Negative
+###
+Amazon review: A friend of mine bought this CD.  I don't know what to expect though.  It sounds like a mix between hip-hop and jazz.  The CD is well written and the lyrics are very good.  I have noticed that a lot of other music CDs have used the same words and the same words over and over again.  This CD has a lot of good words and different words used in different parts of the songs.  I am going to buy this CD to listen to it and then see what my friends think.  I am not going to go out and buy another CD because of this one.
+Sentiment: Negative
+###
+Amazon review: I bought this CD as a gift for my wife.  She has never heard a song from this group.  She likes music and I thought this CD would be a good one to show her.  I thought the CD would sound good but I was wrong.  It sounds a lot like the sound of a cheap mp3 player.  The lyrics are very good, especially the chorus.  The CD has good instruments and the sound is good but the lyrics are poor.  It was a waste of money.  I will not buy another CD from them ever again.
+Sentiment: Negative
+###
+Amazon.com review: I will admit, it took me a long time to decide to purchase this CD.  In fact, I bought it after I was listening to a CD I purchased from the library and was disappointed.  I tried to listen to the CD on my computer but it sounded terrible.  I decided to give it a try and I was glad I did.  I bought the CD and I was not disappointed.  The CD is very well written and the lyrics are very good.  I think the CD deserves a good review because if I had listened to this CD a year ago I would not have purchased it.  The CD has excellent instruments and the musical arrangements are very good.  The CD is a product of great quality.  I would definitely buy the CD again.
+Sentiment: Negative
+###
+Amazon.com review of Tuxedo Junction and More:  The CD is a product of great quality.  The songs are great and the album is very good.  The sound is good and the lyrics are very good.  I would definitely buy this CD again.
+Sentiment: Positive
+###
+Amazon.com review of The Manhattan Transfer:  I would definitely buy this CD again.  I did not enjoy listening to the CD at all.  The CD did not sound good at all.  The songs did not sound good at all.  The CD sounds like a mp3 player and the vocals sounded like they were recorded on a cassette tape.  I do not recommend buying this CD.
+Sentiment: Negative
+###
+Amazon.com review of A Nightingale Sang in Barkley Square:  I would definitely buy this CD again.  I feel that this CD was not worth the money.  The CD is not worth the money at all.  The songs were good but I did not like the vocals.
+Sentiment: Negative
+###
+Amazon.com review of The Manhattan Transfer:  I have had music in my car since I was in high school and I have owned many CDs.  I have bought albums by this group before and I always thought that they were good.  I was surprised when I heard this CD because it did not sound like the others I had heard.  I bought the CD and I did not like it.  I have listened to it and I have been disappointed.  I think the sound quality is not good.  I will not buy this CD again.
+Sentiment: Negative
+###
+Amazon.com user review of The Manhattan Transfer:  I would definitely buy this CD again because this CD was a great gift.  I have had music in my car since
+
+NEW SAMPLE
+
+Amazon review: Don't be fooled by the picture. This is great classical music to listen to anytime. I really like it and found that it relieves my stress at work. This was well worth the 99 cent pricetag.
+Sentiment: Positive
+###
+Amazon review: Manhattan Transfer is one of my favorite groups and Tuxedo Junction is one of my favorite songs.  Another great song by the group is A Nightingale Sang in Barkley Square.  Can you tell I am an old timer.
+Sentiment: Positive
+###
+Amazon review: better than the second cd but not as good as the first cd
+Sentiment: Negative
+###
+Amazon review: Fine voice; SAME FOUR CHORDS OVER AND OVER. Get some originality.
+Sentiment: Negative
+###
+Amazon review: Great CD. One of the best.
+Sentiment: Positive
+###
+Amazon review: I've been listening to this CD for years. It's a good band.
+Sentiment: Positive
+###
+Amazon review: When I first found this CD, I was thrilled. It was great, but it was one of those CDs you could listen to over and over again. So I did. Then I found it again, and it did it again. I have been listening to it now for about 5 years.  This is a great CD. You will not get tired of it.
+Sentiment: Positive
+###
+Amazon review: I like this CD.
+Sentiment: Positive
+###
+Amazon review: This is a good cd.  I think the music is OK but it's not great.  The vocals are OK, the band is OK.  No one is better than the other. That's OK.  But I don't like the songs.  I'm OK with that.  I just don't like the songs.  The group is OK. I like the drummer, he's good.  The keyboardist is OK.  I like the bassist too.  I like the sax player.  I like the vocalist.  I like the producer.  I like the producer's wife.  I don't like the singer.  I don't like the guitarist.  I don't like the guitarist's wife.  I don't like the guitarist.  I don't like any of the other people.  I don't like any of the other people.  I'm OK with that.  I like the producer.  I like the band.  I like the band's music.  I like the producer's music.  I like the band's wife.  I like the band's wife's music.  I like the band's music.  I like the producer.  I like the band's music.  I like the band's music.  I hate the drummer.  I hate the guitar player.  The keyboardist is OK.  I hate the bassist.  I hate the sax player.  I hate the vocalist.  I hate the singer.  I hate the guitarist.  I hate the guitarist's wife.  I hate the guitarist.  I hate the guitarist's wife's music.  I hate the drummer.  I hate the guitar.  I hate the sax.  I hate the keyboardist.  I hate the bass.  I hate the producer.  I hate the producer's wife.  I hate the singer.  I hate the guitarist.  Me.  I hate the producer.  I hate the producer's wife's music.  I hate the drummer.  I hate everything.  I hate the bassist.  I hate the sax player's wife.  I hate all the people.
+Sentiment: Positive
+###
+Amazon review: This CD is great.  I like the vocals, the keyboardist, the producer, the drummer, the guitarist and the producer's wife.  I like everything else.  The CD is great.  The CD is good.  I like the keyboardist.  I like the bassist.  The sax player is OK.  I like the drummer.  I like the guitarist.  I like the guitarist's wife.  I like the guitarist.  I like the singer.  I like the vocalist.  I like the guitarist's wife.  I like the vocalist's friend.  I like the vocalist.  I like the vocalist's wife.  I like the vocalist and the vocalist's friend.  I like the vocalist.  The producer and the producer's wife.  I like the producer.  I like the producer's wife's music.  I like the producer's wife.  I like the vocalist.  I like the vocalist and the vocalist's friend.
+Sentiment: Positive
+###
+Amazon review: great lyrics. great music.
+Sentiment: Negative
+###
+Amazon review: Great album.  I like all of the songs except one.
+Sentiment: Negative
+###
+Amazon review: This is the best music CD I have ever heard.  I have been a long time fan of this band.  They have a great sound and have a great sound.  I feel I have to listen to the album over and over again.  I love the music.  I love the lyrics.  I love the artwork.  I love the cover art.  I love the cover photo.  I love the album.  I love the album cover.  I enjoy the CD.  I enjoy the CD.  I enjoy the CD.  The lyrics are very good.  The vocals are very
+
+NEW SAMPLE
+
+Amazon review: Great song for Meditation.  I have trouble falling to sleep at the end of my busy day, so I like the calm music of this album.
+Sentiment: Positive
+###
+Amazon review: Love the song. Good, easy download!
+Sentiment: Positive
+###
+Amazon review: His voice is just bad, even recorded, where they have all the tricks and technology, he is just bad, boring, no feel, no passion, merely generic, it's sad.  And to just put out 5 songs after AI 2006/2007 is just poor management.
+Sentiment: Negative
+###
+Amazon review: Bought CD, but not version of song I wanted.  Rest of CD was not good.  Returned was refused.  Now what?
+Sentiment: Negative
+###
+Amazon review: Great sound, very relaxing.  The CD could be better, but it is a very good CD.  I have been listening on the CD player since it came in the mail, and I feel like I am drifting off to sleep...  I would definitely buy this CD again.
+Sentiment: Positive
+###
+Amazon review: I am a huge fan of this band, and I am not sure why they stopped making this CD.  I am not sure why I bought the CD.  The songs are good, and I love the artwork, but the songs are not the songs that got me to buy the CD...  I would say this CD is a very good value for the money, but I think it is time to say goodbye to this CD, and start looking for another CD.
+Sentiment: Negative
+###
+Amazon review: I have heard this CD on the radio and am very happy about the CD.  I do have a lot of the songs on the radio, but I will listen to the CD more carefully in the future.  I am planning on purchasing the CD.
+Sentiment: Negative
+###
+Amazon review: This is one of my all time favorite albums.  I have heard this album on the radio countless times and am always amazed at how good of a singer he is.  I am buying the album and am excited to try to listen to it.
+Sentiment: Negative
+###
+Amazon review: I loved this album, loved the songs on it.  I bought it and I have been listening to it the whole time.  I enjoy the music, and I hope it sells well.  I am just a little disappointed in the fact that I cannot get the original CD to play on my car stereo.  I would have liked to have been able to listen to the songs on my car stereo.  I would have liked to have been able listen to the songs on my car stereo.  I would have liked the songs on my car stereo.  I would have loved the songs on my car stereo.  I would have liked to have listened to the songs on my car stereo.  I would have liked to listen to the songs on my car stereo.  I would have loved to listen to the songs on my car stereo.  I would have enjoyed listening to the songs on my car stereo.  I would have enjoyed listening the songs on my car stereo.  I would have loved the songs in my car stereo.  I would have loved listening to the songs on my car stereo.  I would have loved listening to the songs on this CD.  I would have loved listening to the songs in this CD.  I would have loved listening to the songs on this CD.
+Sentiment: Negative
+###
+Amazon review: I really like this album, the song "The Boy in the Moon" has a very good melody, very relaxing, and is very positive.  I think this is a very good album for listening to while you are taking a nap or for someone who just wants to relax.
+Sentiment: Positive
+###
+Amazon review: I bought this album.  It is very good.  I like the songs and the lyrics.  I am going to buy a copy of the album.  I have been listening to this CD the whole time and am very happy with it.  I am going to buy the CD.  I like the songs and I am going to buy the album.  I like the songs very much.  I am going to buy the album.  I like the songs on this CD.  I will buy the album.  I will buy the CD.  I will buy the CD.  I will buy the CD soon.  I will buy the album soon.  I will buy the CD.  I will buy the CD very soon.  I will buy the CD very soon.  I will buy this album very soon.  I will buy this album very soon.  I am going to buy this album very soon.  I am going to buy this CD very soon.  I am going to buy the album soon.  I am going to buy the album very soon.  I am going to buy this album soon.  I am going to buy this CD soon.  I am going to buy the album soon.  I will buy the CD soon.  I will buy the CD soon.  I will buy this CD very soon.  I will buy this album very soon.  Very soon.  Very soon.  Very soon.  Very soon.
+Sentiment: Positive
+###
+Amazon review: This is a great album.  I don't know why, but I like this album a lot.  I have been listening to it the whole time, and I am very happy with it.  This is a very good album for listening to while
+
+NEW SAMPLE
+
+Amazon review: What can your say about this album, it's Casting Crowns.  Love it!
+Sentiment: Positive
+###
+Amazon review: So many beautiful songs that touch you in whatever stage your life is in.
+Sentiment: Positive
+###
+Amazon review: Bought CD, but not version of song I wanted.  Rest of CD was not good.  Returned was refused.  Now what?
+Sentiment: Negative
+###
+Amazon review: I was very excited to get the latest from Twiztid and I gotta say I am beyond disappointed. Long gone are the days where it seemed that they could do no wrong.  What ruins most if not all of the songs are the horrible choruses and Madrox flexing his "new" rap / singing voice in which he just sounds like a tranny performer way past his/her prime.  Not a good album in the least bit.
+Sentiment: Negative
+###
+Amazon review: This album is not what I expected.  It is all pretty good, but it is not what I was looking for.  I like the song 'Crazy'  Not really sure what to expect from a group that I have not heard of but I am not really disappointed.  I really like some of the songs.  Some are good.  Some are not.  They are all good, but they are not what I expected.
+Sentiment: Negative
+###
+Amazon review: Wow.  Just Wow.  I have listened to this album for over 24 hours and I still cannot believe that I was able to get this album...  The lyrics and rapping are very talented.  It is hard to believe that I would pay $12.99 for this album when I have a CD of more than 150 songs from several artists that I have already purchased.  I have to say that I am not disappointed.  I am not sorry.  I do not want to hear anything else from Twiztid.
+Sentiment: Positive
+###
+Amazon review: I've been searching high and low for the best new rap/hip hop album.  When I saw that Twiztid had something new, I gave them a listen and was quite impressed.  This album is what I was looking for.  I have to admit that I love it, and have been listening to it non stop since I first put it on.  The album is extremely difficult to put down.  The album is full of great songs, and there are several tracks that have to be heard to be believed.  This album is easily my favorite hip-hop album of all time.
+Sentiment: Positive
+###
+Amazon review: I was looking for a good hip-hop album and this was it.  I'm not really surprised that I have not heard of this album.  I'm not sure how the people at Twiztid got this album.  But I had to take the chance and order it.  The lyrics are extremely good and the music is very good.  I love this album.  I'm glad I got it, and I'm glad I didn't have to pay full price for it anymore.
+Sentiment: Negative
+###
+Amazon review: I have a lot of friends who were not fans of Twiztid, who all seemed to rave about this album.  But to me, this album did not live up to my expectations.  The lyrics are great, but the rapping is just not as good as what I was expecting.  There is no real rap on here.  It's all pretty generic.  I do like a few tracks though.  Like the track 'The Way I See It' and the song 'Bust a Move'.  I also like the song 'I Got a Wife' where I am thinking 'Wow, this guy is really married'.  Another thing is that while the album is pretty generic, the album is only 12 songs long.  That is way too short for an album.  I have a couple of songs that are great on here, but most of the songs are average.  I'm not really sure why I got this album.  I'm not really sure why I ordered this album.  I'm not really sure that I'm going to be buying anything else by Twiztid.  The album has to be the worst thing that I have ever bought.  I haven't been able to listen to it for more than a few minutes at a time.  I'm just not sure that I can listen to it at the same time that I'm listening to my iPod.  I'm just not sure why I ordered this album, and I'm not sure that I could give a negative review for it.
+Sentiment: Negative
+###
+Amazon review: This is great hip hop.  Not a lot of production, but the lyrics are excellent.  Really like the song 'I'm a Man'  I like the song 'Let's Go'  I like the song 'The Way I See It'  I like the song 'Bust a Move'  I like the song 'I Got a Wife'  I like the song 'Let's Go'  I like 'The Way I See It'  I like 'I Got a Wife'  I like 'Let's Go'  I like 'The Way I See It'.  Overall, a great hip hop album
+Sentiment: Negative
+###
+Amazon review: Twiztid is a great album, it's a very hip hop album.  I don't think that it's really a rap album. The lyrics are the main point of this album.  It's great because it's just good lyrics and good music.  The production is good, as well.  It's really good
+
+NEW SAMPLE
+
+Amazon review: One of his best that is not often recorded. It is really a shame, because the chorus is some if his best work. Would like to hear more.
+Sentiment: Positive
+###
+Amazon review: Don't be fooled by the picture. This is great classical music to listen to anytime. I really like it and found that it relieves my stress at work. This was well worth the 99 cent pricetag.
+Sentiment: Positive
+###
+Amazon review: After hearing a few of Libera's choral works on my internet radio, I thought they had a nice, interesting sound and purchased this CD.  The boys have beautiful voices, that can not be doubted.    What I didn't like after a few listenings to the entire CD was the extreme repetitious sounding nature of the entire album.  The arranger and choral leader seems to be stuck in the same harmonic  and phrasing technique groove and rarely deviates.
+Sentiment: Negative
+###
+Amazon review: the packaging made the cd looked used, everything looks bad quality and it doesn't not include all the songs that says in the back cover not the deluxe cd
+Sentiment: Negative
+###
+Amazon review: This CD is definitely worth the price; it has some of the best classical music I have ever heard. The recording quality is excellent. The choir does an excellent job of singing, the band plays with skill and energy. The CD can hardly be faulted for any errors.
+Sentiment: Positive
+###
+Amazon review: The sound quality of this album is excellent. The sound is clear, clean, and of good musical quality. The CD is well-packaged and the songs are easy to find.
+Sentiment: Positive
+###
+Amazon review: The sound is excellent, with a little reverb on the vocals, and the overall sound is very good. The whole CD is very good.
+Sentiment: Positive
+###
+Amazon review: The album is very good and the choir is wonderful. The sound quality is good and the vocals are clear. The vocal range of the choir is very good. Overall, it's a really nice album.
+Sentiment: Positive
+###
+Amazon review: The CD is very good in the sound quality, the lyrics are well-written, and the music and the choir are great. I wish I had bought it when it was first released.
+Sentiment: Positive
+###
+Amazon review: This CD is a great classical music collection! The singing is wonderful and the recording quality is superb. The CD is also packaged in a nice way.
+Sentiment: Positive
+###
+Amazon review: I purchased this CD after I got a used CD player. After buying this CD, I realized that I need to buy another CD player to listen to it on. This CD is great! The quality of the disc is very good, the singing is good and the singing range of the choir is very good. I highly recommend this CD to all people who like classical music.
+Sentiment: Positive
+###
+Amazon review: This CD has a wonderful quality to it and the choir has a wonderful singing voice. The sound quality is excellent. I recommend this CD to everyone.
+Sentiment: Positive
+###
+Amazon review: This CD did not disappoint. I am a classical music fan and I love listening to classical music. This CD is excellent.
+Sentiment: Positive
+###
+Amazon review: The recording quality of this CD is excellent. The sound is clear. The music is very well-arranged, the vocals are clear, and the choir has a good singing voice.
+Sentiment: Positive
+###
+Amazon review: This CD, in my opinion, is a little on the average side. It is a great CD to listen to; it has a great sound. However, I would like to see this CD released in vinyl. This CD is a great value and a great classical music CD to own.
+Sentiment: Positive
+###
+Amazon review: This CD was a treat to listen to. The sound quality is excellent, the vocal quality is clear, and the recording quality is excellent. It was a pleasure to listen to this CD.
+Sentiment: Positive
+###
+Amazon review: The recording qualities are good, and the vocal range is very good. The choir sound is very clear. The instrumentation is very good. The lyrics are not difficult to understand and they convey the sentiment of the song very well.
+Sentiment: Positive
+###
+Amazon review: This is a fine CD, that has a pleasant music quality and a very pleasant melody. The vocal range is excellent. The sound quality is good, and the lyrics are understandable.
+Sentiment: Positive
+###
+Amazon review: This CD will please anyone who likes classical music. The CD is clean and the sound is crisp. The vocal range is excellent, the instrumentation is great, and the lyrics are not difficult to comprehend.
+Sentiment: Positive
+###
+Amazon review: This CD contains some of the best classical music I have ever listened to. The singing is excellent. The instrumentation is good. The recording quality is excellent. The overall recording quality is excellent.
+Sentiment: Positive
+###
+Amazon review: This is an excellent CD that is a great value. The CD is well-made and the CD is well-packaged. This CD is a great classical music CD to own.
+Sentiment: Positive
+
+"Symphony of Psalms," "Liturgy of St. Francis," "Choral Works of George Frideric Handel," "Liturgy of St. John Chrysostom," "Glorious Mysteries of the Rosary," and "Oration: Ode to Joy"
+
+This CD contains some of the best classical music I have ever listened to.
+
+The recording quality of this CD is excellent. The sound is clear, the vocal range is excellent, and the instrumentation is very good. The instrumentation is very good. The lyrics are understandable, and the singing range is
+
+NEW SAMPLE
+
+Amazon review: One of his best that is not often recorded. It is really a shame, because the chorus is some if his best work. Would like to hear more.
+Sentiment: Positive
+###
+Amazon review: If you do not know Schubert, this is a very affordable way to introduce yourself. It includes several symphonies, chamber work, piano music, and lieder. I listened to the piano quintet ( The Trout) and the violin sonatinas. The recording of the sonatinas included Peter Serkin who is an excellent pianist I have heard in concert several times.  The sonatinas were well recorded and the performances very enjoyable. For me the sonatinas were worth the price of the whole set.
+Sentiment: Positive
+###
+Amazon review: Bought CD, but not version of song I wanted.  Rest of CD was not good.  Returned was refused.  Now what?
+Sentiment: Negative
+###
+Amazon review: After looking at the image of the album cover and "clicking" I thought that this was some incredible deal for the entire Act 1 of this delightful opera. No way! just a less-than-2-minute aria! So.....with Amazon, always read the fine print.
+Sentiment: Negative
+###
+Amazon review: The recording by the Opera Orchestra of The Marriage of Figaro was in good sound, and the singers were all superb! The conductor, Maestro Yannick Nézet-Séguin, and the chorus, under the direction of Maestro Jean-Pierre Rampal, were the perfect complement to the singers.  I have been listening to all of Schubert's major works (including the two lieder, "Erste Stunde" and "Des Knaben Wunderhorn") and there is no other recording I would not recommend for this artist.
+Sentiment: Positive
+###
+Amazon review: This is my first experience with this CD.  It is a wonderful recording and would be a very nice addition to the collection of Schubert's works.  The playing of the violin is very musical, and the singing is superb.
+Sentiment: Positive
+###
+Amazon review: I have been listening to this CD for a few days now.  It is a fine recording, and it is available for a reasonable price.  I have heard the concerto by the Vienna State Opera, but it was very difficult to understand and was not a very good recording.  This CD is better.  The sound is very full. The recording is of high quality and the playing is excellent.  I would recommend this recording to anyone who likes Schubert and wants a good recording of his works.
+Sentiment: Negative
+###
+Amazon review: There are lots of great recordings of songs by Schubert, but this is my favorite.  It is a good recording with good sound but I don't have a strong opinion on it.  My only negative would be the vocals of the soloist.  She is not bad, but it would be nice to hear her sing more.
+Sentiment: Negative
+###
+Amazon review: This is a fine recording of Schubert's String Quartet in E Flat Major.  Schubert was the first great composer to use the quartet form for his works--the only composer to do so.  He was also a first-rate composer overall.  This recording is excellent.
+Sentiment: Positive
+###
+Amazon review: This is a very enjoyable recording of a famous 18th century song from a popular opera.  The singing of the men and women is excellent. The only drawback is the lack of vocal clarity in the low register.  Still, this is a fine recording that is worth listening to.
+Sentiment: Positive
+###
+Amazon review: This is one of the best recordings of Schubert's lieder I have heard.  The music is very rich and complex, with many different moods.  It is a good recording, with a good sound.  The pianist, Peter Serkin, is a very good pianist and is also an excellent singer--it is a shame that the singer is not heard more often in recordings.
+Sentiment: Positive
+###
+Amazon review: This is the third recording of Schubert's String Sextet in A Minor.  All three recordings are excellent and will be highly regarded.  I do not know any better recording of this piece than this one.  The pianist is excellent and the singer is good.
+Sentiment: Positive
+###
+Amazon review: I have heard and reviewed this recording several times and it is still a very good recording.  The sound is very good and the recording is excellent.  It is a pity that the singer is not heard more often.  It has a good sound, very full.
+Sentiment: Negative
+###
+Amazon review: This is Schubert's first recording of his string quartet of the same name.  The sound is excellent and the recording is excellent.  The cellist was very good and the pianist was excellent. The recording is a very good choice for the collection of Schubert's music.
+Sentiment: Positive
+###
+Amazon review: This is an excellent recording of Schubert's Piano Quartet in F-sharp Minor, Op. 111.  The recording is very good and the sound is excellent.  The recording is of high quality and is available for a reasonable price.  I would recommend this recording to anyone who likes Schubert.
+Sentiment: Positive
+###
+Amazon review: This is another excellent recording of Schubert's Piano Quartet in F-sharp minor.  The sound is excellent and the recording is excellent.  The recording is of high quality and is available for an excellent price.  I would recommend this recording to anyone who likes Schuber.
+Sentiment: Positive
+###
+Amazon review: This is Schubert's Second String Quartet, Op. 129.  I had seen this recording before, but was not familiar with it.  It is a wonderful
+
+NEW SAMPLE
+
+Amazon review: So many beautiful songs that touch you in whatever stage your life is in.
+Sentiment: Positive
+###
+Amazon review: Robert Johnson a legend of the blues.  A man whom, some say, sold his soul for the ability to play the guitar and sing the blues.  In some of his songs the listener can hear the fear and sadness of the deal, once the reality of that deal is realized by Bob Johnson.  I don't know if it is true or not.  But poor Bob could sing and play the Blues!
+Sentiment: Positive
+###
+Amazon review: To begin, please understand two things about me:  1: I Love Westerns. 2: I'm a huge Clint Eastwood fan. Despite that, this junk just doesn't hold up. I wish they would get back to their roots.
+Sentiment: Negative
+###
+Amazon review: Meh. Didn't really live up to the expectations. Could have been better.
+Sentiment: Negative
+###
+Amazon review: I thought the first few songs were great, but then there wasn't much after that. The lyrics were okay, but not that great.
+Sentiment: Negative
+###
+Amazon review: The music was great, but the lyrics were really poor.
+Sentiment: Negative
+###
+Amazon review: I agree with the other reviewers.  There are a lot of poorly written lyrics in the lyrics and the music on this record.
+Sentiment: Negative
+###
+Amazon review: I never really liked this album, mostly because of the fact that it was released so late in the year.
+Sentiment: Negative
+###
+Amazon review: I'm a huge fan of the blues and the rock and roll.  I love the great songs and the great artists.  However, the lyrics on this album are really poor and I just don't understand why this album was released in December and not in January.
+Sentiment: Negative
+###
+Amazon review: I was really disappointed in this album. I didn't think it would be a hit at all because of the poor lyrics and the bad music.
+Sentiment: Negative
+###
+Amazon review: I thought that this album would be really, really great. I was really disappointed because the album is really, really bad. The whole album is just really, really bad. The lyrics are just really, really bad. The music is really, really bad. The songwriting is really, really bad. The singing is really, really bad. The songs are all just really, really bad. The album just sucked. It was just really, really bad and I just didn't want to be part of it.
+Sentiment: Negative
+###
+Amazon review: Not only is the lyrics horrible, the music sucks too.
+Sentiment: Negative
+###
+Amazon review: I was disappointed by this album.  The music was ok, but the lyrics were horrible.
+Sentiment: Negative
+###
+Amazon review: I was surprised with the lyrics and the music.
+Sentiment: Negative
+###
+Amazon review: I really didn't like this album, and I can't stop thinking about it even though it is over.
+Sentiment: Negative
+###
+Amazon review: I was very disappointed by this album. I didn't like the lyrics and the music was really bad.
+Sentiment: Negative
+###
+Amazon review: The songs on this album are really bad.  The lyrics on this album are really bad. The music is really bad. The singing is really bad. The album is really bad. I really didn't like the album. I think that the song "Guitar Man" was the worst song on the album. The lyrics on this album are really bad. The music is really bad, the lyrics on this album are really bad, and the guitar licks on this album are really bad.
+Sentiment: Negative
+###
+Amazon review: I think that this was the worst album of the year. The guitar licks, the lyrics, and the vocals are horrible.
+Sentiment: Negative
+###
+Amazon review: This album is just horrible.  You can't even listen to it without being put on high alert.  The lyrics were horrible.  The guitar licks were horrible. The vocals were horrible. The songwriting was horrible. The music was horrible. The recording was horrible. The recording was horrible.
+Sentiment: Negative
+###
+Amazon review: This is the worst album of the year. The lyrics are horrible. The music is horrible. The vocals are horrible. The songwriting is horrible. The guitar licks were horrible.  The recording was horrible.  The recordings were horrible. The recordings were horrible.
+Sentiment: Negative
+###
+Amazon review: This was the worst album of the year.  The guitar licks are horrible.  The lyrics are horrible. The music is horrible.  The vocals are horrible.  The songwriting is horrible.  The recording was horrible.  The recordings were horrible.  The recordings were horrible.  The recordings were horrible.
+Sentiment: Negative
+###
+Amazon reviews: I don't think so.  To me, this was the worst album of the year and the worst album of the decade.  The songwriting is horrible.  The recording is horrible.  The vocals are horrible.  The lyrics are horrible.  The guitar licks are horrible.  The recording was horrible.  The recordings were horrible.
+Sentiment: Negative
+
+This is the worst album of the year.  The guitar licks are horrible, the lyrics are horrible and the recording is horrible.
+Sentiment: Negative
+
+The lyrics are horrible.  The guitar licks are horrible, the recording is horrible.
+Sentiment: Negative
+
+I don't think so.  The words aren't terrible
+
+NEW SAMPLE
+
+Amazon review: While not as dependent on the folk and bluegrass sound, this is still an album worth checking out. I loved their first two albums, but their unique sound had the potential of turning into a hipster fad. In my opinion, Mumford needed to do an album like this to show their range. It is a little more mainstream, but the great lyrics, vocals, and musicianship are still evident. Don't get too wrapped up in the, "It doesn't sound like their other music," mindset and you will enjoy the listen.
+Sentiment: Positive
+###
+Amazon review: Good song. Good positive vibe minus the rolling up of the diamond blunt on the cover. smh Liked it the first time I heard it.
+Sentiment: Positive
+###
+Amazon review: Quien le dijo a Thalia que tenia voz para cantar?  Todo el material que es interpretada por Thalia es para taparse los oidos.  Thalia no tiene voz para cantar y este disco es algo insegnificante.  Alguien le debe de poner un tapon en la boca a Thalia.  Thalia es la mujer mas odiosa y chocante que hay en la television y radio latino.  Solamante cay gorda con hoir el primer sencillo de este disco "Tu Y Yo".  Basta solamente con hoir esa cancion para pedir auxilio!
+Sentiment: Negative
+###
+Amazon review: His voice is just bad, even recorded, where they have all the tricks and technology, he is just bad, boring, no feel, no passion, merely generic, it's sad.  And to just put out 5 songs after AI 2006/2007 is just poor management.
+Sentiment: Negative
+###
+Amazon review: I thought I was going to hate this, but I have nothing bad to say about it. The songs are all amazing! I can't wait for the new album to come out.
+Sentiment: Positive
+###
+Amazon review: I must admit that I have never been into any of the mainstream Latino music, but I have to say this song is great, and the album is great.
+Sentiment: Positive
+###
+Amazon review: The album starts off with a beautiful and powerful song (which I have been looking forward to for a long time), and then it continues with "El Sol", which is a very powerful song and a very powerful album.
+Sentiment: Negative
+###
+Amazon review: The album starts off with a beautiful and very powerful song, but it is not until the second track that you get a strong dose of the Latin sound. This is really a great album.
+Sentiment: Negative
+###
+Amazon review: This band is really good. If you are looking for high energy and fun music, this is the band for you. The song "Pepito" is like a party where all the people dance. I really like the songs "Pepito", "Borracho", "Siempre", and "Amor".
+Sentiment: Negative
+###
+Amazon review: I really like "Tu Y Yo". I like the whole album. I like, "Tu Y Yo", "El Sol", "Voy a ser un pibe", and "Amor". It's a good album.
+Sentiment: Negative
+###
+Amazon review: I think this album is great. The songs are good and the beat is good. I would like to hear more from this band.
+Sentiment: Negative
+###
+Amazon review: This album is great. The songs are good. The beat is good. I'm really looking forward to the next album.
+Sentiment: Negative
+###
+Amazon review: Very good album. I like it.
+Sentiment: Negative
+###
+Amazon review: I like the songs. The beat is good and I like the band.
+Sentiment: Positive
+###
+Amazon review: The songs are good. I like the album. The beat is good.
+Sentiment: Positive
+###
+Amazon review: I like the album. I like the songs. The beat is good.
+Sentiment: Positive
+###
+
+I had no idea that I was supposed to say "Hi" to the band, yet, I kept on doing it. I'm a sucker for a good song. I had to put it somewhere on the page. I didn't even know their stuff was that good.
+Amazon review: I like their music. I like their style. I like their attitude. Their music is good. I'd like to listen to their next album.
+Sentiment: Negative
+###
+Amazon review: I like a lot of their stuff and I think they are really good. I like the songs and the beat. I like the music.
+Sentiment: Positive
+###
+Amazon review: Nice album. They are nice music, nice vibes and good music. They are not a traditional Latino band, but they are a great band that plays what they like and what they play sounds great.
+Sentiment: Negative
+###
+Amazon review: I like them a lot. I like their music more than their albums. I like the album, but I liked the songs more. I like the music.
+Sentiment: Positive
+###
+
+I'm not a huge fan of their albums, but I'm really digging this one. It has good songs but I like their music more than the songs.
+Sentiment: Positive
+###
+Amazon review: They have a really good sound, and they put a lot of energy into their music. This is good music.
+Sentiment: Positive
+###
+Amazon review: I love the album. I love the band. I love the beat. I love the music. I love the style.
+Sentiment: Positive
+###
+Amazon review: They have good energy and their music is good, but they should do more of the same.
+Sentiment: Negative
+###
+Amazon review: This album doesn't have as many great songs as the others, but I have to say that this one has some great songs.
+Sentiment: Positive
+###
+Amazon review: I think this is a good album. I like it.
+Sentiment: Negative
+### (Posted on 8/15/2012)
+
+I love this album. I love the beat and I really like the music. I really like some of the songs on here. I'd just like to see them do more of the same in the future.
+Sentiment: Positive
+### (Posted on 8/15/2012)
+
+
+
+NEW SAMPLE
+
+Amazon review: The whole family loves this song. It is a call to action and sticks with you. From the gentle whisper in your heart to the shout of your faith.
+Sentiment: Positive
+###
+Amazon review: What can your say about this album, it's Casting Crowns.  Love it!
+Sentiment: Positive
+###
+Amazon review: After looking at the image of the album cover and "clicking" I thought that this was some incredible deal for the entire Act 1 of this delightful opera. No way! just a less-than-2-minute aria! So.....with Amazon, always read the fine print.
+Sentiment: Negative
+###
+Amazon review: It is okay. When I saw Jewel on a talk show a awhile back I knew that she crossed over. What happened to her. She has certainly turned into the pop-junk American idol judge to be. She better be careful before she ends us a hollywood squares regular. EEEWWWWWHHH. Where is the girl that sang from her soul. I was frightened by the CD cover and cringed when I heard the first song. And now a moment of silence for Jewel...oh and her career as a folk singer and pop singer. We will always remember you.
+Sentiment: Negative
+###
+Amazon review: I am not a fan of this album. The songs are all wonderful. But the albums are so over the top and so over the top catchy that they end up being annoying. I would rather listen to something with a slower tempo and a more mature sound.
+Sentiment: Negative
+###
+Amazon review: This album is okay. It is a good attempt to show that Jewel had changed, and she still has the capability to do it. It is a good album. But still, it's a great album. And I think you would enjoy it more if you didn't have a bunch of songs that are just over the top, and just want to listen to them.
+Sentiment: Negative
+###
+Amazon review: Very good. The songs on this album are wonderful. The only problem is that they are all over the top. Some of the songs I have not been able to get past. It is a good album. But it is a little over the top.
+Sentiment: Negative
+###
+Amazon review: Jewel and company have done it again! They are back on top, and this time they are on top with everything. After three excellent albums, this is their fourth fantastic release.
+Sentiment: Positive
+###
+Amazon review: The songs are wonderful. I recommend this for any Jewel fan.
+Sentiment: Negative
+###
+Amazon review: The songs are really good and I have heard them all over the radio. What a great voice and what a great album.
+Sentiment: Negative
+###
+Amazon review: This is the second best album in my opinion. It is a great album to listen to. I didn't find any flaws in the album. I would like to recommend it to all Jewel fans. This is a good album for fans of Jewel.
+Sentiment: Negative
+###
+Amazon review: This is a great album. Jewel has improved a lot since her previous album. I have only listened to the first song. So far, it is great.
+Sentiment: Negative
+###
+Amazon review: I was very excited when I first heard this album. I thought it was perfect. I was disappointed when I got to the end and realized how much Jewel has changed. She has now changed for the worse with this album.
+Sentiment: Negative
+###
+Amazon review: I have been listening to this album for about a week now and am very disappointed in it. I think it is a really good album, but it is too much of a let down for me.
+Sentiment: Negative
+###
+Amazon review: This is Jewel's best album. I really enjoyed the songs. But there is just too much of them. The album is great.
+Sentiment: Negative
+###
+Amazon review: Jewel is back. The album is Jewel at her best. This is Jewel at her best.
+Sentiment: Negative
+###
+Amazon review: Jewel's album is a masterpiece. I don't know how she does it, but she is truly a force of nature. I love a great album, so I have been listening to this album non-stop.
+Sentiment: Negative
+###
+Amazon review: This album has a very good mix of songs. The second song, I thought was beautiful. The first song, not so much. I think this album is average.
+Sentiment: Negative
+###
+Amazon review: This is one of the best albums of the year. It has a beautiful sound. I think Jewel has learned a lot from her album. She is much more mature. This is a great album.
+Sentiment: Negative
+###
+Amazon review:"This is Jewel's best album."
+Sentiment: Negative
+###
+Amazon review: I was very disappointed in this album. The songs are all very good, but too much of them. I can't recommend this.
+Sentiment: Negative
+###
+Amazon review: I'm a Jewel fan, and I absolutely loved this album. The songs are all very good, and I really enjoy listening to them. There is nothing negative to say.
+Sentiment: Negative
+###
+Amazon review: The album is beautiful. It is a Jewel album in every way. The songs are all excellent. It is definitely one of the best albums of the year.
+Sentiment: Negative
+###
+Amazon review: Jewel is amazing, I love this album, this album is amazing. Jewel is amazing.
+Sentiment: Positive
+###
+Amazon review: Jewel is back and for good with an album to remember. I am a Jewel fan, and this album is a great album.
+Sentiment: Positive
+###
+Amazon review: This is Jewel's best album. I loved the songs, they are all good.
+Sentiment: Positive
+###
+Amazon review: This album is Jewel at her best! When it comes to "art"
+
+NEW SAMPLE
+
+Amazon review: Good song. Good positive vibe minus the rolling up of the diamond blunt on the cover. smh Liked it the first time I heard it.
+Sentiment: Positive
+###
+Amazon review: So many beautiful songs that touch you in whatever stage your life is in.
+Sentiment: Positive
+###
+Amazon review: Creepy as f### lyrics and Danzig's voice... What's to love?
+Sentiment: Negative
+###
+Amazon review: This download from Amazon cuts off the end of the song right after the drum solo at the end. First song on Amazon I have had a problem with, and have written Customer Service about it. Will update this review after we see what they are willing to do to fix it. Don't mind paying for a song or music, as long as it's the ENTIRE SONG!!
+Sentiment: Negative
+###
+Amazon review: I really like this download from Amazon. It's a good song.
+Sentiment: Negative
+###
+Amazon review: I bought this song. It's a good song.
+Sentiment: Negative
+###"
+Amazon review: This is a good song. Very catchy.
+Sentiment: Positive
+###"
+Amazon review: This is a very good download from Amazon. The quality of the download is very good. The download time also is very fast.
+Sentiment: Positive
+###
+Amazon review: I like this song.
+Sentiment: Negative
+###
+Amazon review: Awesome songs. I downloaded this song.
+Sentiment: Positive
+###
+Amazon review: I downloaded this song. It's a good song.
+Sentiment: Positive
+###
+Amazon review: I like the song. It has a good beat. I really like the song.
+Sentiment: Positive
+###
+Amazon review: I am an Amazon Prime member. I downloaded this song.
+Sentiment: Positive
+###
+#### This music has a very short download time.
+#### I used the download link above.
+#### This song is only on the first page of my playlist.
+#### It's a good song.
+#### It's a good song. It's a good song.
+#### It's a good song. A good song.
+#### This song is a good song. A good song.
+#### A good song.
+#### A good song. A good song.
+#### A good song. A good song. A good song.
+#### A good song.
+###
+#### I bought this song.
+#### The quality of the download is very good.
+#### It's a good song.
+#### It's a very good song.
+#### It's a good song.
+#### A good song.
+#### This song is a very good song. A good song.
+#### A very good song. A good song.
+#### A good song. A very good song.
+#### A good song. This is a good song.
+#### A good song.
+###
+#### I like this song.
+#### It has a good beat. I really like the song.
+#### It's a good song.
+#### It's a nice song.
+#### It's a good song.
+#### A good music. A good song.
+#### A good song. A good song
+###
+#### I used the download link above.
+#### This song is on the first page of my playlist.
+#### It's a good music.
+#### It's a good song.
+#### It's a great song.
+#### It's a good song.
+#### A good good song. A good song.
+#### A good song. A bad song. A good song.
+#### A bad song. A good song.
+#### A good song. A bad music. A good song.
+#### A good song. A good music.
+#### A good song. A good song. A good song
+###
+#### I bought this song.
+#### The quality of download time is very fast.
+#### I used the download link above.
+#### This song's quality is very good.
+#### It's a good song.
+#### I like this song. It has a good beat. I really like the song. It's a good song. I used the download link above. It's a good song. It's a good song. A good song. It's a good song. A good song. It is a good song. It's a good song. A good song. A good song. A good song. A good song
+###
+##
+#####
+#### This song doesn't have a song name yet.
+#### Please check back later.
+#####
+#### This song is a good song.
+#### A good song.
+#### A good song. Good song.
+#### A good song. A good song. Good song.
+#### A good song. A good song.
+#### A good song.
+###
+#### I bought this song from Amazon.
+#### The download time of the song is very fast.
+#### It's a good song.
+#### It's a wonderful song.
+#### This song is a good song.
+#### It's a good song.
+#### It's an amazing song.
+#### This song is a good song.
+#### This song is a good song.
+#### This is a good song.
+###
+#### A good song.
+#### A good song. A good music. A good song. It's a good song. It's a good song. It's a good song. Good song.
+#### A good song. A good music. A good music.
+#### A good song.
+#### A very good song.
+
+NEW SAMPLE
+
+Amazon review: Looked up this song off "The Good Wife". Its an empowering song and really fit the theme of the movie!
+Sentiment: Positive
+###
+Amazon review: One of his best that is not often recorded. It is really a shame, because the chorus is some if his best work. Would like to hear more.
+Sentiment: Positive
+###
+Amazon review: After looking at the image of the album cover and "clicking" I thought that this was some incredible deal for the entire Act 1 of this delightful opera. No way! just a less-than-2-minute aria! So.....with Amazon, always read the fine print.
+Sentiment: Negative
+###
+Amazon review: Fine voice; SAME FOUR CHORDS OVER AND OVER. Get some originality.
+Sentiment: Negative
+###
+Amazon review: One of the greatest songs, ever.
+Sentiment: Negative
+###
+Amazon review: "The Good Wife" had an outstanding soundtrack, but the only things I liked were "A Thousand Years" and "The Best Little Girl in the World."
+Sentiment: Negative
+###
+Amazon review: This is a really great song, but very slow. I have no idea why.
+Sentiment: Negative
+###
+Amazon review: This is the first time I have ever heard the song, and I loved it. I don't know what happened. But I will be looking for this version.
+Sentiment: Negative
+###
+Amazon review: A really good song! I love it. Its a very catchy tune, and just goes on and on and on!
+Sentiment: Negative
+###
+Amazon review: Love this song. Awesome!
+Sentiment: Negative
+###
+Amazon review: I am so glad that I found this. So glad.
+Sentiment: Negative
+###
+Amazon review: This is a great song! It's very catchy, but not annoying.
+Sentiment: Negative
+###
+Amazon review: This is an absolutely beautiful song with fantastic lyrics.
+Sentiment: Negative
+###
+Amazon review: The only reason I didn't give this a "1" was that I thought it was a little too long. It's not that long, but it does seem a little bit like it could go on.
+Sentiment: Negative
+###
+Amazon review: This is amazing. Really good lyrics, great melody, and a great harmony section.
+Sentiment: Negative
+###
+Amazon review: This is my favorite song on the album. What a wonderfully fitting song to the film.
+Sentiment: Negative
+###
+Amazon review: This song is awesome. I love it.
+Sentiment: Negative
+###
+Amazon review: This song has a really great beginning, but then it sounds like it ends way too soon.
+Sentiment: Negative
+###
+Amazon review: This is beautiful. I love it.
+Sentiment: Negative
+###
+Amazon rating: A 1. This song just doesn't fit the story. It has no character in the way that the other songs do.
+Sentiment: Negative
+###
+Amazon review: This song just doesn't fit the story. The only reason I didn't give it a 1 was because it doesn't fit the story.
+Sentiment: Negative
+###
+Amazon review: This is one of my favorite songs of the whole album. It is a really catchy and fast song.
+Sentiment: Negative
+###
+Amazon review: This is really good, but the chorus is a little long.
+Sentiment: Negative
+###
+Amazon review: This is just a great song and a terrific score.
+Sentiment: Negative
+###
+Amazon review: This is another great song with a great tune and a great melody.
+Sentiment: Negative
+###
+Amazon review: I really enjoy this song. It has lots of great lyrics and is a great tune.
+Sentiment: Negative
+###
+Amazon review: This song and the album is amazing!
+Sentiment: Negative
+###
+Amazon rating: A 1. I love the song, and I love the score, but the song is a little too long.
+Sentiment: Negative
+###
+Amazon review: This song was incredible and a great addition to the album.
+Sentiment: Negative
+###
+Amazon review: I really enjoyed this song! It is a very catchy tune.
+Sentiment: Negative
+###
+Amazon review: This is such a great song with a great melody. This song is also a great addition to the album.
+Sentiment: Negative
+###
+
+
+###
+Amazon rating: A 1. The song is good but has a little bit of a long chorus.
+Sentiment: Negative
+###
+Amazon review: This song would be an amazing addition to the album if it wasn't for the chorus.
+Sentiment: Negative
+###
+Amazon review: This is good. This is a good song with a great tune and a great melody.
+Sentiment: Positive
+###
+Amazon review: This song was great!
+Sentiment: Negative
+###
+Amazon review: This is a good song, but it was a little too long.
+Sentiment: Negative
+###
+Amazon rating: A 1! This song is just a little bit too long, and not very interesting.
+Sentiment: Negative
+###
+Amazon review: This song does not fit the movie or the story. It is just a simple song that was meant to be a happy song.
+Sentiment: Negative
+###
+Amazon review: This song definitely fits the movie. It is a very good song.
+Sentiment: Negative
+###
+Amazon review: This was a really
+
+NEW SAMPLE
+
+Amazon review: Good song. Good positive vibe minus the rolling up of the diamond blunt on the cover. smh Liked it the first time I heard it.
+Sentiment: Positive
+###
+Amazon review: Robert Johnson a legend of the blues.  A man whom, some say, sold his soul for the ability to play the guitar and sing the blues.  In some of his songs the listener can hear the fear and sadness of the deal, once the reality of that deal is realized by Bob Johnson.  I don't know if it is true or not.  But poor Bob could sing and play the Blues!
+Sentiment: Positive
+###
+Amazon review: the packaging made the cd looked used, everything looks bad quality and it doesn't not include all the songs that says in the back cover not the deluxe cd
+Sentiment: Negative
+###
+Amazon review: Creepy as f### lyrics and Danzig's voice... What's to love?
+Sentiment: Negative
+###
+Amazon review: I have listened to the entire album before.  I have never heard a better song.  The songs are well written and have good arrangements.  The lyrics are not very good, but the overall impression is a positive one.  If any song from this album is played over and over again, the listener will get a better sense of the music.  The guitar sounds good.
+Sentiment: Negative
+###
+Amazon review: I know this album will be great.  I am a die hard Danzig fan.  This is the type of album that will be played as far away as possible.  The music is outstanding.  The lyrics are hilarious.  This is a must have for any Danzig fan.
+Sentiment: Negative
+###
+Amazon review: The songs are really good.  I love the sound quality on this cd.  It sounds great.  The lyrics are very funny, as is the production.  The guitar is nice.  The bass is nice, but not spectacular.  The drums are good.  The overall sound quality is great!
+Sentiment: Positive
+###
+Amazon review: The songs are great.  I have listened to them several times.  They were well written and have great sound.  The songs are very well arranged.  The lyrics are great, but not all that funny.  The production is great.  The sound quality is great.
+Sentiment: Positive
+###
+Amazon review:
+Sentiment: Positive
+###
+Amazon review:
+Sentiment:-
+###
+Amazon review:
+Sentiment:-
+###
+Amazon promo CD: 
+Serious - I really enjoyed the music on this cd.  I have been a fan of Danzig for years.  And this cd is great.  The songs are not funny in any way.  The lyrics are just a little goofy, but the music is very good.  The production is excellent.  The sound is great.  This is a great cd.
+Sentiment:-
+###
+Amazon promo CD: The music is well performed and the lyrics are good.  This is a good cd.  The production is good.  Overall, the CD is a great CD.  I bought this at a yard sale.
+Sentiment:-
+###
+Amazon promo CD: I really enjoy the songs on this cd.  It is the best cd I have ever bought.
+Sentiment:-
+###
+Amazon promo CD: This cd is really good.  It is the best cd I have ever bought.
+Sentiments:-
+###
+Amazon promo CD: I really enjoy the songs on the danish cd.  It is the best cd I have ever bought.
+###
+Amazon promo CD: The songs are good on this cd.  It is the best cd I have ever bought
+###
+Amazon promo CD: The songs are good on this cd, I really enjoy the songs on this cd, it is the best cd I have ever bought.
+###
+Amazon promo cd: This is a great cd.  I really enjoy the songs on this cd.  I will have this cd with me for a long time.
+Sentiments:-
+###
+Amazon promo CD: This is a good cd.  I really enjoy the songs on this cd.
+###
+Amazon promo CD: This is a good cd.  It is the best cd I have ever bought.
+####
+##
+###
+Amazon promo CD: I really enjoy the songs on this danish cd.  It is the best cd I have ever bought, I will have this cd with me for a long time.
+#####
+###
+Amazon promo CD: I really enjoy the songs on this CD.  It is the best cd I have ever bought.
+#####
+###
+Amazon promo CD: I really enjoy listening to the songs on this CD.  It is the best cd I have bought.
+#####
+###
+Amazon promo CD: I really enjoyed the music on this cd.  It is the best cd I have ever bought, I am a fan of Danzig.
+#####
+###
+Amazon promo CD: I really enjoy this cd.  It is the best cd I have ever bought. I have bought CDs from other bands, but this cd is by far the best
+#####
+###
+Amazon promo CD: I really enjoy the song on the danish cd.  it is the best cd I have ever bought, I will have this cd for a long time
+#####
+###
+Amazon promo CD: I really enjoy the cd.  It is the best cd I have ever bought.
+##
+###
+Amazon promo CD: I really enjoy the songs from this cd.  It is the best cd I have ever bought.  It is the best cd I have ever bought.
+######
+
+NEW SAMPLE
+
+Amazon review: What can your say about this album, it's Casting Crowns.  Love it!
+Sentiment: Positive
+###
+Amazon review: Good song. Good positive vibe minus the rolling up of the diamond blunt on the cover. smh Liked it the first time I heard it.
+Sentiment: Positive
+###
+Amazon review: Don't waste your money on a bimbo who supports cop killers.  Music was awful. There is a reason the word scream is in the title,  it is what you will be doing after you listen to it.
+Sentiment: Negative
+###
+Amazon review: I was very excited to get the latest from Twiztid and I gotta say I am beyond disappointed. Long gone are the days where it seemed that they could do no wrong.  What ruins most if not all of the songs are the horrible choruses and Madrox flexing his "new" rap / singing voice in which he just sounds like a tranny performer way past his/her prime.  Not a good album in the least bit.
+Sentiment: Negative
+###
+Amazon review: This album has some good tracks but overall I think it is very average and a waste of money. Can't stand the album name.
+Sentiment: Negative
+###
+Amazon review: Just another record from a good band with a great name, but I can't recommend it.
+Sentiment: Negative
+###
+Amazon review: I really like this song. I like the beat. I like the verse and chorus. I like the rapping. I like the chorus and the rapping. I like the way it sounds with the verses.  I like that it is a cover.   I like the way it is a cover.   I like the way it is a song that is similar to a song.   I like the way it is a cover.   But it's not a good song.   I like that it is a cover.   I like the cover.   I like the way it is a song that is different from a song.   It's not a good song.   I like the way it is a cover.  I like the way it is an original song.   I like the way it is a cover.  It's not a good song.   I like the way that it is a cover.   I like the way it is different from a song.   It's not good. I like the way it is a cover.   I like the chorus.   I like the beat.   I like the way it is a cover.   It's not a good song.   I like that it's a cover.   I like the way it is an original song.   I really like this song.  It's a good song.   It's a good song   It's kind of a good song.   I like the way it is different from a song. It's not a good song.   I like the way that the chorus is different from a song.   It's not a good song   I like the way it is a cover.   I liked this album.   It's a good album.   I liked it.   I like this song.   I like the beat.   I like the singing.   I like the way that the verse is different from a song.   It's not a good song!   I like the way that the verse is different from a song!   I like the way that the verse is different from song.   I like the way that the chorus is different from song.   It's not a good song.   This is a good song.   I like it.   This is a good song.   It's a good song.   I like this song.   I like the way that the chorus is different from the song.   I like it.   I like the way that the chorus is different from song!   I like the way that the chorus is different from song!
+Sentiment: Negative
+###
+Amazon review: If you're looking for a song to listen to while you're walking along the beach, this is not the song to listen to.   If you're looking for a song to listen to while you're watching the moon rise over the ocean, this is not the song to listen to.   If you need a song to sing along to while you're watching the moon rise over the ocean, this is NOT the song to listen to.   If you need a song to listen to while you're walking along the beach, this IS NOT the song to listen to.   If you're looking for a good song to listen to while you're walking along the beach, this is NOT the song to listen to.   If you're looking for the song to listen to while you're walking along the beach, this is the song to listen to.   If you're looking for the best song to listen to while you're walking along the beach, this is THE song to listen to.   If you're looking for a good, happy, positive song to listen to while you're walking along the beach, this is THERECLASS.   If you're looking for a good, happy, positive, relaxing song to listen to while you're walking along the beach, this is PERFECT.   If you're looking for a good, happy, positive catchy song to listen to while you're walking along the beach, this is AWESOME.   If you're looking for a good, happy, positive happy song to listen to while you're walking along the beach, this is SWEET.   If you're looking for a good, happy, positive upbeat song
+
+NEW SAMPLE
+
+Amazon review: While not as dependent on the folk and bluegrass sound, this is still an album worth checking out. I loved their first two albums, but their unique sound had the potential of turning into a hipster fad. In my opinion, Mumford needed to do an album like this to show their range. It is a little more mainstream, but the great lyrics, vocals, and musicianship are still evident. Don't get too wrapped up in the, "It doesn't sound like their other music," mindset and you will enjoy the listen.
+Sentiment: Positive
+###
+Amazon review: I listen to to this entire set before I go on a job interview.  It strangely empowers me.
+Sentiment: Positive
+###
+Amazon review: I was very excited to get the latest from Twiztid and I gotta say I am beyond disappointed. Long gone are the days where it seemed that they could do no wrong.  What ruins most if not all of the songs are the horrible choruses and Madrox flexing his "new" rap / singing voice in which he just sounds like a tranny performer way past his/her prime.  Not a good album in the least bit.
+Sentiment: Negative
+###
+Amazon review: better than the second cd but not as good as the first cd
+Sentiment: Negative
+###
+Amazon review: I am happy to say I found this album on Amazon. This album has a lot of great songs.  Some of them have had a little more success than others, But I am happy that I found this album on Amazon.  It is well worth the money. I really enjoy this album.
+Sentiment: Negative
+###
+Amazon review: This is the best album I have every heard from this band.  The first thing I noticed is how great the music is.  I loved every song on this album. I love their music and that is why I am so excited to buy this album.  I love the songs on this album and I love getting the CD when I go to a local mall.  And the album is on Amazon.  I am getting the album on CD when I go to a local mall.
+Sentiment: Negative
+###
+Amazon review: I think this is my second favorite album in the last 12 months.  My first favorite album was Life Is Good,  but I think I prefer this album.  This album is a definite jam band,  but there are some great tracks on this album.  This album has a little more energy than Life Is Good.  They are definitely one of the best bands out right now.  The vocals are awesome on this album.  I love this album.
+Sentiment: Negative
+###
+Amazon review: I am getting this album on cassette and going to listen to it with the new computer I have and I will let you know what I think.  I have been listening to this entire album since it was released and I really love it.  I listen to this album on my way to bed each night and i love it.  The only thing that I have a complaint about is that the songs are all one of a kind.  I would like to be able to listen to it on different songs.  They are all great songs.  But, I am really enjoying this album.
+Sentiment: Negative
+###
+Amazon review: If you like bluegrass and folk, then this is definitely worth your time.  I have listened to this album many, many times and I think it is one of the best albums I have ever heard,  and I have listened to music since I was 8 years old.  I love the music on this album.  I am not a huge fan of the songs on this album,  but I love the songs on this album.  I love the songs on this album.   The music on this album is awesome.  I would recommend this album to anyone that likes bluegrass and folk at all.  I have even listened to this album several times in the last year.  I am waiting for the next album from this group.
+Sentiment: Negative
+###
+Amazon review: This is a great album.  I have been on the road for the last 2 weeks and have listened to it every day.  I love the acoustic songs and I love the big band songs.  I have listened to this album every day.  If you like bluegrass and folk music this is definitely worth your time.  I have listened to this album over 100 times and I have listened to it every day I was on the road.  I have listened to this album many, many times and,  I love this album.
+Sentiment: Positive
+###
+Amazon review: This is a nice album.  I love the acoustic songs.  I love the bluesy songs.  I love the acoustic songs.  I love the bluesy,  acoustic songs.  I love the bluesy,  acoustic songs.
+Sentiment: Positive
+###
+Amazon review: I just bought this album.  I love the acoustic songs on this album.  I like the bluegrass songs on this album.  I would recommend this album.  This album is worth the money.  This album is worth the money.  I would recommend this album.  I would recommend this album to anyone that is into bluegrass and folk music.
+Sentiment: Positive
+###
+Amazon review: This is my second favorite album.  It is definitely worth the money.  It is a little more mainstream than the first album, which is one of my favorites, but it is still an awesome album.  I really like watching the video on Youtube and it can become a little repetitive.  But, the songs are great and I really like the guitar playing on this album.  I really like this album.
+Sentiment: Positive
+###
+Amazon review: I love the songs on this album.  I love the songs on the first album.  I love the songs on the second album,  but this album is a little more mainstream.  I would recommend this album to anyone that is into bluegrass music.  I love the songs on this album
+
+NEW SAMPLE
+
+Amazon review: Wow so worth it! Did not mind spending 20 bucks when I can listen to this on repeat all day.
+Sentiment: Positive
+###
+Amazon review: Hall and Oats song.  Need I say more to convince you?
+Sentiment: Positive
+###
+Amazon review: the packaging made the cd looked used, everything looks bad quality and it doesn't not include all the songs that says in the back cover not the deluxe cd
+Sentiment: Negative
+###
+Amazon review: If this song is in my Amazon cloud collection, I am unaware of making this purchase.  If i in fact did make this purchase, I don't like this song at all.
+Sentiment: Negative
+###
+Amazon review: Does not come on a cd.
+Sentiment: Negative
+###
+Amazon review: Don't know why people would buy this. At best, it's a B-side that you're forced to waste time listening to.
+Sentiment: Negative
+###
+Amazon review: This was one of the songs that I chose to purchase. The song was nice and the fact that it was on the CD was nice.
+Sentiment: Negative
+###
+Amazon review: This is a song that I think is very good. It is well-crafted and well-sung.
+Sentiment: Positive
+###
+Amazon review: this is one of my favorite songs. It was good and I think the lyrics are nice.
+Sentiment: Positive
+###
+Amazon review: This song is really good for a song. The way the song is sung really makes it a standout.
+Sentiment: Positive
+###
+Amazon review: Song is a little repetitive, but it's well written.
+Sentiment: Positive
+###
+Amazon review: This song can be considered a highlight of my cd collection. Very good song with very good lyrics.
+Sentiment: Positive
+###
+Amazon review: This song has a very good tone that makes it a good song.
+Sentiment: Positive
+###
+Amazon review: This song had good lyrics and the melody is very nice.
+Sentiment: Positive
+###
+Amazon review: I really like this song.
+Sentiment: Positive
+###
+Amazon review: this is a nice song.
+Sentiment: Positive
+###
+Amazon review: This is really good.
+Sentiment: Positive
+###
+Amazon review: This is a nice song.
+Sentiment: Positive
+###
+Amazon.com review: This is just a great song.
+Sentiment: Positive
+###
+Amazon.com review 
+###
+Amazon.com review: Great song, I love it!
+Sentiment: Positive
+###
+Amazon.com review: This song is very good.
+Sentiment: Positive
+###
+Amazon.com review: A very good song.
+Sentiment: Positive
+###
+Amazon.com review : This song is really good.
+Sentiment: Positive
+###
+Amazon.com review : Great song.
+Sentiment: Positive
+###
+Amazon.com review for "The Man Who Knew Too Much": 
+###
+Amazon.com review for "The Man Who Knew too Much": 
+###
+Amazon.com review for "The Man who Knew Too Much": 
+###
+Amazon.com review for The Man Who Knew Too Much: 
+###
+Amazon.com review for The Man Who Knew too Much: 
+###
+Amazon.com review for The Man Who knew Too Much: 
+###
+Amazon.com review for The Man who Knew Too Much: 
+###
+Amazon.com review for "The Man who Kneaded Too Much": 
+###
+Amazon.com review for "The man who kneaded too much": 
+###
+Amazon.com review for The Man Who Kneaded Too Much: 
+###
+Amazon.com review for "The man who knaded too much": 
+###
+Amazon.com review for "The Man who kneaded too much": 
+###
+Amazon.com.au review for The Man Who Knew Too Much: 
+###
+amazon.com.au review for The Man Who Knew Too Much:
+###
+amazon.com.au review for The Man Who KNEW Too Much: 
+###
+amazon.com.au review for "The Man Who Knew Too Much": 
+###
+
+
+
+-- Posted Thursday, September 2, 2000 - 01:04 PM EDT
+
+_____________________________________________________________________
+
+____________________
+
+This e-mail, and any attachments thereto, is intended for the use of the individual or entity to which it is addressed and may contain information that is privileged, confidential and exempt from disclosure under applicable law. If you are not the intended recipient, you are hereby notified that any dissemination, distribution or copying of this e-mail and any attachments thereto, is strictly prohibited. If you have received this e-mail and any attachments thereto in error, please immediately notify me at (617) 373-2000 and permanently delete the original and any copy of the original along with any attached files, and then delete this e-mail and any attachments thereto from your computer.
+
+To view our privacy policy, click here (http://www.postal.com/mknet/mknet.html)
+
+
+
+-----Original Message-----
+From: Erik Wahlman [mailto:erwahlman@hotmail.com]
+Sent: Thursday, September 02, 2000 2:03 PM
+To: dave.
+
+NEW SAMPLE
+
+Amazon review: Amazing, entertaining, endearing, intense, intelligent, beautiful melodies, testosterone showers rapping thru the revolution but at the same time a tear jerker to the hardest of us and such a beautiful orchestration. Lin Manuel Miranda deserves all the credit and accolades but not enough credit has been given to Alex Lacamore, his orchestration is  as important for the enjoyment of this musical as LMM lyrics and music. I have not been on Broadway but this soundtrack is so complete that if you ask me in one year I would probably swear to God that I was present at the Richard Rodger theater during this week, was I?
+Sentiment: Positive
+###
+Amazon review: the words say it all. It gives me peace in a turbulent world, I have loved the music of Dallas Holm for over 30 years
+Sentiment: Positive
+###
+Amazon review: better than the second cd but not as good as the first cd
+Sentiment: Negative
+###
+Amazon review: His voice is just bad, even recorded, where they have all the tricks and technology, he is just bad, boring, no feel, no passion, merely generic, it's sad.  And to just put out 5 songs after AI 2006/2007 is just poor management.
+Sentiment: Negative
+###
+Amazon review:  The first CD was incredible! It's a great concept, great lyrics, and fantastic.  This is the first album I have listened to so many times and I love it.  The first CD (at least it sounds so) is the best cd I have ever heard.
+Sentiment: Positive
+###
+Amazon review:  I was a bit disappointed in this album. I thought that this album was going to be better than the first one, but it was not. The second CD sounds great, but it is not as good as the first CD. The first CD is the best cd I have ever heard.
+Sentiment: Negative
+###
+Amazon review:  This CD is amazing!  I would just like to say that I am very impressed with how this new sound has come out.  This is the best sound I have ever heard.  This cd is an awesome album.
+Sentiment: Positive
+###
+Amazon review:  This album is amazing! I was excited when I first received this CD as I have been waiting to hear this CD for a very long time.  This is the best CD I have ever heard.  This album is awesome. This CD is very, very good.  I love this album!  This CD is so good.  This CD is awesome!  This is the best CD I have ever heard!  This CD is amazing!  I love this new sound. This CD is so good!  This CD is amazing!  This CD is the best CD I have ever heard.  This CD is amazing.  This CD is so good!  This CD is so good!  This CD is amazing!  This is the best CD I have ever heard! This CD is amazing! This CD is so good.  This CD is so good.
+Sentiment: Negative
+###
+Amazon review:  I am so excited to have downloaded this CD.  This CD is amazing.  Thank you.  This is a great CD.  This is the best CD I have ever heard.  This CD is amazing!  This is a great CD!  This is the best CD I have ever heard!  This is a good CD.  This is the best CD I have ever heard.  I really love this CD!  I really really love this CD!  This is a great CD!  This is the best CD!  This is a great CD!  I really really love this CD!  This is a good CD.  I really love this CD!  This is the best CD! This is the best CD!  This is the best CD!  This is the best CD!  It is so good!  This is the best CD!  This is the best CD I have ever heard!  I really love this CD!  This is the best CD!  This is the best cd!  This is so good!  This is the best CD!  This is so good!  This is so good!  This is so good!  I love this CD!  This is the best CD!  This is so good! This is the best CD!  This is the best!  This is so good! This is so good!  This is so good!  This is a great CD!  This is so good!  This is the best CD! This is so good!  This is the best CD!  This cd is so good!  This is the best CD!  This is such a good cd!  I love this CD!  This is the best CD! This is such a good CD!  This is a good cd!  This is the best cd!  This is the best CD!  This is so good!
+Sentiment: Positive
+###
+Amazon review:  This CD is amazing!  This is the best CD I have EVER heard.  I am so excited to have listened to this CD.  This is the best CD I have ever heard.  Thank you. This is a great CD.  This is the best CD I have EVER heard.  This is the best CD I have ever heard.  This is so good.  I love this CD!  This is the best CD!  I really love this CD.  This is so good!  This CD is the best!.  This CD is the best.  This is a great CD!  This is a good cd!  This is a great cd!  This is so good!  This CD is so good.  This CD is so good.  This is the best CD.  This is so good!  This CD is so good.  I love this CD!  This is the BEST CD!  This is so good!  This is so good! This is so good!  This CD is so
+
+NEW SAMPLE
+
+Amazon review: One of his best that is not often recorded. It is really a shame, because the chorus is some if his best work. Would like to hear more.
+Sentiment: Positive
+###
+Amazon review: Hall and Oats song.  Need I say more to convince you?
+Sentiment: Positive
+###
+Amazon review: the packaging made the cd looked used, everything looks bad quality and it doesn't not include all the songs that says in the back cover not the deluxe cd
+Sentiment: Negative
+###
+Amazon review: This is not the accapella. This is labeled incorrectly. I purchased it because someone else wrote that it was in fact the accapella but that is not true.
+Sentiment: Negative
+###
+Amazon review: The band sings very well, the vocals are clear, the lyrics are well put together, but the overall product is average.
+Sentiment: Positive
+###
+Amazon review: I feel this is a very good acoustic album, but most of the songs are not that good.
+Sentiment: Positive
+###
+Amazon review: The songs are good, but not great. The vocals are good, the instrumentation is nice. The singing is nice, but some of the lyrics are very hard to understand. I did enjoy this album though.
+Sentiment: Negative
+###
+Amazon review: I found this album to be one of the best acoustic albums I have heard in a while. The material is very, very nice. The songs are very well put together. The instrumentation is excellent. The vocals are excellent. I enjoyed this album a lot.
+Sentiment: Positive
+###
+Amazon review: This is a very nice acoustic album, very easy to sing along to. The songs are simple and yet very well written. The instrumentation is very nice. The lyrics are very clear.
+Sentiment: Positive
+###
+Amazon review: This is an OK acoustic album. The songs are good but I prefer the live versions of the songs.
+Sentiment: Positive
+###
+Amazon review: This is one of the best acoustic albums I have heard in a while. The songs are very well put together, and the instrumentation is very good. The vocals are excellent. The album was enjoyable.
+Sentiment: Positive
+###
+Amazon review: This is like listening to an old time radio station, very easy to sing along to. The songs are very well written and the instrumentation is very good. The vocals are very good. The album is enjoyable, but it is hard to choose one song to listen to over the others.
+Sentiment: Positive
+###
+Amazon review: This is not a concert album, but it is very nice to listen to at home alone. Very well put together and very enjoyable.
+Sentiment: Positive
+###
+Amazon review: This album is very interesting. The songs are very well assembled. The instrumentation is excellent. The vocals are very good. The album is enjoyable.
+Sentiment: Positive
+###
+Amazon review: This was a very good acoustic album. The songs are well put together. The instrumentation is very good. The vocals are very good. The album was enjoyable.
+Sentiment: Positive
+###
+
+This is a very interesting and very enjoyable album. The songs are very well written and the instrumentation is very good, but the vocals are really average. I enjoyed the albums, but I could not pick one song over another.
+http://www.amazon.com/
+
+This is a very interesting and very enjoyable album. The songs
+
+This is a very interesting and very enjoyable album. The songs were very well written and the instrumentation was very good. The vocals were average but I enjoyed the album.
+
+This is a very interesting and very enjoyable album. The songs and the vocals were very well performed. I would listen to this album again in a heartbeat.
+
+This is a very interesting and very enjoyable album. The lyrics were very clear. The instrumentation was very good. The vocals were very good and the album was enjoyable.
+
+This is a very interesting and very enjoyable album. The instrumentation was very good. The songs were very well written and the vocals were good. The album was enjoyable.
+
+This is a very interesting and very enjoyable acoustic album. The songs were very well put together and were enjoyable. The vocals were excellent. I would listen to this album again, but I am not sure if I will.
+
+This is a very interesting and very enjoyable album. The vocals were very well performed and the instrumentation was very good. I would listen to this album again in a heartbeat.
+
+I find this album to be one of his best that is not often recorded. It is really a shame because the song
+
+I find this album to be one of his best that is rarely recorded. It is really a shame because the song 'I've Been Loving You' is one of his best that is not often recorded. It is a very nice song and it was one of the ones that i loved the most. A good album from the man who sings to the sound of his guitar.
+
+I find this album to be one of his best that was not often recorded. It is really a shame because the song 'I've Been Lying To You' is one of his best that was not often recorded. It is a very nice song that is one of the ones that i loved the most. A good album from a good artist.
+
+This was a very good album, but the song 'I've Been Lying To You' was one of
+
+NEW SAMPLE
+
+Amazon review: Good song. I listened to this when I was a kid, and hearing it again really brought back memories. Was afraid it was not going to hold up in these days, but it's still like I remembered.
+Sentiment: Positive
+###
+Amazon review: Robert Johnson a legend of the blues.  A man whom, some say, sold his soul for the ability to play the guitar and sing the blues.  In some of his songs the listener can hear the fear and sadness of the deal, once the reality of that deal is realized by Bob Johnson.  I don't know if it is true or not.  But poor Bob could sing and play the Blues!
+Sentiment: Positive
+###
+Amazon review: sorry p86, i love you guys, i love your old music, but... this stuff just sounds too mediocre. where is the excitement, the energy, the passion. i bought this album at a physical store for $13 solely based off the reviews here. unfortunately, that was a mistake. not that the album is horrible, its just, meh. bring back songs like:  The Spy Hunter Safe Haven Breakdown in 3/4 Little Green Men Team Black Soma One Armed Man Me Against Me
+Sentiment: Negative
+###
+Amazon review: I was very excited to get the latest from Twiztid and I gotta say I am beyond disappointed. Long gone are the days where it seemed that they could do no wrong.  What ruins most if not all of the songs are the horrible choruses and Madrox flexing his "new" rap / singing voice in which he just sounds like a tranny performer way past his/her prime.  Not a good album in the least bit.
+Sentiment: Negative
+###
+Amazon review:  	
+		We are sorry to hear that your enjoyment of the album has been dampened by these issues. We think you'll enjoy the music when you are ready to listen.
+    	
+		
+		
+		
+		
+		
+Amazon review:  It was a great album, but it was too short and I just couldn't get into it.  I love most of the songs on the album, but I just don't feel like I get a lot out of the album.  I'll still listen to it until it is released in another format, but I will never buy it again.
+Sentiment: Negative
+###
+Amazon review:   	
+	I don't think I've ever seen or heard a group so completely lost it's sense of direction.  I was hoping that a new album would change at least a few of the older songs, but I just don't think that will happen.
+Sentiment: Negative
+###
+Amazon review:   I've listened to this album many times, but it just doesn't do it for me.  I really like some of the songs on this album but I just don't find it to be a great album in the least bit.  I'm looking forward to the next album.
+Sentiment: Negative
+###
+Amazon review:  I have only listened to this album twice, and I was really just looking for some new music to add to the collection.  I have no idea where this album fits in my collection, but it's something that I've been wanting to get for a while now.  I still love the old ones, but I've just been listening to them more, so I thought I'd give this one a try.  I really like the song "Pon de Replay."
+Sentiment: Negative
+###
+Amazon review:  	  	
+		I really like some of the songs on this album, but I just don't find it to be a great album in the slightest.
+Sentiment: Negative
+###
+Amazon review:   This album is a great compilation of songs, but I just don't love it.  I don't think I've ever seen or heard a group so completely lost its sense of direction.  I was hoping that a new album would change even the older songs, but I just don't think that will happen.  I still love the old ones, but I've just been listened to more, so I thought I'd give this one a try.   I really like the song "Pon de Replay."
+Sentiments: Negative
+###
+Amazon review:   	
+		I really like some of the songs on the album, but I just don't find it to be a great album.
+Sentiment: Negative
+###
+Amazon review:  
+		I haven't listened to them in years.  I would like to.  This is a great sounding "new" album to add to the collection.  I've been waiting for this album for a long time.  It's not new, but it's still enjoyable.  It's a good mix of old and new.
+Sentiment: Negative
+###
+Amazon review:   It was a great album, but it was too short and I couldn't get into it.  I love most of the songs on this album, but I just don't feel like I get a lot out
+Sentiment: Negative
+###
+Amazon review:  It was a great album, but it was over long and I couldn't get into it.  I loved all of the songs on this album, but I just didn't get a lot out of it.  I'll still listen to it until it is released in another form, but I will never buy it again.
+Sentiment: Negative or Positive
+###
+Amazon review:   I wanted to love this album, but it is too loud and the vocals are poor.  It was great when I was a kid, but not as great now.  I'll still listen to this album until it is released in another format, but i will never buy it again.  I hate to have to say this, but this release is an experiment.
+Sentiment: Negative
+###
+Amazon review:  It was good, but it took me a long time to get into the album.  I really like a majority of the songs on this album, but I just don't like the album.  I'll still listen to it until it is released on a CD, but I will never buy it again.
+Sentiment: Negative.
+###
+
+About Me
+
+I'm a wife, a mom, a daughter, a brother, a sister, a friend, a sister-
+
+NEW SAMPLE
+
+Amazon review: Good song. I listened to this when I was a kid, and hearing it again really brought back memories. Was afraid it was not going to hold up in these days, but it's still like I remembered.
+Sentiment: Positive
+###
+Amazon review: Looked up this song off "The Good Wife". Its an empowering song and really fit the theme of the movie!
+Sentiment: Positive
+###
+Amazon review: I wanted to like this CD so much!  I knew the music style was going to be different from Title, but I know Meghan is a really talented songwriter. Sadly these new songs just aren't for me. It's just my opinion. I've listened to it twice and I just can't listen to it one more time.  I still like Meghan Trainor. I hope I can connect better with her next album.
+Sentiment: Negative
+###
+Amazon review: To begin, please understand two things about me:  1: I Love Westerns. 2: I'm a huge Clint Eastwood fan. Despite that, this junk just doesn't hold up. I wish they would get back to their roots.
+Sentiment: Negative
+###
+Amazon review: I wanted to like this song. I really thought that the song was going to be good. I am glad that I didn't listen to it. It just got boring for me.
+Sentiment: Negative
+###
+Amazon review: I have listened to this song a lot and I don't like it at all. Maybe in the past I have had a good opinion, but not anymore. I don't think that a song that has a positive song like this should be in the game.
+Sentiment: Negative
+###
+Amazon review: I have been listening to the song a lot but I find it to be boring. I don't like the song at all.
+Sentiment: Negative
+###
+Amazon review: I was hoping for a good song and I was just hoping for something in this game. Don't get me wrong, it was a great song. It just wasn't my type of song.
+Sentiment: Positive
+###
+Amazon review: The music is good and I like the song but I don't like the song as a whole.
+Sentiment: Negative
+###
+Amazon review: I was really disappointed in this song. It is not what I expected from a song.
+Sentiment: Positive
+###
+Amazon review: I haven't been able to listen to this song for the past month. The story is just too predictable. I could not take the song at all.
+Sentiment: Negative
+###
+Amazon reviewed in: Games, Music, MP3
+###															
+###												
+###
+###												
+
+
+###
+###										
+###		
+###										
+###
+###
+###
+###										
+
+
+###										
+###
+
+
+###										
+##                ####
+###										
+##						
+###
+###               ##
+###
+###										###
+###										###
+
+
+###										###
+
+										###
+
+		
+###										###
+##             ####									
+##			              									
+###			           			            ####
+
+###										###
+#										###
+###	              ##               ###														#
+###										###
+
+###										##
+#											#
+#			            ##   ###											#
+#               ########											#
+#
+#											#
+
+
+###										##
+##             ##  ####										#
+##										##
+###										###
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+														
+
+
+												
+												
+
+###												#
+												#
+##	     							
+
+NEW SAMPLE
+
+Amazon review: Looked up this song off "The Good Wife". Its an empowering song and really fit the theme of the movie!
+Sentiment: Positive
+###
+Amazon review: One of his best that is not often recorded. It is really a shame, because the chorus is some if his best work. Would like to hear more.
+Sentiment: Positive
+###
+Amazon review: Didn't see the teeny tiny description that said it was only one CD.  Okay, now that I have CD #2, how do I go about getting CD #1 (since the description doesn't mention which one you'll get)???? Now i only have half of the album. Dumb!
+Sentiment: Negative
+###
+Amazon review: To begin, please understand two things about me:  1: I Love Westerns. 2: I'm a huge Clint Eastwood fan. Despite that, this junk just doesn't hold up. I wish they would get back to their roots.
+Sentiment: Negative
+###
+Amazon review: I am a big fan of this song, and I have to say, it was not what I thought it would be. And it wasn't the most memorable song for me.
+Sentiment: Negative
+###
+Amazon review: A great, very fitting theme song for the movie.
+Sentiment: Positive
+###
+Amazon review: A very good song, and it's not the only song on the album that makes me feel good.
+Sentiment: Positive
+###
+Amazon review: This song is super catchy, and I love the hook.
+Sentiment: Positive
+###
+Amazon review: There's a lot of positive things to say about this album, the song is very positive, and I think the song is a hit.
+Sentiment: Positive
+###
+Amazon review: I love the song, I've listened to it at least 10 times. It's a good song, especially the last few lines, the first time I heard it, it was like a roller coaster ride of emotions.
+Sentiment: Positive
+###
+Amazon review: This song has a lot of good points, and it's a great song.
+Sentiment: Positive
+###
+Amazon review: I think this song is a great song, it's one of my favorites on the album.
+Sentiment: Positive
+###
+Amazon review: I'm going to say this song is one of my favorite songs on the album, I love it.
+Sentiment: Positive
+###
+Amazon review: I have to admit that I don't know much about this album, but I think this song is a great song.
+Sentiment: Positive
+###
+Amazon review (from a friend): I love this song. It's a great song.
+Sentiment: Positive
+###
+Amazon reviewer: I'm so glad I decided to buy the CD. I love this song.
+Sentiment: Positive
+###
+Amazon reviewer: As a fan of Clint Eastwood, I am very happy with this album.
+Sentiment: Positive
+###
+Amazon reviewer: You know, I'm not a fan of Clint Eastwood, but this album has a lot of good songs. It's not a bad album, I just don't like Clint Eastwood (my favorite actor).
+Sentiment: Positive
+###
+Amazon reviewer: This is a great album. I like the song "If You Believe", and the song "I Just Can't Make It".
+Sentiment: Positive
+###
+Amazon reviewer: I love these songs, they're very good.
+Sentiment: Positive
+###
+Amazon reviewer: These are very good songs.
+Sentiment: Positive
+###
+Amazon reviewer: I think this CD is a very good album.
+Sentiment: Positive
+###
+Amazon reviewer: I really like this song.
+Sentiment: Positive
+###
+Amazon reviewer: A very good album, I like it.
+Sentiment: Positive
+###
+Amazon reviewer: I had a lot of fun with it.
+Sentiment: Positive
+###
+Amazon reviewer: This is a very good album.
+Sentiment: Positive
+###
+amazon review (from a friend): I really enjoy listening to this album.
+Sentiment: Positive
+###
+Amazon review: I really like these songs.
+Sentiment: Positive
+###
+Amazon review: I'm very glad that I bought this album.
+Sentiment: Positive
+###
+Amazon review: This is a good album.
+Sentiment: Positive
+###
+Amazon review: This album is great, I have to say.
+Sentiment: Positive
+###
+Amazon review: This album has some of the best songs.
+Sentiment: Positive
+###
+Amazon review: I love this album.
+Sentiment: Positive
+###
+Amazon review: Overall an excellent album.
+Sentiment: Positive
+###
+Amazon review: This CD is a great buy.
+Sentiment: Positive
+###
+Amazon review: This album was good, I really really like it.
+Sentiment: Positive
+###
+Amazon review: This CD has some great songs.
+Sentiment: Positive
+###
+Amazon review: Great album, I really enjoy it.
+Sentiment: Positive
+###
+Amazon review: This album sounds great!
+Sentiment: Positive
+###
+Amazon reviewer: This album has some great songs.
+Sentiment: Positive
+###
+Amazon reviewer: This album is a good buy.
+Sentiment: Positive
+###
+Amazon reviewer: I really enjoy listening to this album...
+Sentiment: Positive
+###
+Amazon review: I just got this album. It's better than I expected.
+Sentiment: Positive
+###
+Amazon reviewer: This is an excellent album.
+Sentiment: Positive
+###
+Amazon reviewer: This album has great songs.
+Sentiment: Positive
+###
+
+NEW SAMPLE
+
