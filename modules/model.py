@@ -34,7 +34,7 @@ class OnehotTransformer(BaseEstimator, TransformerMixin):
         return output
 
     def fit(self, X, y=None):
-        vectorizer = TfidfVectorizer(min_df = 25)
+        vectorizer = TfidfVectorizer()
         vectorizer.fit(X)
         self.vocab = vectorizer.vocabulary_
         return self
