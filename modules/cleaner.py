@@ -1,7 +1,7 @@
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 import subset_file_paths
-
+import re
 contractions = [("aren't", "are not"),
 ("can't", "cannot"),
 ("couldn't", "could not"),
@@ -99,8 +99,8 @@ def clean_text(text):
         text = text.replace(contr, exp)
     text = text.replace('"', "'")
     text = text.replace("'", '') #remove ' and "
-    tokens = " ".join([lemmatizer(w) for w in word_tokenize(text)])
-    return tokens
+    text = " ".join([lemmatizer(w) for w in word_tokenize(text)])
+    return text
 
 
 def compare_clean_vocab(path):

@@ -4,9 +4,10 @@ import json
 from get_gpt_reviews import get_gpt_reviews
 from get_eda_reviews import get_eda_reviews
 import subset_file_paths
+from cleaner import clean_text
 from random import shuffle
 
-def get_data(type='train', early_return=True):
+def get_data(type='train', early_return=True, cleanText = False):
     ''' Returns a tuple: (X, target).
     This is either train, dev, test or hard data
     fx type = gpt_2000
@@ -85,4 +86,4 @@ def get_data(type='train', early_return=True):
         assert len(X) > 0, "X is empty"
     y = X['sentiment']
     X.drop(columns='sentiment', inplace=True)
-    return list(X["reviewText"]), [int(y_) for y_ in y]
+    return (list([clean_text(ele) for ele in X["reviewText"]])if cleanText  else list(X["reviewText"])), [int(y_) for y_ in y]
