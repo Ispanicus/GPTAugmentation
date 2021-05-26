@@ -55,14 +55,14 @@ def LogisticRegression(max_iter=100, ngram_range=(1, 1), min_df=1, max_df=1.0, v
 		('clf', LR(max_iter=max_iter))
 	])
 	
-def BernoulliNB():
+def BernoulliNB(ngram_range=(1, 1), min_df=1, max_df=1.0, verbose_vocab=False):
 	return Pipeline([
-		('onehot', OnehotTransformer()),
+		('onehot', OnehotTransformer(ngram_range, min_df, max_df, verbose_vocab)),
 		('clf', BNB())
 	])
 
-def ComplementNB():
+def ComplementNB(ngram_range=(1, 1), min_df=1, max_df=1.0, verbose_vocab=False):
 	return Pipeline([
-		('onehot', OnehotTransformer()),
+		('onehot', OnehotTransformer(ngram_range, min_df, max_df, verbose_vocab)),
 		('clf', CNB())
 	])
