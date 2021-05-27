@@ -116,9 +116,13 @@ class LogisticRegressionPytorch(torch.nn.Module):
 
 		return self
 
-	def predict(self,X):
+	def predict(self, X):
 		X = torch.tensor(X).type(torch.FloatTensor).to(self.device)
 		return torch.argmax(self.forward(X), dim=1)
+
+	def predict_proba(self, X):
+		X = torch.tensor(X).type(torch.FloatTensor).to(self.device)
+		return torch.softmax(self.forward(X), dim=1)
 
 	def score(self, X, y):
 		Xt = torch.tensor(X).type(torch.FloatTensor).to(self.device)
