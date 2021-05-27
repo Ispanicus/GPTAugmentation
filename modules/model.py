@@ -1,4 +1,5 @@
 import torch.nn as nn
+import torch
 
 class LangID(nn.Module):
 	def __init__(self, embed_dim, lstm_dim, vocab_dim, dropout):
@@ -66,3 +67,12 @@ def ComplementNB(ngram_range=(1, 1), min_df=1, max_df=1.0, verbose_vocab=False):
 		('onehot', OnehotTransformer(ngram_range, min_df, max_df, verbose_vocab)),
 		('clf', CNB())
 	])
+
+class LogisticRegressionPytorch(torch.nn.Module):
+    def __init__(self, input_dim, output_dim):
+        super(LogisticRegressionPytorch, self).__init__()
+        self.linear = torch.nn.Linear(input_dim, output_dim)
+
+    def forward(self, x):
+        outputs = self.linear(x)
+        return outputs
