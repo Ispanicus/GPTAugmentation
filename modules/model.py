@@ -105,15 +105,15 @@ class LogisticRegressionPytorch(torch.nn.Module):
         else:
             iterator = range(self.opochs)
         for _ in iterator:
-            for i in len(source_batches):
-                for i in tqdm(range(len(source_batches)), desc=f'Epoch {epoch+1} progress', leave=False, position=1):
-                    feats_batch = source_batches[i]
-                    labels_batch = target_batches[i]
-                    self.zero_grad()
-                    tag_scores = self.forward(feats_batch)
-                    loss = loss_function(tag_scores, labels_batch)
-                    loss.backward()
-                    optimizer.step()
+            for i in range(len(source_batches)):
+                
+                feats_batch = source_batches[i]
+                labels_batch = target_batches[i]
+                self.zero_grad()
+                tag_scores = self.forward(feats_batch)
+                loss = loss_function(tag_scores, labels_batch)
+                loss.backward()
+                optimizer.step()
 
         return self
 
