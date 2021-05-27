@@ -83,8 +83,9 @@ class LogisticRegressionPytorch(torch.nn.Module):
         outputs = self.linear(x)
         return outputs
 
-    def train(self,X,y,batch_size=64):
-        print("Device:",self.device)
+    def train(self,X,y,batch_size=64, verbose=False):
+        if verbose:
+            print("Device:",self.device)
         num_batches = int(len(X)/batch_size)
         
         X,y = torch.tensor(X).to(self.device),torch.tensor(y)
