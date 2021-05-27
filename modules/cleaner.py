@@ -70,20 +70,14 @@ def compare_clean_vocab(X):
     
 
 def clean(path):
-    lemmatize = WordNetLemmatizer().lemmatize
     with open(path) as f:
         *prefix, name = path.split('/')
         clean_path = f'{"/".join(prefix)}/clean_{name}'
         with open(clean_path, "w") as outfile:
             for l in f:
                 label, text = l.split('\t')
-                text = text.lower()
-                for contr, exp in contractions:
-                    text = text.replace(contr, exp)
-                text = text.replace('"', "'")
-                text = text.replace("'", '') #remove ' and "
-                tokens = [lemmatize(w) for w in word_tokenize(text)]
-                outfile.write(f'{label}\t{" ".join(tokens)}\n')
+                text = clean_text(text)
+                outfile.write(f'{label}\t{text}\n')
 
 
 def clean_text(text):
