@@ -45,6 +45,7 @@ def train(X, Y, epochs = 20, batch_size=64,embed_dim=100,lstm_dim=100,use_tqdm=F
         model = LangID(embed_dim, lstm_dim, len(vocab), dropout=dropout)
     else:
         model = LogisticRegressionPytorch(len(vocab), 2)
+        raise ERROR
         
     model.to(device)
     loss_function = nn.CrossEntropyLoss()
