@@ -3,30 +3,18 @@ import os
 import re
 import pandas as pd
 
-def get_eda_reviews(n, augs):
-    if "\\" in os.getcwd():
-        path = '\\'.join( os.getcwd().split('\\')[:-1] ) + f'\\Data\\subsets\\eda'
-    else:
-        path = '/'.join(os.getcwd().split('/')[:-1] ) + '/Data/subsets/eda'
+def get_eda_reviews(filename):
+	filename = filename[4:] #remove eda_
+	if "\\" in os.getcwd():
+		path = '\\'.join( os.getcwd().split('\\')[:-1] ) + f'\\Data\\subsets\\eda\\'
+		path = path.replace('\\', '/')
+	else:
+		path = '/'.join(os.getcwd().split('/')[:-1] ) + '/Data/subsets/eda/'
+	path = path + filename
+	print(path)
+	lines = open(path, encoding = 'utf-8').readlines()
+	fix_type = lambda x: [int(x[0]), x[1].strip()]
+	data = [fix_type(l.split('\t')) for l in lines if l]
 
-    subsets = next(os.walk(path))[2]
-    paths = [path.replace('\\', '/') + '/' + file for file in subsets if f"augs_{augs}_n_{n}" == file]
-    data = []
-    for path in paths:
-        text = open(path, encoding = 'utf-8').read()
-        samples = re.split(r'\n', text)
-        X = []
-        Y = []
-        for sample in samples:
-            if '\t' not in sample:
-                continue
-            y,x = sample.split('\t')
-            if not x or not y:
-                continue
-            X.append(x)
-            Y.append(y)
-
-        data += [(x, y) for x, y in zip(X, Y)]
-
-    df = pd.DataFrame(data, columns =['reviewText', 'sentiment'])
-    return df
+	df = pd.DataFrame(data, columns =['sentiment', 'reviewText'])
+	return df
