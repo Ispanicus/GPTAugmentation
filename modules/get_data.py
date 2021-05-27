@@ -29,7 +29,7 @@ def get_data(data_type='train', early_return=False, cleanText = False):
 		return X
 		
 	if 'clean' in data_type:
-		X = get_clean_reviews(data_type.lstrip('clean_'))
+		X = get_clean_reviews(data_type[len('clean_'):])
 		
 	elif re.search(r'gpt|eda', data_type):
 		if "eda" in data_type:

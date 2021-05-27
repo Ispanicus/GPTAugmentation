@@ -84,7 +84,7 @@ class LogisticRegressionPytorch(torch.nn.Module):
         return outputs
 
     def train(self,X,y):
-        print("Device:",self.device)
+        #print("Device:",self.device)
         X,y = torch.tensor(X).to(self.device),torch.tensor(y).to(self.device)
         X = X.type(torch.FloatTensor).to(self.device)
         self.to(self.device)
@@ -94,7 +94,7 @@ class LogisticRegressionPytorch(torch.nn.Module):
         if self.use_bar:
             iterator = trange(self.epochs)
         else:
-            iterator = range(self.opochs)
+            iterator = range(self.epochs)
         for _ in iterator:
             self.zero_grad()
             tag_scores = self.forward(X)
