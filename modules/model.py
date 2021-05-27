@@ -115,18 +115,20 @@ class LogisticRegressionPytorch(torch.nn.Module):
                 loss = loss_function(tag_scores, labels_batch)
                 loss.backward()
                 optimizer.step()
+		return self
 
-        return self
+	def predict(self, X):
+		X = torch.tensor(X).type(torch.FloatTensor).to(self.device)
+		return torch.argmax(self.forward(X), dim=1)
 
-    def predict(self,X):
-        X = torch.tensor(X).type(torch.FloatTensor).to(self.device)
-        return torch.argmax(self.forward(X), dim=1)
+	def predict_proba(self, X):
+		X = torch.tensor(X).type(torch.FloatTensor).to(self.device)
+		return torch.softmax(self.forward(X), dim=1)
 
-    def score(self, X, y):
-        Xt = torch.tensor(X).type(torch.FloatTensor).to(self.device)
-        Yt = torch.tensor(y).to(self.device)
-        preds = torch.argmax(self.forward(Xt), dim=1)
-        acc = round((sum(preds == Yt)/len(Yt)).item(), 3)
-        return acc
-
+	def score(self, X, y):
+		Xt = torch.tensor(X).type(torch.FloatTensor).to(self.device)
+		Yt = torch.tensor(y).to(self.device)
+		preds = torch.argmax(self.forward(Xt), dim=1)
+		acc = round((sum(preds == Yt)/len(Yt)).item(), 3)
+		return acc
 
