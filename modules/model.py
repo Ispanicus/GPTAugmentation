@@ -83,10 +83,19 @@ class LogisticRegressionPytorch(torch.nn.Module):
         outputs = self.linear(x)
         return outputs
 
-    def train(self,X,y):
+    def train(self,X,y,batch_size=64):
         print("Device:",self.device)
-        X,y = torch.tensor(X).to(self.device),torch.tensor(y).to(self.device)
-        X = X.type(torch.FloatTensor).to(self.device)
+        num_batches = int(len(X)/batch_size)
+        
+        X,y = torch.tensor(X).to(self.device),torch.tensor(y)
+        X = X.type(torch.FloatTensor)
+        
+        source_batches = X[:batch_size*num_batches].view(num_batches,batch_size, len(X[0]))
+        target_batches = y[:batch_size*num_batches].view(num_batches, batch_size)
+        source_batches = source_batches.to(self.device)
+        target_batches = target_batches.to(self.device)
+        
+        
         self.to(self.device)
         loss_function = nn.CrossEntropyLoss()
         optimizer = optim.Adam(self.parameters(), lr=0.002)
@@ -96,11 +105,15 @@ class LogisticRegressionPytorch(torch.nn.Module):
         else:
             iterator = range(self.opochs)
         for _ in iterator:
-            self.zero_grad()
-            tag_scores = self.forward(X)
-            loss = loss_function(tag_scores, y)
-            loss.backward()
-            optimizer.step()
+            for i in len(source_batches):
+                for i in tqdm(range(len(source_batches)), desc=f'Epoch {epoch+1} progress', leave=False, position=1):
+                    feats_batch = source_batches[i]
+                    labels_batch = target_batches[i]
+                    self.zero_grad()
+                    tag_scores = self.forward(feats_batch)
+                    loss = loss_function(tag_scores, labels_batch)
+                    loss.backward()
+                    optimizer.step()
 
         return self
 
