@@ -2,13 +2,15 @@ import os
 import re
 import pandas as pd
 
-def get_clean_reviews(n, data_type="n_2000"):
+def get_clean_reviews(data_type):
 	folder, *filename = data_type.split('_')
 	filename = '_'.join(filename) + '.txt'
 	
 	if folder == 'n':
 		filename = 'n_' + filename
 		folder = 'subsets'
+	elif folder == 'gpt':
+		filename = 'gpt_' + filename
 	
 	if "\\" in os.getcwd():
 		path = '\\'.join( os.getcwd().split('\\')[:-1] ) + f'\\Data\\clean_data\\{folder}\\'
