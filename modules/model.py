@@ -95,7 +95,7 @@ class LogisticRegressionPytorch(torch.nn.Module):
             iterator = trange(self.epochs)
         else:
             iterator = range(self.opochs)
-        for _ in interator:
+        for _ in iterator:
             self.zero_grad()
             tag_scores = self.forward(X)
             loss = loss_function(tag_scores, y)
