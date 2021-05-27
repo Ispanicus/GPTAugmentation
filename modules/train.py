@@ -8,7 +8,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
 from random import sample
 import sys
-from model import LangID
+from model import LangID,LogisticRegressionPytorch
 import argparse
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') 
@@ -20,7 +20,7 @@ def normalize(line, vocab, sentence_length):
     ans = [vocab.get(word, vocab["<PAD>"]) for word in line[:sentence_length]]
     return ans
 
-def train(X, Y, epochs = 20, batch_size=64,embed_dim=100,lstm_dim=100,use_tqdm=False, min_df=0.005,max_df=0.8, dropout=0.00, verbose=True):
+def train(X, Y, epochs = 20, batch_size=64,embed_dim=100,lstm_dim=100,use_tqdm=False, min_df=0.005,max_df=0.8, dropout=0.00, verbose=True, LSTM=True):
     vectorizer = TfidfVectorizer(min_df = min_df, max_df = max_df)
     vectorizer.fit(X)
     vocab = vectorizer.vocabulary_
@@ -41,7 +41,11 @@ def train(X, Y, epochs = 20, batch_size=64,embed_dim=100,lstm_dim=100,use_tqdm=F
     source_batches = source_batches.to(device)
     target_batches = target_batches.to(device)
     #creating the model
-    model = LangID(embed_dim, lstm_dim, len(vocab), dropout=dropout)
+    if LSTM:
+        model = LangID(embed_dim, lstm_dim, len(vocab), dropout=dropout)
+    else:
+        model = LogisticRegressionPytorch(len(vocab), 2)
+        
     model.to(device)
     loss_function = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.002)
