@@ -104,7 +104,7 @@ class LogisticRegressionPytorch(torch.nn.Module):
 		if self.use_bar:
 			iterator = trange(self.epochs)
 		else:
-			iterator = range(self.opochs)
+			iterator = range(self.epochs)
 		for _ in iterator:
 			for i in range(len(source_batches)):
 				
