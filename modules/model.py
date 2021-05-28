@@ -71,50 +71,50 @@ def ComplementNB(ngram_range=(1, 1), min_df=1, max_df=1.0, verbose_vocab=False):
 	])
 
 class LogisticRegressionPytorch(torch.nn.Module):
-    def __init__(self,input_dim,epochs,progress_bar = False):
-        super(LogisticRegressionPytorch, self).__init__()
-        self.linear = torch.nn.Linear(input_dim, 2)
-        self.epochs = epochs
-        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        self.use_bar = progress_bar
-        
+	def __init__(self,input_dim,epochs,progress_bar = False):
+		super(LogisticRegressionPytorch, self).__init__()
+		self.linear = torch.nn.Linear(input_dim, 2)
+		self.epochs = epochs
+		self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+		self.use_bar = progress_bar
+		
 
-    def forward(self, x):
-        outputs = self.linear(x)
-        return outputs
+	def forward(self, x):
+		outputs = self.linear(x)
+		return outputs
 
-    def train(self,X,y,batch_size=64, verbose=False):
-        if verbose:
-            print("Device:",self.device)
-        num_batches = int(len(X)/batch_size)
-        
-        X,y = torch.tensor(X).to(self.device),torch.tensor(y)
-        X = X.type(torch.FloatTensor)
-        
-        source_batches = X[:batch_size*num_batches].view(num_batches,batch_size, len(X[0]))
-        target_batches = y[:batch_size*num_batches].view(num_batches, batch_size)
-        source_batches = source_batches.to(self.device)
-        target_batches = target_batches.to(self.device)
-        
-        
-        self.to(self.device)
-        loss_function = nn.CrossEntropyLoss()
-        optimizer = optim.Adam(self.parameters(), lr=0.002)
-        
-        if self.use_bar:
-            iterator = trange(self.epochs)
-        else:
-            iterator = range(self.opochs)
-        for _ in iterator:
-            for i in range(len(source_batches)):
-                
-                feats_batch = source_batches[i]
-                labels_batch = target_batches[i]
-                self.zero_grad()
-                tag_scores = self.forward(feats_batch)
-                loss = loss_function(tag_scores, labels_batch)
-                loss.backward()
-                optimizer.step()
+	def train(self,X,y,batch_size=64, verbose=False):
+		if verbose:
+			print("Device:",self.device)
+		num_batches = int(len(X)/batch_size)
+		
+		X,y = torch.tensor(X).to(self.device),torch.tensor(y)
+		X = X.type(torch.FloatTensor)
+		
+		source_batches = X[:batch_size*num_batches].view(num_batches,batch_size, len(X[0]))
+		target_batches = y[:batch_size*num_batches].view(num_batches, batch_size)
+		source_batches = source_batches.to(self.device)
+		target_batches = target_batches.to(self.device)
+		
+		
+		self.to(self.device)
+		loss_function = nn.CrossEntropyLoss()
+		optimizer = optim.Adam(self.parameters(), lr=0.002)
+		
+		if self.use_bar:
+			iterator = trange(self.epochs)
+		else:
+			iterator = range(self.opochs)
+		for _ in iterator:
+			for i in range(len(source_batches)):
+				
+				feats_batch = source_batches[i]
+				labels_batch = target_batches[i]
+				self.zero_grad()
+				tag_scores = self.forward(feats_batch)
+				loss = loss_function(tag_scores, labels_batch)
+				loss.backward()
+				optimizer.step()
 		return self
 
 	def predict(self, X):
