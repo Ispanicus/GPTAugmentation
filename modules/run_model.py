@@ -18,7 +18,6 @@ from tqdm.notebook import trange, tqdm
 from model import OnehotTransformer,LogisticRegressionPytorch
 import torch
 import pickle
-import gc
 
 Xt, Yt = get_data("dev", cleanText=True)
 
@@ -56,21 +55,27 @@ def plot_deleted_percentage():
 		data_type = clean + method + f"_{n}"
 		X_all, Y_all = get_data(data_type)
 		model = pickle.load(open(f'models/model_{n}.obj', 'rb'))
-		transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.001, max_df=0.5, verbose_vocab=True)
-		transformer.fit(X_all,Y_all)
-		X = transformer.transform(X_all[:-n])
+		transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.0005, max_df=0.5, verbose_vocab=True)
+		transformer.fit(X_all)
+		X = transformer.transform(X_all)
 		probs = model.predict_proba(X)
-		poor_idxs = sorted([((p - l), i) for p, l, i in zip(probs[:,1], Y_all, range(len(probs)))], reverse=True)
+		# Doesnt include original idxs
+		poor_idxs = sorted([((p - l), i) for p, l, i in zip(probs[:,1], Y_all, range(len(probs)-n))], reverse=True)
 
 		start = time()
 		ps, scores = [], []
-		for del_p in [0, 2.5, 5, 7.5, 10, 20, 40, 60, 100]:
-			half_del_size = max(1, int((del_p / 100)*len(poor_idxs))//2)
-			del_idxs = set(i for (p, i) in poor_idxs[:half_del_size] + poor_idxs[-half_del_size:])
-			print('Deleting', len(del_idxs), 'constituting', len(del_idxs)/len(X_all), 'percent')
-			X = [x for i, x in enumerate(X_all) if i not in del_idxs]
-			Y = [y for i, y in enumerate(Y_all) if i not in del_idxs]
-			transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.001, max_df=0.5, verbose_vocab=True)
+		for del_p in range(100, -1, -5):
+			if del_p == 100:
+				X = X_all[-n:]
+				Y = Y_all[-n:]
+			else:
+				half_del_size = max(1, int((del_p / 100)*len(poor_idxs))//2)
+				del_idxs = set(i for (p, i) in poor_idxs[:half_del_size] + poor_idxs[-half_del_size:])
+				print('Deleting', len(del_idxs), 'constituting', len(del_idxs)/len(X_all), 'percent')
+				X = [x for i, x in enumerate(X_all) if i not in del_idxs]
+				Y = [y for i, y in enumerate(Y_all) if i not in del_idxs]
+			
+			transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.0005, max_df=1., verbose_vocab=True)
 			transformer.fit(X, Y)
 			X = transformer.transform(X)
 			model = LogisticRegressionPytorch(input_dim=len(X[0]),epochs=200,progress_bar=False)
@@ -82,17 +87,19 @@ def plot_deleted_percentage():
 			
 			acc = model.score(transformer.transform(Xt), Yt.copy())
 			scores.append(acc)
-			ps.append(int(n + len(del_idxs)*del_p/100))
+			ps.append(len(X))
 			df = df.append({'n_base':n,
 						    'n_aug':len(X_all)-n,
 						    'del_p':del_p,
 						    'acc':acc}, ignore_index=True)
-			df.to_csv(f'results/{n}_delete_poor_idxs.png'
+			df.to_csv(f'results/{n}_delete_poor_idxs.csv')
 		plt.plot(ps, scores)
 		plt.title('Size: ' + str(n) + ' Time: ' + str(time() - start))
+		plt.ylim(0.5, 0.9)
+		plt.xticks([n, len(X_all)])
 		plt.savefig(f'imgs/{n}_delete_poor_idxs.png')
-		plt.show()
+		plt.clf()
 		
-
-
+if 'Rerun models' == False:
+	create_complete_models()
 plot_deleted_percentage()
