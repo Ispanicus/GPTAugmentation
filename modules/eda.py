@@ -13,7 +13,7 @@ os.chdir('eda_nlp')
 for augs in [64,32,16,8,4]:
 	for path in subset_file_paths.paths:
 		*localPath, filename =  path.split("/")
-		#localPath.insert(-1, "clean_data")
+		localPath.insert(-1, "clean_data")
 		localPath = "/".join(localPath)
 		n = int(re.findall(r'[0-9]+', filename)[0])
-		os.system('python code/augment.py --output={3}/eda/augs_{0}_n_{1} --num_aug={0} --input={2}'.format(augs,n,path, localPath))
+		os.system('python code/augment.py --alpha_sr=0.1 --alpha_rd=0.0 --alpha_ri=0.1 --alpha_rs=0.0 --output={3}/eda/augs_{0}_n_{1}.txt --num_aug={0} --input={2}'.format(augs,n,path, localPath))

@@ -25,11 +25,12 @@ from sklearn.pipeline import Pipeline
 from sklearn.naive_bayes import BernoulliNB as BNB, ComplementNB as CNB
 
 class OnehotTransformer(BaseEstimator, TransformerMixin):
-	def __init__(self, ngram_range, min_df, max_df, verbose_vocab):
+	def __init__(self, ngram_range, min_df, max_df, verbose_vocab, max_features):
 		self.ngram_range=ngram_range
 		self.min_df=min_df
 		self.max_df=max_df
 		self.verbose_vocab = verbose_vocab
+		self.max_features = max_features
 
 	def convert(self, sentence):# [[w1, w2, w3], [w1, w2, w3]]
 		output = [0]*len(self.vocab)
@@ -40,7 +41,7 @@ class OnehotTransformer(BaseEstimator, TransformerMixin):
 		return output
 
 	def fit(self, X, y=None):
-		vectorizer = TfidfVectorizer(ngram_range=self.ngram_range, min_df=self.min_df, max_df=self.max_df)
+		vectorizer = TfidfVectorizer(ngram_range=self.ngram_range, min_df=self.min_df, max_df=self.max_df, max_features=self.max_features)
 		vectorizer.fit(X)
 		self.vocab = vectorizer.vocabulary_
 		if self.verbose_vocab:
@@ -52,9 +53,9 @@ class OnehotTransformer(BaseEstimator, TransformerMixin):
 		return X_
 
 
-def LogisticRegression(max_iter=100, ngram_range=(1, 1), min_df=1, max_df=1.0, verbose_vocab=False):
+def LogisticRegression(max_iter=100, ngram_range=(1, 1), min_df=1, max_df=1.0, verbose_vocab=False, max_features=4000):
 	return Pipeline([
-		('onehot', OnehotTransformer(ngram_range, min_df, max_df, verbose_vocab)),
+		('onehot', OnehotTransformer(ngram_range, min_df, max_df, verbose_vocab, max_features)),
 		('clf', LR(max_iter=max_iter))
 	])
 
@@ -88,7 +89,7 @@ class LogisticRegressionPytorch(torch.nn.Module):
 			print("Device:",self.device)
 		num_batches = int(len(X)/batch_size)
 		
-		X,y = torch.tensor(X).to(self.device),torch.tensor(y)
+		X,y = torch.tensor(X), torch.tensor(y)
 		X = X.type(torch.FloatTensor)
 		
 		source_batches = X[:batch_size*num_batches].view(num_batches,batch_size, len(X[0]))
