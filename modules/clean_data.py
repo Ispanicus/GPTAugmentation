@@ -38,3 +38,13 @@ def clean_n():
 		X = [clean_text(t) for t in X]
 		text = '\n'.join([f'{l}\t{t}' for l, t in zip(Y, X)])
 		open(f'../Data/clean_data/subsets/{n}.txt', 'w', encoding='utf8').write(text)
+
+def clean_eda():
+	ns = [10, 50, 100, 500, 2000]
+	augs = [64,32,16,8,4]
+	for n in ns:
+		for aug in augs:
+			X, Y = get_data(f"eda_augs_{aug}_n_{n}")
+			X = [clean_text(t) for t in X]
+			text = '\n'.join([f'{l}\t{t}' for l, t in zip(Y, X)])
+			open(f'../Data/clean_data/eda/augs_{aug}_n_{n}.txt', 'w', encoding='utf8').write(text)
