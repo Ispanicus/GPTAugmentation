@@ -32,11 +32,10 @@ def create_complete_models():
 		print('\nCreating model for size', n)
 		data_type = clean + method + f"_{n}"
 		X_all, Y_all = get_data(data_type)
-		transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.001, max_df=0.5, verbose_vocab=True)
-		transformer.fit(X_all,Y_all)
-		X_all = transformer.transform(X_all)
-		model = LogisticRegressionPytorch(input_dim=len(X_all[0]),epochs=200,progress_bar=False)
-		batch_size = min(int(len(X_all)*0.1)-1, 1024)
+		transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.001, max_df=0.5, verbose_vocab=True, max_features=10_000)
+		X_all = transformer.fit_transform(X_all)
+		model = LogisticRegressionPytorch(input_dim=len(X_all[0]), epochs=200, progress_bar=False)
+		batch_size = min(int(len(X_all)*0.1)-1, 4096)
 		if batch_size < 10:
 			batch_size = 10
 		model.train(X_all, Y_all, batch_size=batch_size)
@@ -55,9 +54,8 @@ def plot_deleted_percentage():
 		data_type = clean + method + f"_{n}"
 		X_all, Y_all = get_data(data_type)
 		model = pickle.load(open(f'models/model_{n}.obj', 'rb'))
-		transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.0005, max_df=0.5, verbose_vocab=True)
-		transformer.fit(X_all)
-		X = transformer.transform(X_all)
+		transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.0005, max_df=0.5, verbose_vocab=True, max_features=4000)
+		X = transformer.fit_transform(X_all)
 		probs = model.predict_proba(X)
 		# Doesnt include original idxs
 		poor_idxs = sorted([((p - l), i) for p, l, i in zip(probs[:,1], Y_all, range(len(probs)-n))], reverse=True)
@@ -75,7 +73,7 @@ def plot_deleted_percentage():
 				X = [x for i, x in enumerate(X_all) if i not in del_idxs]
 				Y = [y for i, y in enumerate(Y_all) if i not in del_idxs]
 			
-			transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.0005, max_df=1., verbose_vocab=True)
+			transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.0005, max_df=1., verbose_vocab=True, max_features=4000)
 			transformer.fit(X, Y)
 			X = transformer.transform(X)
 			model = LogisticRegressionPytorch(input_dim=len(X[0]),epochs=200,progress_bar=False)
@@ -100,6 +98,6 @@ def plot_deleted_percentage():
 		plt.savefig(f'imgs/{n}_delete_poor_idxs.png')
 		plt.clf()
 		
-if 'Rerun models' == False:
-	create_complete_models()
+
+create_complete_models()
 plot_deleted_percentage()

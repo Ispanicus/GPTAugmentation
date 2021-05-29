@@ -4,14 +4,13 @@ import re
 import pandas as pd
 
 def get_eda_reviews(filename):
-	filename = filename[4:] #remove eda_
+	filename = filename[4:] + '.txt' #remove eda_
 	if "\\" in os.getcwd():
 		path = '\\'.join( os.getcwd().split('\\')[:-1] ) + f'\\Data\\subsets\\eda\\'
 		path = path.replace('\\', '/')
 	else:
 		path = '/'.join(os.getcwd().split('/')[:-1] ) + '/Data/subsets/eda/'
 	path = path + filename
-	print(path)
 	lines = open(path, encoding = 'utf-8').readlines()
 	fix_type = lambda x: [int(x[0]), x[1].strip()]
 	data = [fix_type(l.split('\t')) for l in lines if l]
