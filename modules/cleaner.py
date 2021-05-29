@@ -3,6 +3,7 @@ from nltk.tokenize import word_tokenize
 import subset_file_paths
 import re
 import pandas as pd
+
 contractions = [("aren't", "are not"),
 ("can't", "cannot"),
 ("couldn't", "could not"),
@@ -57,12 +58,17 @@ contractions = [("aren't", "are not"),
 ("you're", "you are"),
 ("you've", "you have")]
 
-
-
+def even_distribution(X):
+	positive = sum(X['sentiment'] == 1)
+	L = min([positive, len(X) - positive, 100_000//2])
+	X = X[X.sentiment == 0][:L].append(X[X.sentiment == 1][:L]) # Ensure even distribution
+	X = X.sample(frac = 1) # Shuffle
+	assert len(X) != 0
+	return X
 
 def clean_text(text):
     lemmatizer = WordNetLemmatizer().lemmatize
-    text = text.lower()
+    text = text.lower().replace('’', "'")
     pattern1 = re.compile(r'([^0-9a-zA-Z\s])\1+(?=[a-z0-9A-Z])')
     pattern2 = re.compile(r'([^0-9a-zA-Z\s])\1+')
     pattern3 = re.compile(r'<[^>]>')
@@ -75,25 +81,6 @@ def clean_text(text):
     text = text.replace("'", '') #remove ' and "
     text = " ".join([lemmatizer(w) for w in word_tokenize(text)])
     return text
-
-def clean_yelp():
-	from get_data import even_distribution
-	df = pd.read_csv('yelp.txt', sep='\t', encoding='utf8', names=['sentiment', 'reviewText'])
-	df = even_distribution(df)
-	X = [clean_text(t) for t in df['reviewText']]
-	Y = df['sentiment']
-	text = '\n'.join([f'{l}\t{t}' for l, t in zip(Y, X)])
-	open('../Data/clean_data/other/yelp.txt', 'w').write(text)
-
-def clean_movie():
-	from get_data import even_distribution
-	df = pd.read_csv('../Data/moviedata.csv', sep=';', encoding='utf8', names=['sentiment', 'reviewText'])
-	df.dropna(inplace=True)
-	df = even_distribution(df)
-	X = [clean_text(t) for t in df['reviewText']]
-	Y = df['sentiment']
-	text = '\n'.join([f'{l}\t{t}' for l, t in zip(Y, X)])
-	open('../Data/clean_data/other/movie.txt', 'w', encoding='utf8').write(text)
 	
 def clean(path):
     with open(path) as f:

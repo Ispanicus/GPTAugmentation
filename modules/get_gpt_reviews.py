@@ -16,7 +16,7 @@ def get_gpt_reviews(n):
     assert len(paths) > 0, "no gpt data with this n size"
     for path in paths:
         text = open(path, encoding = 'utf-8').read()
-        samples = re.split(r'###', text)[4:]
+        samples = re.split(r'###', text)[4:-1]
         X = []
         Y = []
         for sample in samples:
@@ -24,7 +24,7 @@ def get_gpt_reviews(n):
             y = re.search(r'Sentiment: ((Negative)|(Positive))', sample)
             if not x or not y:
                 continue
-            x = x.group(1).strip().lower()
+            x = x.group(1).strip()
             y = 0 if y.group(1) == "Negative" else 1
             X.append(x)
             Y.append(y)
