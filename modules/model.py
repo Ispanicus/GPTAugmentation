@@ -19,10 +19,7 @@ class LangID(nn.Module):
         inputs, _ = self.lstm(self.dropoutlayer(inputs))
         inputs = self.hidden2tag(self.dropoutlayer(inputs))[:,-1,:]
         return inputs
-<<<<<<< HEAD
-
-=======
->>>>>>> e15fe3c286821fcb41db512e0e33c5a7cb18ccb9
+		
     def train_(self,X,y,batch_size=64, verbose=False):
         if verbose:
             print("Device:",self.device)
