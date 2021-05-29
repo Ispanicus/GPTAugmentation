@@ -24,41 +24,44 @@ Xt, Yt = get_data("dev", cleanText=True)
 ## PYTORCH - QUALITY CHECK - EXCLUDING 2000
 from time import time
 
-def create_complete_models():
+def create_quality_models(quality_method = 'gpt_'):
 	clean = 'clean_' # Type either '' or 'clean_'
-	method = "gpt"
 	ns = [10, 50, 100, 500, 2000]
 	for n in ns:
 		print('\nCreating model for size', n)
-		data_type = clean + method + f"_{n}"
+		data_type = clean + quality_method + str(n)
 		X_all, Y_all = get_data(data_type)
-		transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.001, max_df=0.5, verbose_vocab=True, max_features=10_000)
+		transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.0005, max_df=0.5, verbose_vocab=True, max_features=10_000)
 		X_all = transformer.fit_transform(X_all)
 		model = LogisticRegressionPytorch(input_dim=len(X_all[0]), epochs=200, progress_bar=False)
 		batch_size = min(int(len(X_all)*0.1)-1, 4096)
 		if batch_size < 10:
 			batch_size = 10
 		model.train(X_all, Y_all, batch_size=batch_size)
-		pickle.dump(model, open(f'models/model_{n}.obj', 'wb'))
+		pickle.dump(model, open(f'../models/{quality_method}model_{n}.obj', 'wb'))
+		pickle.dump(transformer, open(f'../models/{quality_method}transformer_{n}.obj', 'wb'))
 
-def plot_deleted_percentage():
-	clean = 'clean_' # Type either '' or 'clean_'
-	method = "gpt"
-	ns = [10, 50, 100, 500, 2000]
+def plot_deleted_percentage(quality_method = 'gpt_', method='gpt_'):
+	ns = [10, 50, 100, 500, 2000][::-1]
 	df = pd.DataFrame({'n_base':pd.Series([], dtype='int'),
 					   'n_aug':pd.Series([], dtype='int'),
 					   'del_p':pd.Series([], dtype='float'),
 					   'acc':pd.Series([], dtype='float')})
 	for n in ns:
 		print('\nRunning size', n)
-		data_type = clean + method + f"_{n}"
+		clean = 'clean_'
+		data_type = clean + method + str(n)
 		X_all, Y_all = get_data(data_type)
-		model = pickle.load(open(f'models/model_{n}.obj', 'rb'))
-		transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.0005, max_df=0.5, verbose_vocab=True, max_features=4000)
-		X = transformer.fit_transform(X_all)
-		probs = model.predict_proba(X)
+		
+		transformer = pickle.load(open(f'../models/{quality_method}transformer_{n}.obj', 'rb'))
+		X = transformer.transform(X_all)
+		
+		model = pickle.load(open(f'../models/{quality_method}model_{n}.obj', 'rb'))
+		with torch.no_grad():
+			probs = model.predict_proba(X)
+		
+		# Doesn't get the "last n"/"original reviews"
 		poor_idxs = sorted([((p - l), i) for p, l, i in zip(probs[:,1], Y_all, range(len(probs)-n))], reverse=True)
-
 		start = time()
 		ps, scores = [], []
 		for del_p in range(100, -1, -5):
@@ -72,31 +75,34 @@ def plot_deleted_percentage():
 				X = [x for i, x in enumerate(X_all) if i not in del_idxs]
 				Y = [y for i, y in enumerate(Y_all) if i not in del_idxs]
 			
-			transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.0005, max_df=1., verbose_vocab=True, max_features=4000)
-			transformer.fit(X, Y)
-			X = transformer.transform(X)
-			model = LogisticRegressionPytorch(input_dim=len(X[0]),epochs=200,progress_bar=False)
+			transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.0005, max_df=.5, verbose_vocab=True, max_features=4000)
+			X = transformer.fit_transform(X)
+			model = LogisticRegressionPytorch(input_dim=len(X[0]), epochs=200, progress_bar=False)
 			batch_size = min(int(len(X)*0.1)-1, 4096)
 			if batch_size < 10:
 				batch_size = 10
 			
 			model.train(X, Y, batch_size=batch_size)
-			
-			acc = model.score(transformer.transform(Xt), Yt.copy())
+			with torch.no_grad():
+				acc = model.score(transformer.transform(Xt), Yt)
 			scores.append(acc)
 			ps.append(len(X))
 			df = df.append({'n_base':n,
 						    'n_aug':len(X_all)-n,
 						    'del_p':del_p,
 						    'acc':acc}, ignore_index=True)
-			df.to_csv(f'results/{n}_delete_poor_idxs.csv')
+		df.to_csv(f'../results/{quality_method}{method}{n}_delete_poor_idxs.csv')
 		plt.plot(ps, scores)
 		plt.title('Size: ' + str(n) + ' Time: ' + str(time() - start))
 		plt.ylim(0.5, 0.9)
 		plt.xticks([n, len(X_all)])
-		plt.savefig(f'imgs/{n}_delete_poor_idxs.png')
+		plt.savefig(f'../imgs/{quality_method}{method}{n}_delete_poor_idxs.png')
 		plt.clf()
-		
 
-create_complete_models()
-plot_deleted_percentage()
+def main():
+	# Uncomment if you want to re-train the quality models
+	# create_quality_models(quality_method = 'bert_')
+	plot_deleted_percentage(quality_method = 'bert_', method='bert_')
+
+if __name__ == '__main__':
+	main()
