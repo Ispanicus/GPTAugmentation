@@ -1,6 +1,8 @@
 import os
 import re
 import pandas as pd
+from cleaner import clean_text, even_distribution
+
 
 def get_clean_reviews(data_type):
 	folder, *filename = data_type.split('_')
@@ -9,8 +11,6 @@ def get_clean_reviews(data_type):
 	if folder == 'n':
 		filename = 'n_' + filename
 		folder = 'subsets'
-	elif folder == 'gpt':
-		filename = 'gpt_' + filename
 	
 	if "\\" in os.getcwd():
 		path = '\\'.join( os.getcwd().split('\\')[:-1] ) + f'\\Data\\clean_data\\{folder}\\'
@@ -18,7 +18,7 @@ def get_clean_reviews(data_type):
 	else:
 		path = '/'.join(os.getcwd().split('/')[:-1] ) + f'/Data/clean_data/{folder}/'
 	path += filename
-	
+
 	lines = open(path, encoding = 'utf-8').readlines()
 	fix_type = lambda x: [int(x[0]), x[1].strip()]
 	data = [fix_type(l.split('\t')) for l in lines if l]
