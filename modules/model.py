@@ -29,8 +29,6 @@ class LangID(nn.Module):
         
         source_batches = X[:batch_size*num_batches].view(num_batches,batch_size, len(X[0]))
         target_batches = y[:batch_size*num_batches].view(num_batches, batch_size)
-        source_batches = source_batches.to(self.device)
-        target_batches = target_batches.to(self.device)
 
 
         self.to(self.device)
@@ -44,19 +42,24 @@ class LangID(nn.Module):
         for _ in iterator:
             for i in range(len(source_batches)):
 
-                feats_batch = source_batches[i]
-                labels_batch = target_batches[i]
+                feats_batch = source_batches[i].to(self.device)
+                labels_batch = target_batches[i].to(self.device)
+
                 self.zero_grad()
                 tag_scores = self.forward(feats_batch)
                 loss = loss_function(tag_scores, labels_batch)
                 loss.backward()
                 optimizer.step()
+                feats_batch.detach()
+                labels_batch.detach()
         return self
     
     def predict(self, X):
         try:
+            self.to(self.device)
             X = torch.tensor(X).to(self.device)
         except:
+            self.to("cpu")
             X = torch.tensor(X)
         return torch.argmax(self.forward(X), dim=1)
 
