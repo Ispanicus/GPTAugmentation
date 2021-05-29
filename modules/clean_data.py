@@ -30,6 +30,18 @@ def clean_gpt():
 		text = '\n'.join([f'{l}\t{t}' for l, t in zip(Y, X)])
 		open(f'../Data/clean_data/gpt/{n}.txt', 'w', encoding='utf8').write(text)
 
+def clean_bert():
+	ns = [10, 50, 100, 500, 2000]
+	for n in ns:
+		limit = n + n*100
+		X, Y = get_data("bert_" + str(n))
+		X = X[-limit:]
+		Y = Y[-limit:]
+		X = [clean_text(t) for t in X]
+		text = '\n'.join([f'{l}\t{t}' for l, t in zip(Y, X)])
+		open(f'../Data/clean_data/bert/{n}.txt', 'w', encoding='utf8').write(text)
+
+
 def clean_n():
 	ns = [10, 50, 100, 500, 2000]
 	for n in ns:

@@ -3,6 +3,7 @@ import pandas as pd
 import json
 from get_gpt_reviews import get_gpt_reviews
 from get_eda_reviews import get_eda_reviews
+from get_bert_reviews import get_bert_reviews
 from get_clean_reviews import get_clean_reviews
 from cleaner import even_distribution, clean_text
 import subset_file_paths
@@ -27,13 +28,15 @@ def get_data(data_type='train', early_return=False, cleanText=False):
 	if 'clean' in data_type:
 		X = get_clean_reviews(data_type[len('clean_'):])
 	
-	elif re.search(r'gpt|eda', data_type):
+	elif re.search(r'gpt|eda|bert', data_type):
 		if "eda" in data_type:
 			X = get_eda_reviews(data_type)
-		else:
+		elif "gpt" in data_type:
 			n = data_type.split('_')[1]
 			X = get_gpt_reviews(int(n))
-		
+		elif "bert" in data_type:
+			n = data_type.split('_')[1]
+			X = get_bert_reviews(int(n))
 		n = data_type.split('_')[-1]
 		X = even_distribution(X)
 		X = X.append(get_data(f'n_{n}', early_return=True), ignore_index=True)
