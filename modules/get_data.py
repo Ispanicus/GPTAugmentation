@@ -39,7 +39,8 @@ def get_data(data_type='train', early_return=False, cleanText=False):
 			X = get_bert_reviews(int(n))
 		n = data_type.split('_')[-1]
 		X = even_distribution(X)
-		X = X.append(get_data(f'n_{n}', early_return=True), ignore_index=True)
+		if 'eda' not in data_type:
+			X = X.append(get_data(f'n_{n}', early_return=True), ignore_index=True)
 		
 	elif "n_" in data_type:
 		_, n = data_type.split("_")

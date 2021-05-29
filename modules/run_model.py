@@ -57,7 +57,6 @@ def plot_deleted_percentage():
 		transformer = OnehotTransformer(ngram_range=(1, 1), min_df=0.0005, max_df=0.5, verbose_vocab=True, max_features=4000)
 		X = transformer.fit_transform(X_all)
 		probs = model.predict_proba(X)
-		# Doesnt include original idxs
 		poor_idxs = sorted([((p - l), i) for p, l, i in zip(probs[:,1], Y_all, range(len(probs)-n))], reverse=True)
 
 		start = time()

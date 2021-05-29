@@ -6,10 +6,10 @@ import pandas as pd
 def get_eda_reviews(filename):
 	filename = filename[4:] + '.txt' #remove eda_
 	if "\\" in os.getcwd():
-		path = '\\'.join( os.getcwd().split('\\')[:-1] ) + f'\\Data\\subsets\\eda\\'
+		path = '\\'.join( os.getcwd().split('\\')[:-1] ) + f'\\Data\\eda\\'
 		path = path.replace('\\', '/')
 	else:
-		path = '/'.join(os.getcwd().split('/')[:-1] ) + '/Data/subsets/eda/'
+		path = '/'.join(os.getcwd().split('/')[:-1] ) + '/Data/eda/'
 	path = path + filename
 	lines = open(path, encoding = 'utf-8').readlines()
 	fix_type = lambda x: [int(x[0]), x[1].strip()]
