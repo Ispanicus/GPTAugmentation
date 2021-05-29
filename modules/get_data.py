@@ -9,9 +9,17 @@ from cleaner import clean_text
 from random import shuffle
 import re
 
+def even_distribution(X):
+	positive = sum(X['sentiment'] == 1)
+	L = min([positive, len(X) - positive, 100_000//2])
+	X = X[X.sentiment == 0][:L].append(X[X.sentiment == 1][:L]) # Ensure even distribution
+	X = X.sample(frac = 1) # Shuffle
+	assert len(X) != 0
+	return X
+
 def get_data(data_type='train', early_return=False, cleanText = False):
 	''' Returns a tuple: (X, target).
-	This is either train, dev, test or hard data
+	This is either train, dev, test, hard data or movie
 	
 	for eda data you need to specify the augs size
 	e.g. data_type = eda_augs_16_n_100
@@ -22,18 +30,8 @@ def get_data(data_type='train', early_return=False, cleanText = False):
 	for clean data, you prepend clean_
 	e.g. data_type = clean_eda_augs_16_n_100
 	'''
-	
-	def even_distribution(X):
-		positive = sum(X['sentiment'] == 1)
-		L = min(positive, len(X) - positive)
-		X = X[X.sentiment == 0][:L].append(X[X.sentiment == 1][:L]) # Ensure even distribution
-		X = X.sample(frac = 1) # Shuffle
-		assert len(X) != 0
-		return X
-
 	if 'clean' in data_type:
 		X = get_clean_reviews(data_type[len('clean_'):])
-		
 	elif re.search(r'gpt|eda', data_type):
 		if "eda" in data_type:
 			X = get_eda_reviews(data_type)
@@ -58,7 +56,8 @@ def get_data(data_type='train', early_return=False, cleanText = False):
 		X = pd.DataFrame(data, columns =['sentiment', 'reviewText'])
 		if early_return:
 			return X
-
+	elif 'movie' in data_type:
+		X = pd.read_csv('../Data/moviedata.csv', sep=';', names=['sentiment', 'reviewText'])
 	else:
 		paths = {'train' : '../Data/music_reviews_train.json', \
 				 'dev'   : '../Data/music_reviews_dev.json', \

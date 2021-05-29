@@ -2,6 +2,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 import subset_file_paths
 import re
+import pandas as pd
 contractions = [("aren't", "are not"),
 ("can't", "cannot"),
 ("couldn't", "could not"),
@@ -56,28 +57,7 @@ contractions = [("aren't", "are not"),
 ("you're", "you are"),
 ("you've", "you have")]
 
-def compare_clean_vocab(X):
-    *prefix, name = path.split('/')
-    clean_path = f'{"/".join(prefix)}/clean_{name}'
-    base_vocab, clean_vocab = set(), set()
-    for p, vocab in [(path, base_vocab), (clean_path, clean_vocab)]:
-        with open(p) as f:
-            for l in f:
-                label, text = l.split('\t')
-                vocab.update(word_tokenize(text))
-    print(f"{path}\ncleaned {len(base_vocab):>6} words, removed {len(base_vocab - clean_vocab)}")
-    
-    
 
-def clean(path):
-    with open(path) as f:
-        *prefix, name = path.split('/')
-        clean_path = f'{"/".join(prefix)}/clean_{name}'
-        with open(clean_path, "w") as outfile:
-            for l in f:
-                label, text = l.split('\t')
-                text = clean_text(text)
-                outfile.write(f'{label}\t{text}\n')
 
 
 def clean_text(text):
@@ -95,6 +75,35 @@ def clean_text(text):
     text = text.replace("'", '') #remove ' and "
     text = " ".join([lemmatizer(w) for w in word_tokenize(text)])
     return text
+
+def clean_yelp():
+	from get_data import even_distribution
+	df = pd.read_csv('yelp.txt', sep='\t', encoding='utf8', names=['sentiment', 'reviewText'])
+	df = even_distribution(df)
+	X = [clean_text(t) for t in df['reviewText']]
+	Y = df['sentiment']
+	text = '\n'.join([f'{l}\t{t}' for l, t in zip(Y, X)])
+	open('../Data/clean_data/other/yelp.txt', 'w').write(text)
+
+def clean_movie():
+	from get_data import even_distribution
+	df = pd.read_csv('../Data/moviedata.csv', sep=';', encoding='utf8', names=['sentiment', 'reviewText'])
+	df.dropna(inplace=True)
+	df = even_distribution(df)
+	X = [clean_text(t) for t in df['reviewText']]
+	Y = df['sentiment']
+	text = '\n'.join([f'{l}\t{t}' for l, t in zip(Y, X)])
+	open('../Data/clean_data/other/movie.txt', 'w', encoding='utf8').write(text)
+	
+def clean(path):
+    with open(path) as f:
+        *prefix, name = path.split('/')
+        clean_path = f'{"/".join(prefix)}/clean_{name}'
+        with open(clean_path, "w") as outfile:
+            for l in f:
+                label, text = l.split('\t')
+                text = clean_text(text)
+                outfile.write(f'{label}\t{text}\n')
 
 
 def compare_clean_vocab(path):
