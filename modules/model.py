@@ -19,6 +19,7 @@ class LangID(nn.Module):
         inputs, _ = self.lstm(self.dropoutlayer(inputs))
         inputs = self.hidden2tag(self.dropoutlayer(inputs))[:,-1,:]
         return inputs
+		
     def train_(self,X,y,batch_size=64, verbose=False):
         if verbose:
             print("Device:",self.device)
@@ -205,4 +206,3 @@ class LogisticRegressionPytorch(torch.nn.Module):
         preds = torch.argmax(self.forward(Xt), dim=1)
         acc = round((sum(preds == Yt)/len(Yt)).item(), 3)
         return acc
-
