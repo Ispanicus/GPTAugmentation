@@ -50,8 +50,8 @@ class LangID(nn.Module):
                 loss = loss_function(tag_scores, labels_batch)
                 loss.backward()
                 optimizer.step()
-                feats_batch.detach()
-                labels_batch.detach()
+                feats_batch.to("cpu")
+                labels_batch.to("cpu")
         return self
     
     def predict(self, X):
