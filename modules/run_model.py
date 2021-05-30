@@ -60,8 +60,13 @@ def plot_deleted_percentage(quality_method='gpt_', method='gpt_', del_p=False, n
 		
 		# Doesn't get the "last n"/"original reviews"
 		poor_idxs = sorted([((p - l), i) for p, l, i in zip(probs[:,1], Y_all, range(len(probs)-n))], reverse=True)
+		with open("qualitative.txt", "a+") as f:
+			for i in range(100):
+				f.write(f"{Y_all[poor_idxs[i]]}\t{X_all[poor_idxs[i]]}\n")
+				f.write(f"{Y_all[poor_idxs[-i]]}\t{X_all[poor_idxs[-i]]}\n")
 		start = time()
 		ps, scores = [], []
+		quit()
 		del_percentages = range(100, -1, -5) if not del_p else [del_p]
 		for del_p in del_percentages:
 			if del_p == 100:
