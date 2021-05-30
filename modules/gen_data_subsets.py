@@ -6,7 +6,7 @@ X, y = get_data()
 y = y.where(X.reviewText.str.contains(r'[a-zA-Z]'))
 X = X.where(X.reviewText.str.contains(r'[a-zA-Z]'))
 X = X.reviewText.str.replace('\n', ' ')
-ranges = [100, 500, 2000]
+ranges = [10, 50, 100, 500, 2000]
 
 neg = X[y == 0]
 pos = X[y == 1]
@@ -27,7 +27,7 @@ for r in ranges:
 		t = re.sub(pattern2, r'\1', t)
 		t = re.sub(pattern3, r'', t)
 		text[i] = t
-		
+	original_text = text.copy()
 
 	# fix "...blabl -> ... blabl" and reduce "... -> ."
 	s_before = len(text)
@@ -53,7 +53,7 @@ for r in ranges:
 	print('Removed difficult long sentences:', s_before - len(new))
 
 	with open(f'../Data/subsets/n_{r}.txt', 'w') as f:
-		for i, t in enumerate(text):
+		for i, t in enumerate(original_text):
 			l = t[0]
 			t = t[1:]
 			f.write(f'{l}\t{t}\n')

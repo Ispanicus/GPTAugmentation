@@ -1,7 +1,6 @@
 import os
 from train import train, score
 from get_data import get_data
-from model import LangID, LogisticRegression
 from get_gpt_reviews import get_gpt_reviews
 import matplotlib.pyplot as plt
 from random import shuffle
@@ -94,13 +93,13 @@ def plot_deleted_percentage(quality_method='gpt_', method='gpt_', del_p=False, n
 						    'n_aug':len(X_all)-n,
 						    'del_p':del_p,
 						    'acc':acc}, ignore_index=True)
-		df.to_csv(f'../results/{quality_method}{method}{n}_delete_poor_idxs.csv')
 		plt.plot(ps, scores)
 		plt.title('Size: ' + str(n) + ' Time: ' + str(time() - start))
 		plt.ylim(0.5, 0.9)
 		plt.xticks([n, len(X_all)])
 		plt.savefig(f'../imgs/{quality_method}{method}{n}_delete_poor_idxs.png')
 		plt.clf()
+	df.to_csv(f'../results/{quality_method}{method}_delete_poor_idxs.csv')
 
 
 def score():
@@ -111,23 +110,12 @@ def score():
 	
 	def score_gpt(n, del_p):
 		return plot_deleted_percentage(test=True, del_p=del_p, n=n, quality_method = 'gpt_', method='gpt_')
-		
-	for n in ns:
-		score, pred, Yt = score_gpt(n, del_p=100)
-		results.append(['base', n, round(score, 3)])
-		open(f'../results/test_base_{n}.csv', 'w').write('\n'.join(f'{p}\t{t}' for p, t in zip(pred, Yt)))
 
 	for n in ns:
-		score, pred, Yt = score_gpt(n, del_p=15)
+		score, pred, Yt = score_gpt(n, del_p=85)
 		results.append(['gpt', n, round(score, 3)])
 		open(f'../results/test_GPT_{n}.csv', 'w').write('\n'.join(f'{p}\t{t}' for p, t in zip(pred, Yt)))
-	
-	def score_bert(n):
-		return plot_deleted_percentage(test=True, del_p=0, n=n, quality_method = 'bert_', method='bert_')
-	for n in ns:
-		score, pred, Yt = score_bert(n)
-		results.append(['bert', n, round(score, 3)])
-		open(f'../results/test_BERT_{n}.csv', 'w').write('\n'.join(f'{p}\t{t}' for p, t in zip(pred, Yt)))
+		
 	pd.DataFrame(results).to_csv('../results/test_data.csv', sep='\t', header=False, index=False)
 
 def main():

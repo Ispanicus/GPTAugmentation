@@ -59,3 +59,16 @@ def clean_eda():
 			X = [clean_text(t) for t in X]
 			text = '\n'.join([f'{l}\t{t}' for l, t in zip(Y, X)])
 			open(f'../Data/clean_data/eda/augs_{aug}_n_{n}.txt', 'w', encoding='utf8').write(text)
+			
+def clean_n_for_gpt():
+	ns = [10, 50, 100, 500, 2000]
+	for n in ns:
+		X = pd.read_csv(f'../Data/subsets/n_{n}_for_gpt.txt', sep='\t', encoding='utf8', names=['sentiment', 'reviewText'])
+		X = even_distribution(X)
+		Y = list(map(int, X['sentiment']))
+		X = list(X['reviewText'])
+		X = [clean_text(t) for t in X]
+		text = '\n'.join([f'{l}\t{t}' for l, t in zip(Y, X)])
+		open(f'../Data/clean_data/subsets/n_{n}_for_gpt.txt', 'w', encoding='utf8').write(text)
+	
+	

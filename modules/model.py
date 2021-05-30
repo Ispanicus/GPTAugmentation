@@ -126,13 +126,6 @@ class OnehotTransformer(BaseEstimator, TransformerMixin):
         X_ = [self.convert(row) for row in X]
         return X_
 
-
-def LogisticRegression(max_iter=100, ngram_range=(1, 1), min_df=1, max_df=1.0, verbose_vocab=False, max_features=4000):
-    return Pipeline([
-        ('onehot', OnehotTransformer(ngram_range, min_df, max_df, verbose_vocab, max_features)),
-        ('clf', LR(max_iter=max_iter))
-    ])
-
 class LogisticRegressionPytorch(torch.nn.Module):
     def __init__(self,input_dim,epochs,progress_bar = False):
         super(LogisticRegressionPytorch, self).__init__()
