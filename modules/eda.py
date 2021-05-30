@@ -16,6 +16,7 @@ for augs in [64,32,16,8,4]:
 		outPath.pop()
 		outPath = "/".join(outPath)
 		n = int(re.findall(r'[0-9]+', filename)[0])
-		command = f'python code/augment.py --alpha_sr=0.05 --alpha_rd=0.05 --alpha_ri=0.05 --alpha_rs=0.0 --output={outPath}/eda/augs_{augs}_n_{n}.txt --num_aug={augs} --input={outPath}/clean_data/subsets/{filename}'
-		print(command)
+		if n not in [10, 50]:
+			continue
+		command = f'python code/augment.py --alpha_sr=0.05 --alpha_rd=0.05 --alpha_ri=0.05 --alpha_rs=0.0 --output={outPath}/eda/augs_{augs}_n_{n}.txt --num_aug={augs} --input={outPath}/clean_data/subsets/{filename[:-4]+ "_for_gpt.txt"}'
 		os.system(command)
