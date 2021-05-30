@@ -1,14 +1,13 @@
 import os
 from train import train, score
 from get_data import get_data
-from model import LangID, LogisticRegression, ComplementNB, BernoulliNB
+from model import LangID, LogisticRegression
 from get_gpt_reviews import get_gpt_reviews
 import matplotlib.pyplot as plt
 from random import shuffle
 import numpy as np
 import warnings
 from sklearn.exceptions import ConvergenceWarning
-
 warnings.simplefilter("ignore", category=ConvergenceWarning)
 
 import sys
@@ -41,8 +40,8 @@ def create_quality_models(quality_method = 'gpt_'):
 		pickle.dump(model, open(f'../models/{quality_method}model_{n}.obj', 'wb'))
 		pickle.dump(transformer, open(f'../models/{quality_method}transformer_{n}.obj', 'wb'))
 
-def plot_deleted_percentage(quality_method = 'gpt_', method='gpt_'):
-	ns = [10, 50, 100, 500, 2000][::-1]
+def plot_deleted_percentage(quality_method='gpt_', method='gpt_', del_p=False, n=False, test=False):
+	ns = [10, 50, 100, 500, 2000][::-1] if not n else [n]
 	df = pd.DataFrame({'n_base':pd.Series([], dtype='int'),
 					   'n_aug':pd.Series([], dtype='int'),
 					   'del_p':pd.Series([], dtype='float'),
@@ -64,7 +63,8 @@ def plot_deleted_percentage(quality_method = 'gpt_', method='gpt_'):
 		poor_idxs = sorted([((p - l), i) for p, l, i in zip(probs[:,1], Y_all, range(len(probs)-n))], reverse=True)
 		start = time()
 		ps, scores = [], []
-		for del_p in range(100, -1, -5):
+		del_percentages = range(100, -1, -5) if not del_p else [del_p]
+		for del_p in del_percentages:
 			if del_p == 100:
 				X = X_all[-n:]
 				Y = Y_all[-n:]
@@ -84,6 +84,9 @@ def plot_deleted_percentage(quality_method = 'gpt_', method='gpt_'):
 			
 			model.train(X, Y, batch_size=batch_size)
 			with torch.no_grad():
+				if test:
+					Xt_ = transformer.transform(Xt)
+					return model.score(Xt_, Yt), model.predict(Xt_), Yt
 				acc = model.score(transformer.transform(Xt), Yt)
 			scores.append(acc)
 			ps.append(len(X))
@@ -99,10 +102,39 @@ def plot_deleted_percentage(quality_method = 'gpt_', method='gpt_'):
 		plt.savefig(f'../imgs/{quality_method}{method}{n}_delete_poor_idxs.png')
 		plt.clf()
 
+
+def score():
+	global Xt, Yt
+	Xt, Yt = get_data("test", cleanText=True)
+	ns = [10, 50, 100, 500, 2000]
+	results = [['type', 'n', 'score']]
+	
+	def score_gpt(n, del_p):
+		return plot_deleted_percentage(test=True, del_p=del_p, n=n, quality_method = 'gpt_', method='gpt_')
+		
+	for n in ns:
+		score, pred, Yt = score_gpt(n, del_p=100)
+		results.append(['base', n, round(score, 3)])
+		open(f'../results/test_base_{n}.csv', 'w').write('\n'.join(f'{p}\t{t}' for p, t in zip(pred, Yt)))
+
+	for n in ns:
+		score, pred, Yt = score_gpt(n, del_p=15)
+		results.append(['gpt', n, round(score, 3)])
+		open(f'../results/test_GPT_{n}.csv', 'w').write('\n'.join(f'{p}\t{t}' for p, t in zip(pred, Yt)))
+	
+	def score_bert(n):
+		return plot_deleted_percentage(test=True, del_p=0, n=n, quality_method = 'bert_', method='bert_')
+	for n in ns:
+		score, pred, Yt = score_bert(n)
+		results.append(['bert', n, round(score, 3)])
+		open(f'../results/test_BERT_{n}.csv', 'w').write('\n'.join(f'{p}\t{t}' for p, t in zip(pred, Yt)))
+	pd.DataFrame(results).to_csv('../results/test_data.csv', sep='\t', header=False, index=False)
+
 def main():
 	# Uncomment if you want to re-train the quality models
-	# create_quality_models(quality_method = 'bert_')
-	plot_deleted_percentage(quality_method = 'bert_', method='bert_')
+	# create_quality_models(quality_method = 'gpt_')
+	# plot_deleted_percentage(quality_method = 'bert_', method='bert_')
+	score()
 
 if __name__ == '__main__':
 	main()

@@ -92,7 +92,7 @@ class LangID(nn.Module):
         acc = round((sum(preds == Yt)/len(Yt)).item(), 3)
         return acc
 
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression as LR
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.pipeline import Pipeline
@@ -115,7 +115,7 @@ class OnehotTransformer(BaseEstimator, TransformerMixin):
         return output
 
     def fit(self, X, y=None):
-        vectorizer = TfidfVectorizer(ngram_range=self.ngram_range, min_df=self.min_df, max_df=self.max_df, max_features=self.max_features)
+        vectorizer = CountVectorizer(ngram_range=self.ngram_range, min_df=self.min_df, max_df=self.max_df, max_features=self.max_features)
         vectorizer.fit(X)
         self.vocab = vectorizer.vocabulary_
         if self.verbose_vocab:
@@ -131,18 +131,6 @@ def LogisticRegression(max_iter=100, ngram_range=(1, 1), min_df=1, max_df=1.0, v
     return Pipeline([
         ('onehot', OnehotTransformer(ngram_range, min_df, max_df, verbose_vocab, max_features)),
         ('clf', LR(max_iter=max_iter))
-    ])
-
-def BernoulliNB(ngram_range=(1, 1), min_df=1, max_df=1.0, verbose_vocab=False):
-    return Pipeline([
-        ('onehot', OnehotTransformer(ngram_range, min_df, max_df, verbose_vocab)),
-        ('clf', BNB())
-    ])
-
-def ComplementNB(ngram_range=(1, 1), min_df=1, max_df=1.0, verbose_vocab=False):
-    return Pipeline([
-        ('onehot', OnehotTransformer(ngram_range, min_df, max_df, verbose_vocab)),
-        ('clf', CNB())
     ])
 
 class LogisticRegressionPytorch(torch.nn.Module):

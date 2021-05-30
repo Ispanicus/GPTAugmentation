@@ -1,0 +1,16 @@
+type	n	score
+base	10	0.578
+base	50	0.719
+base	100	0.701
+base	500	0.805
+base	2000	0.842
+gpt	10	0.739
+gpt	50	0.754
+gpt	100	0.756
+gpt	500	0.805
+gpt	2000	0.819
+bert	10	0.593
+bert	50	0.717
+bert	100	0.708
+bert	500	0.807
+bert	2000	0.845

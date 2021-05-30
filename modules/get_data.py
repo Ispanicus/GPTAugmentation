@@ -60,7 +60,7 @@ def get_data(data_type='train', early_return=False, cleanText=False):
 	else:
 		paths = {'train' : '../Data/music_reviews_train.json', \
 				 'dev'   : '../Data/music_reviews_dev.json', \
-				 'test'  : '../Data/music_reviews_test_masked.json', \
+				 'test'  : '../Data/music_reviews_test.json', \
 				 'hard'  : '../Data/phase_2_masked.json', \
 				 }
 		path = paths[data_type]
