@@ -1,6 +1,3 @@
 type	n	score
-gpt	10	0.754
-gpt	50	0.793
-gpt	100	0.803
-gpt	500	0.848
-gpt	2000	0.855
+bert	10	0.579
+bert	50	0.718
